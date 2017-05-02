@@ -8,20 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
   </head>
   <script>
-  function copyToClipboard(element) {
-      var $temp = $("<input>");
-      $("body").append($temp);
-      $temp.val($(element).text()).select();
-      document.execCommand("copy");
-      $temp.remove();
-    }
+
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!--MAIN PAGE CONTENT-->
   <body>
 
   <div class="ui container">
     <a href="https://semantic-ui.com/elements/button.html">Semantic UI</a>
     <hr><br><br>
+
+  <div class="ui container">
+    <div class="ui modal">
+      <i class="close icon"></i>
+      <div class="header">hi there</div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
 
     <div class="ui cards">
     <div class="card">
@@ -45,7 +57,7 @@
     <div class="card">
       <div class="content">
         <div class="ui one column label top right attached grid fluid">
-          <i class="copy icon database orange" onclick="copyToClipboard('#p2')" title="Copy to clipboard" style="cursor: pointer;"></i><p class="item" id="p2">rkalvtms01.roche.com</p>
+          <i class="copy icon database orange" onclick="copyToClipboard('#p2')" title="Copy to clipboard" style="cursor: pointer;"></i><p class="item" id="p2">rkalv624842.kau.roche.com</p>
         </div>
         <div class="header">LZ server</div>
         <div class="meta">Friends of Veronika</div>
@@ -71,8 +83,8 @@
       </div>
       <div class="extra content">
         <div class="ui two buttons">
-          <a class="item" href="file:///C:\Windows\notepad.exe">
-              <div class="ui basic green button">OpenJIRA<br> <i class="icon-jira-alt"></i></div>
+          <a class="item" href="http://jira.glide.roche.com/jira/projects/MDH">
+              <div class="ui basic green button">Open JIRA<br> <i class="icon-jira-alt"></i></div>
           </a>
           <div class="ui basic red button"> (SSH)<br> <i class="icon terminal"></i></div>
         </div>
