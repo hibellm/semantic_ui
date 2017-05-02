@@ -16,6 +16,12 @@
 	    SYSMENU="yes"
 	    SCROLL="no"
 	    WINDOWSTATE="normal">
+    <script type="text/javascript" language="javascript">
+        function RunFile() {
+     		WshShell = new ActiveXObject("WScript.Shell");
+		    WshShell.Run("c:/windows/system32/notepad.exe", 1, false);
+        }
+    </script>	    
     </head>
     
   <script>
@@ -28,12 +34,7 @@
     }
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" language="javascript">
-        function RunFile() {
-     		WshShell = new ActiveXObject("WScript.Shell");
-		    WshShell.Run("c:/windows/system32/notepad.exe", 1, false);
-        }
-    </script>
+
 
   <body>
 
