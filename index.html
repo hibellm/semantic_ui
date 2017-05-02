@@ -6,29 +6,159 @@
     <!--CDN for Semontic UI-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
-
   </head>
-  <script type="text/javascript">
-  $('.ui.basic.modal')
-    .modal('show')
-  ;
+  <script>
+  function copyToClipboard(element) {
+      var $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+    }
   </script>
-
-
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <body>
+
   <div class="ui container">
     <a href="https://semantic-ui.com/elements/button.html">Semantic UI</a>
-<hr>
-<br><br>
+    <hr><br><br>
+
+    <div class="ui cards">
+    <div class="card">
+      <div class="content">
+        <div class="ui one column label top right attached grid fluid">
+          <i class="copy icon database orange" onclick="copyToClipboard('#p1')" title="Copy to clipboard" style="cursor: pointer;"></i><p class="item" id="p1">bee.roche.com</p>
+        </div>
+        <div class="header">BEE server</div>
+        <div class="meta">Friends of Veronika</div>
+        <div class="description">This is the BEE server, used for exploratory projects.</div>
+      </div>
+      <div class="extra content">
+        <div class="ui two buttons">
+          <a class="item" href="file:///C:\Windows\notepad.exe">
+              <div class="ui basic green button">OpenGitKraken<br><i class="icon github"></i></div>
+          </a>
+          <div class="ui basic red button"> (SSH)<br> <i class="icon terminal"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <div class="ui one column label top right attached grid fluid">
+          <i class="copy icon database orange" onclick="copyToClipboard('#p2')" title="Copy to clipboard" style="cursor: pointer;"></i><p class="item" id="p2">rkalvtms01.roche.com</p>
+        </div>
+        <div class="header">LZ server</div>
+        <div class="meta">Friends of Veronika</div>
+        <div class="description">This is the Landing Zone server</div>
+      </div>
+      <div class="extra content">
+        <div class="ui two buttons">
+          <a class="item" href="file:///C:\Windows\notepad.exe">
+              <div class="ui basic green button">OpenGitKraken<br><i class="icon github"></i></div>
+          </a>
+          <div class="ui basic red button"> (SSH)<br> <i class="icon terminal"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="card ">
+      <div class="content">
+        <div class="ui one column label top right attached grid fluid">
+          <i class="copy icon database orange" onclick="copyToClipboard('#p2')" title="Copy to clipboard" style="cursor: pointer;"></i><p class="item" id="p2">rkalvtms01.roche.com</p>
+        </div>
+        <div class="header">JIRA ticket system</div>
+        <div class="meta">Friends of Veronika</div>
+        <div class="description">This is the JIRA ticket system</div>
+      </div>
+      <div class="extra content">
+        <div class="ui two buttons">
+          <a class="item" href="file:///C:\Windows\notepad.exe">
+              <div class="ui basic green button">OpenJIRA<br> <i class="icon-jira-alt"></i></div>
+          </a>
+          <div class="ui basic red button"> (SSH)<br> <i class="icon terminal"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <div class="ui one column label top right attached grid fluid">
+          <i class="copy icon database orange" onclick="copyToClipboard('#p2')" title="Copy to clipboard" style="cursor: pointer;"></i><p class="item" id="p2">rkalvtms01.roche.com</p>
+        </div>
+        <div class="header">JIRA ticket system</div>
+        <div class="meta">Friends of Veronika</div>
+        <div class="description">This is the JIRA ticket system</div>
+      </div>
+      <div class="extra content">
+        <div class="ui two buttons">
+          <a class="item" href="file:///C:\Windows\notepad.exe">
+              <div class="ui basic green button">OpenJIRA<br> <i class="icon-jira-alt"></i></div>
+          </a>
+          <div class="ui basic red button"> (SSH)<br> <i class="icon terminal"></i></div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+    <hr><br><br>
+    <div class="ui vertical menu">
+      <div class="item">
+        <div class="header">GITHUB<i class="icon github"></i></div>
+        <div class="menu">
+          <a class="item" href="https://github.com/">Github</a>
+          <a class="item" href="file:///C:\Users\I5-2500k\AppData\Local\gitkraken\app-2.4.0\gitkraken.exe">GitKraken</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="header">Teradata Documentation</div>
+        <div class="menu">
+          <a class="item">Rails</a>
+          <a class="item">Python</a>
+          <a class="item">PHP</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="header">Servers</div>
+        <div class="menu">
+          <a class="item">EU Server</a>
+          <a class="item">Dedicated</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="header">Support</div>
+        <div class="menu">
+          <a class="item">E-mail Support</a>
+          <a class="item">FAQs</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="ui teal button" data-title="Using click events" data-content="Clicked popups will close if you click away, but not if you click inside the popup">Click Me</div>
+<div class="ui icon input">
+  <input type="text" placeholder="Focus me..." data-content="You can use me to enter data" class="">
+  <i class="search icon"></i>
+</div>
+
+<div class="ui segment" id="button">
+  <i class="square inverted red heart icon link" data-content="Top Left" data-position="top left"></i>
+  <i class="square inverted red heart icon link" data-content="Top Center" data-position="top center"></i>
+  <i class="square inverted red heart icon link" data-content="Top Right" data-position="top right"></i>
+  <i class="square inverted red heart icon link" data-content="Right Center" data-position="right center"></i>
+  <i class="square inverted red heart icon link" data-content="Bottom Right" data-position="bottom right"></i>
+  <i class="square inverted red heart icon link" data-content="Bottom Center" data-position="bottom center"></i>
+  <i class="square inverted red heart icon link" data-content="Bottom Left" data-position="bottom left"></i>
+  <i class="square inverted red heart icon link" data-content="Left Center" data-position="left center"></i>
+</div>
 
 <div class="ui cards">
   <div class="card">
     <div class="content">
       <div class="ui three column label top right attached grid fluid">
         <a class="item"><i class="icon green check green square"></i>Access</a>
-        <a class="item"><i class="flag eu"></i>Server</a>
+        <a class="item"><i class="flag eu" ></i>Server</a>
         <a class="item"><i class="icon database orange"></i>Teradata</a>
       </div>
       <div class="header">2017 Jan</div>
@@ -65,24 +195,24 @@
 
 </div>
 
-<div class="ui modal">
-  <i class="close icon"></i>
-  <div class="header">
-    Modal Title
-  </div>
-  <div class="image content">
-    <div class="image">
-      An image can appear on left or an icon
+    <div class="ui modal">
+      <i class="close icon"></i>
+      <div class="header">
+        Modal Title
+      </div>
+      <div class="image content">
+        <div class="image">
+          An image can appear on left or an icon
+        </div>
+        <div class="description">
+          A description can appear on the right
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui button">Cancel</div>
+        <div class="ui button">OK</div>
+      </div>
     </div>
-    <div class="description">
-      A description can appear on the right
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui button">Cancel</div>
-    <div class="ui button">OK</div>
-  </div>
-</div>
 
 
 
