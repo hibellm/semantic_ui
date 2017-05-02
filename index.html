@@ -15,8 +15,23 @@
 
   <!--MAIN PAGE CONTENT-->
   <body>
-
     <div class="ui container">
+      <!--MENU-->
+      <div class="ui secondary large pointing menu blue">
+        <a class="item" id="mi1" onclick="$('#mi1').click(function() {$(this).toggleClass('active');});">Home</a>
+        <a class="item" onclick="$('a').click(function() {$(this).toggleClass('active');});">Training</a>
+        <a class="item" onclick="$('a').click(function() {$(this).toggleClass('active');});">Data Sources</a>
+        <div class="right menu">
+          <a class="ui item">Logout</a>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>breadcrumbs can go here</p>
+      </div>
+
+
+
+
 
     <a href="https://semantic-ui.com/introduction/getting-started.html">Semantic UI</a>
     <hr><br><br>
@@ -28,10 +43,10 @@
         <div class="ui four column relaxed divided grid">
           <div class="column">
             <h4 class="ui header blue">Data Sources</h4>
-            <div class="ui link list ">
+            <div class="ui link list">
               <div class="ui right floated">
                 <a class="item" onclick="$('.ui.modal#test').modal('show');">
-                  <i class="icon check square green " title="You have access"></i>
+                  <i class="icon check square green" title="You have access"></i>
                   <i class="flag eu right" title="EU server"></i>
                   CPRD
                 </a>
@@ -91,6 +106,64 @@
     </div>
 
     <hr><br><br>
+
+    <!--CPRD-->
+    <table class="ui celled structured table">
+    <thead>
+    <tr>
+      <th rowspan="2">Batch title</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Tables</th>
+      <th colspan="3" class="center aligned">Documentation</th>
+    </tr>
+    <tr>
+      <th>ER Diagram</th>
+      <th>Data Dictionary</th>
+      <th>Other</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January 2017</td>
+      <td>Full data load for January 2017</td>
+      <td class="right aligned">14</td>
+      <td class="center aligned">
+        <i class="green file image outline icon"></i>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="3">Beta Team</td>
+      <td>Project 1</td>
+      <td class="right aligned">52</td>
+      <td class="center aligned">
+        <i class="green checkmark icon"></i>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Project 2</td>
+      <td class="right aligned">12</td>
+      <td></td>
+      <td class="center aligned">
+        <i class="green checkmark icon"></i>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Project 3</td>
+      <td class="right aligned">21</td>
+      <td class="center aligned">
+        <i class="green checkmark icon"></i>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 
