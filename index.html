@@ -6,7 +6,18 @@
     <!--CDN for Semontic UI-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
-  </head>
+    
+    <HTA:APPLICATION ID="oMyApp" 
+	    APPLICATIONNAME="Application Executer" 
+	    BORDER="no"
+	    CAPTION="no"
+	    SHOWINTASKBAR="yes"
+	    SINGLEINSTANCE="yes"
+	    SYSMENU="yes"
+	    SCROLL="no"
+	    WINDOWSTATE="normal">
+    </head>
+    
   <script>
   function copyToClipboard(element) {
       var $temp = $("<input>");
@@ -17,12 +28,19 @@
     }
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        function RunFile() {
+     		WshShell = new ActiveXObject("WScript.Shell");
+		    WshShell.Run("c:/windows/system32/notepad.exe", 1, false);
+        }
+    </script>
+
   <body>
 
   <div class="ui container">
     <a href="https://semantic-ui.com/elements/button.html">Semantic UI</a>
     <hr><br><br>
-
+<input type="button" value="Run Notepad" onclick="RunFile();"/>
     <div class="ui cards">
     <div class="card">
       <div class="content">
