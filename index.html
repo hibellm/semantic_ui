@@ -6,32 +6,81 @@
     <!--CDN for Semontic UI-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
   </head>
-    
-  <script>
-   $('.ui.modal').modal('show');
-  </script>
+
+
 
 
   <!--MAIN PAGE CONTENT-->
   <body>
 
     <div class="ui container">
-    <div class="ui basic modal">
-      <i class="close icon"></i>
-      <div class="header">hi there</div>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+    <a href="https://semantic-ui.com/introduction/getting-started.html">Semantic UI</a>
+    <hr><br><br>
+
+    <!--POPUP-->
+    <div class="ui menu">
+      <a class="browse item">Data Sources<i class="dropdown icon"></i></a>
+      <div class="ui fluid popup bottom left transition hidden" style="top: 553px; left: 1px; bottom: auto; right: auto; width: 960px;">
+        <div class="ui four column relaxed divided grid">
+          <div class="column">
+            <h4 class="ui header blue">Data Sources</h4>
+            <div class="ui link list">
+              <a class="item" onclick="$('.ui.modal#test').modal('show');">CPRD
+                <i class="icon check square green float right" title="You have access"></i>
+                <i class="flag eu" title="EU server"></i>
+              </a>
+              <a class="item">IMSEU</a>
+              <a class="item">CCAE</a>
+              <a class="item">HDD</a>
+              <a class="item">HDD</a>
+              <a class="item">HDD</a>
+              <a class="item">HDD</a>
+              <a class="item">HDD</a>
+            </div>
+          </div>
+          <div class="column">
+            <h4 class="ui header blue">Dictionaries</h4>
+            <div class="ui link list">
+              <a class="item">ICD9</a>
+              <a class="item">ICD10</a>
+              <a class="item">CPT</a>
+              <a class="item">REDBOOK</a>
+            </div>
+          </div>
+          <div class="column">
+            <h4 class="ui header blue">Miscelaneous</h4>
+            <div class="ui link list">
+              <a class="item">Restricted Words</a>
+              <a class="item">Rights Abrreviations</a>
+              <a class="item">Teradata Abbreviations</a>
+            </div>
+          </div>
+          <div class="column">
+            <h4 class="ui header blue">Utilities</h4>
+            <div class="ui link list">
+              <a class="item">My Roles</a>
+              <a class="item">TD User List</a>
+              <a class="item">Archive</a>
+              <a class="item">JIRA ticket</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="actions">
-        <div class="ui button">Neutral</div>
-        <div class="ui green approve button">Approve</div>
-        <div class="ui red cancel button">Cancel</div>
-      </div>
+      <a class="item"><i class="find icon"></i>Search</a>
     </div>
-  </div>
+
+    <hr><br><br>
+
+
+
+    <hr><br><br>
+    <button class="ui basic purple button" type="button" name="button" onclick="$('.ui.modal#test').modal('show');">Press me</button>
+    <hr><br><br>
+
 
     <div class="ui cards">
     <div class="card">
@@ -375,21 +424,40 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
+<!--MODAL DIALOGS-->
+<div class="ui modal" id="test">
+  <i class="close icon"></i>
+  <div class="header">HI THERE</div>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  </div>
+  <div class="actions">
+    <div class="ui button">Neutral</div>
+    <div class="ui green approve button">Approve</div>
+    <div class="ui red cancel button">Cancel</div>
+  </div>
+</div>
 
 
 
 
 
   </div>
-
+  <script>
+  /*POPUP*/
+  $('.menu .browse')
+  .popup({
+    inline     : true,
+    hoverable  : true,
+    position   : 'bottom left',
+    delay: {
+      show: 300,
+      hide: 800
+    }
+  })
+;
+   /*$('.ui.modal#test').modal('show');*/
+  </script>
 
   </body>
 </html>
