@@ -18,9 +18,9 @@
     <div class="ui container">
       <!--MENU-->
       <div class="ui secondary large pointing menu blue">
-        <a class="item" id="mi1" onclick="$('#mi1').click(function() {$(this).toggleClass('active');});">Home</a>
-        <a class="item" onclick="$('a').click(function() {$(this).toggleClass('active');});">Training</a>
-        <a class="item" onclick="$('a').click(function() {$(this).toggleClass('active');});">Data Sources</a>
+        <a class="item" id="mi1" onclick="myFunction()">Home</a>
+        <a class="item" id="mi2" onclick="myFunction()">Training</a>
+        <a class="item" id="mi3" onclick="myFunction()">Data Sources</a>
         <div class="right menu">
           <a class="ui item">Logout</a>
         </div>
@@ -534,6 +534,15 @@
 
   </div>
   <script>
+  /*MENU HIGHLIGHTING*/
+  function myFunction() {
+   var x = document.getElementById('mi1');
+   x.classList.toggle("active");
+   }
+
+
+
+
   /*POPUP*/
   $('.menu .browse')
   .popup({
