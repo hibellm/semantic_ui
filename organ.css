@@ -31,7 +31,7 @@ body{
 	background: #F5EEC9;
 }
 
-.content{
+.ocontent{
 	width: 100%;
 	max-width: 1142px;
 	margin: 0 auto;
@@ -43,7 +43,7 @@ a:focus{
 }
 
 @media all and (max-width: 767px){
-	.content{
+	.ocontent{
 		padding: 0 20px;
 	}
 }
@@ -95,7 +95,7 @@ ul a span{
 }
 
 .director > li > a{
-	width: 50%;
+	width: 25%;
 	margin: 0 auto 0px auto;
 }
 
@@ -113,7 +113,7 @@ ul a span{
 .subdirector,
 .departments{
 	position: absolute;
-	width: 100%;
+	width: 75%;
 }
 
 .subdirector > li:first-child,
@@ -121,7 +121,7 @@ ul a span{
 	width: 18.59894921190893%;
 	height: 64px;
 	margin: 0 auto 92px auto;
-	padding-top: 25px;
+	padding-top: 15px;
 	border-bottom: 4px solid white;
 	z-index: 1;
 }
@@ -300,7 +300,7 @@ ul a span{
 .department li a:hover{
 	box-shadow: 8px 8px 9px -4px rgba(0,0,0,0.1);
 	height: 80px;
-	width: 95%;
+	width: 100%;
 	top: 39px;
 	background-image: none!important;
 }

@@ -6,8 +6,8 @@
     <!--CDN for Semontic UI-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
-
-    <link rel="stylesheet" href="./organ.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./tree.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
@@ -33,15 +33,18 @@
 
       <div class="ui column fluid segment padded">
         <img class="ui fluid image" src="./images/mission_banner.png" alt="Mission Statement">
-        <div class="column large">
+        <div class="ui segment blue inverted tertiary center aligned">
           <h1>In order to achieve its vision, the Medical Data Hub is focusing on:</h1>
-          <ul>
-            <li>Establishing a highly functional team with a collaborative culture and a clear vision (people)</li>
-            <li>Optimizing internal processes in order to increase transparency (process)</li>
-            <li>Creating partnerships to drive the use and availability of data, which provide insights for research and development (partnering)</li>
-            <li>Creating visualization on the data sources to enable less technical users to leverage (publicizing)</li>
-          </ul>
+          <div class="ui basic segment left aligned large">
+            <ul>
+              <li><i class="ui users icon"></i>  Establishing a highly functional team with a collaborative culture and a clear vision (people)</li>
+              <li><i class="ui line chart icon"></i>  Optimizing internal processes in order to increase transparency (process)</li>
+              <li><i class="fa fa-handshake-o"></i>  Creating partnerships to drive the use and availability of data, which provide insights for research and development (partnering)</li>
+              <li><i class="ui bar chart icon"></i>  Creating visualization on the data sources to enable less technical users to leverage (publicizing)</li>
+            </ul>
+          </div>
         </div>
+
         <div class="column">
 
           <!--TABULAR MENU-->
@@ -62,31 +65,111 @@
               <i class="flag pl"></i>ADMD
             </a>
           </div>
-          <div class="ui bottom attached segment">
+          <!--THE TAB CONTENT-->
+          <div class="ui bottom attached segment" id="ch_tab">
             <!--MDH PEOPLE CH-->
             <div class="ui link cards">
               <!--MDH#1-->
+              <div class="card" id="hibellm1">
+                <div class="image">
+                  <img src="./images/hibellm.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Marcus Hibell</div>
+                  <div class="meta">Senior Technical Specialist
+                  </div>
+                  <div class="description">Marcus small description.</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green phone circular icon"></i>
+                      <div class="content middle aligned">+41 321 8040</div>
+                    </div>
+                    <div class="item">
+                      <i class="red marker circular icon"></i>
+                      <div class="content middle aligned">Bau 663 - 2.20 <i class="flag ch"></i></div>
+                    </div>
+                    <div class="item">
+                      <i class="blue mail circular icon"></i>
+                      <div class="content middle aligned">
+                        <a href="mailto:marcus.hibell@roche.com">marcus.hibell@roche.com</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <script src="https://apis.google.com/js/platform.js" async defer></script>
+                      <g:hangout render="createhangout" invites="[{ id : 'marcus.hibell@roche.com', invite_type : 'EMAIL' }]">
+                      </g:hangout>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image">
+                  <img src="./images/hibellm.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Markus Schneider</div>
+                  <div class="meta">Senior Technical Specialist
+                  </div>
+                  <div class="description">Markus small description.</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green phone circular icon"></i>
+                      <div class="content middle aligned">+41 321 8040</div>
+                    </div>
+                    <div class="item">
+                      <i class="red marker circular icon"></i>
+                      <div class="content middle aligned">Bau 663 - 2.20 <i class="flag ch"></i></div>
+                    </div>
+                    <div class="item">
+                      <i class="blue mail circular icon"></i>
+                      <div class="content middle aligned">
+                        <a href="mailto:markus.schneider@roche.com">markus.schneider@roche.com</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <script src="https://apis.google.com/js/platform.js" async defer></script>
+                      <g:hangout render="createhangout" invites="[{ id : 'markus.schnieder@roche.com', invite_type : 'EMAIL' }]">
+                      </g:hangout>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="card">
                 <div class="image">
                   <img src="./images/hibellm.jpg">
                 </div>
                 <div class="content">
                   <div class="header">Marcus Hibell</div>
-                  <div class="meta">
-                    <a>Senior Technical Specialist</a>
+                  <div class="meta">Senior Technical Specialist
                   </div>
-                  <div class="description">
-                    Marcus small description.
-                  </div>
+                  <div class="description">Marcus small description.</div>
                 </div>
                 <div class="extra content">
-                    <i class="phone icon green circular"></i><i class="flag ch"><a href="tel:0041616820877">+41 61 68 20877</a></i>
-                    <i class="mail icon circular"></i><a href="mailto:marcus.hibell@roche.com">marcus.hibell@roche.com</a>
-                    <script src="https://apis.google.com/js/platform.js" async defer></script>
-                     <g:hangout render="createhangout"
-                         invites="[{ id : 'christof.binder@roche.com', invite_type : 'EMAIL' }]">
-                     </g:hangout>
-                  </span>
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green phone circular icon"></i>
+                      <div class="content middle aligned">+41 321 8040</div>
+                    </div>
+                    <div class="item">
+                      <i class="red marker circular icon"></i>
+                      <div class="content middle aligned">Bau 663 - 2.20 <i class="flag ch"></i></div>
+                    </div>
+                    <div class="item">
+                      <i class="blue mail circular icon"></i>
+                      <div class="content middle aligned">
+                        <a href="mailto:marcus.hibell@roche.com">marcus.hibell@roche.com</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <script src="https://apis.google.com/js/platform.js" async defer></script>
+                      <g:hangout render="createhangout" invites="[{ id : 'marcus.hibell@roche.com', invite_type : 'EMAIL' }]">
+                      </g:hangout>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="card">
@@ -104,112 +187,42 @@
 
           </div>
 
-
-          <div class="content segment">
-            <h1>Responsive Organization Chart</h1>
-            <figure class="org-chart cf">
-              <ul class="administration">
-                <li>
-                  <ul class="director">
-                    <li>
-                      <a href="#"><span>Director</span></a>
-                      <ul class="subdirector">
-                        <li><a href="#"><span>Assistante Director</span></a></li>
-                      </ul>
-                      <ul class="departments cf">
-                        <!--li><a href="#"><span>Administration</span></a></li-->
-                        <li class="department dep-a">
-                          <a href="#"><span>BASEL</span></a>
-                          <ul class="sections">
-                            <li class="section"><a href="#"><span>Section A1</span></a></li>
-                            <li class="section"><a href="#"><span>Section A2</span></a></li>
-                            <li class="section"><a href="#"><span>Section A3</span></a></li>
+          <div class="ui bottom attached segment">
+            <div class="ui segment centered">
+              <div class="tree">
+                  <ul>
+                      <li><a class="ui label blue huge " href="#">Steve Frikert</a>
+                          <ul>
+                              <li><a class="ui label blue" href="#">
+                                <div class="ui header middle center aligned">Ileana Fachinni</div>
+                                <div class="ui content middle aligned small">Buisness Project Lead</div>
+                              </a></li>
+                              <li><a class="ui label large basic blue" href="#">Basel</a>
+                                  <ul class="vertical">
+                                      <li><a class="ui label blue" href="#hibellm1">
+                                        <div class="ui header middle center aligned">Marcus Hibell</div>
+                                        <div class="ui content middle aligned small">Senior Technical SPecialist</div>
+                                      </a></li>
+                                      <li><a class="ui label blue" href="#schem44">Markus Schneider</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a class="ui label basic blue" href="#">SSF</a>
+                                  <ul class="vertical">
+                                      <li><a class="ui label blue" href="#">Joe Simpson</a></li>
+                                      <li><a class="ui label blue" href="#">Shaaz Ansari</a></li>
+                                      <li><a class="ui label blue" href="#">Jerry Chen</a></li>
+                                  </ul>
+                              </li>
+                              </li>
                           </ul>
-                        </li>
-                        <li class="department dep-b">
-                          <a href="#"><span>SSF</span></a>
-                          <ul class="sections">
-                            <li class="section"><a href="#"><span>Section B1</span></a></li>
-                            <li class="section"><a href="#"><span>Section B2</span></a></li>
-                            <li class="section"><a href="#"><span>Section B3</span></a></li>
-                          </ul>
-                        </li>
-                        <li class="department dep-c">
-                          <a href="#"><span>ADMD</span></a>
-                          <ul class="sections">
-                            <li class="section"><a href="#"><span>Section C1</span></a></li>
-                            <li class="section"><a href="#"><span>Section C2</span></a></li>
-                            <li class="section"><a href="#"><span>Section C3</span></a></li>
-                            <li class="section"><a href="#"><span>Section C4</span></a></li>
-                          </ul>
-                        </li>
-
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </figure>
+              </div>
+            </div>
           </div>
 
 
 
 
-
-
-          <div class="content segment">
-            <h1>Responsive Organization Chart</h1>
-            <figure class="org-chart cf">
-              <ul class="administration">
-                <li>
-                  <ul class="ui director large">
-                    <li>
-                        <a class="ui image label" href="#">
-                          <i class="rocket icon purple circular"></i><h5>Steve Frikert</h5>Global Medical Data Hub Head
-                          <i class="flag us floated right">
-                        </a>
-
-                      <ul class="subdirector">
-                        <li><a href="#"><span>Ileana Fachinni</span></a></li>
-                      </ul>
-                      <ul class="departments cf">
-                        <li><a href="#"><span>Ileana Fachinni</span></a></li>
-                        <li class="department dep-a">
-                          <a href="#"><span>Basel</span></a>
-                          <ul class="sections">
-                            <li class="section"><a href="#"><span>Marcus hibell</span></a></li>
-                            <li class="section"><a href="#"><span>Markus Schneider</span></a></li>
-                          </ul>
-                        </li>
-                        <li class="department dep-b">
-                          <a href="#"><span>SSF</span></a>
-                          <ul class="sections">
-                            <li class="section"><a href="#"><span>Joe Simpson</span></a></li>
-                            <li class="section"><a href="#"><span>Shaaz Ansari</span></a></li>
-                            <li class="section"><a href="#"><span>Jerry Chen</span></a></li>
-                          </ul>
-                        </li>
-                        <li class="department dep-c">
-                          <a href="#"><span>ADMD</span></a>
-                          <ul class="sections">
-                            <li class="section"><a href="#"><span>Fabian Wirkowski</span></a></li>
-                            <li class="section"><a href="#"><span>Lukasz Nawrot</span></a></li>
-                            <li class="section"><a href="#"><span>Jakub Gromadowski</span></a></li>
-                            <li class="section"><a href="#"><span>Other people to add</span></a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </figure>
-          </div>
-
-
-
-
-</div>
-
+</div><!-- END DIV OF MAIN CONTENT-->
   </body>
 </html>
