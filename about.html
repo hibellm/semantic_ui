@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./tree.css">
+    <link rel="stylesheet" href="./tree2.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
@@ -15,6 +15,7 @@
 
   <!--MAIN PAGE CONTENT-->
   <body>
+
 
     <div class="ui container">
       <!--MENU-->
@@ -49,28 +50,81 @@
 
           <!--TABULAR MENU-->
           <div class="ui top attached tabular menu">
-            <a class="item active">
+            <a class="ui item active" data-tab="tab-org2">
               <i class="sitemap icon blue huge"></i>Organogram
             </a>
-            <a class="item" id="mdh-ch">
+            <a class="ui item" data-tab="tab-basel">
               <i class="users icon purple huge"></i>
               <i class="flag ch"></i>Basel
             </a>
-            <a class="item" id="mdh-us">
+            <a class="ui item" data-tab="tab-ssf">
               <i class="users icon purple huge"></i>
               <i class="flag us"></i>SSF
             </a>
-            <a class="item" id="mdh-pl">
+            <a class="ui item" data-tab="tab-pl">
               <i class="users icon purple huge"></i>
               <i class="flag pl"></i>ADMD
             </a>
           </div>
           <!--THE TAB CONTENT-->
+
+          <!--ORGANOGRAM-->
+          <div class="ui tab active" data-tab="tab-org">
+            <div class="ui bottom attached segment">
+              <div class="ui segment">
+                <div class="ui grid fluid centered">
+                <div class="tree">
+                    <ul>
+                        <li><a class="ui label blue huge " href="#">Steve Frikert</a>
+                            <ul>
+                                <li><a class="ui label blue" href="#">
+                                  <div class="ui header middle center aligned">Ileana Fachinni</div>
+                                  <div class="ui content middle aligned small">Buisness Project Lead</div>
+                                </a></li>
+                                <li><a class="ui label large basic blue" href="#">Basel</a>
+                                    <ul class="vertical">
+                                        <li><a class="ui label blue" href="#">
+                                          <div class="ui header middle center aligned">Marcus Hibell</div>
+                                          <div class="ui content middle aligned small">Senior Technical<br>Specialist</div>
+                                        </a></li>
+                                        <li><a class="ui label blue" href="#">
+                                          <div class="ui header middle center aligned">Markus Schneider</div>
+                                          <div class="ui content middle aligned small">Senior Technical<br>Specialist</div>
+                                        </a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="ui label basic blue" href="#">SSF</a>
+                                    <ul class="vertical">
+                                        <li><a class="ui label blue" href="#">Joe Simpson</a></li>
+                                        <li><a class="ui label blue" href="#">Shaaz Ansari</a></li>
+                                        <li><a class="ui label blue" href="#">Jerry Chen</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="ui label basic blue" href="#">ADMD</a>
+                                    <ul class="vertical">
+                                        <li><a class="ui label blue" href="#">Fabian</a></li>
+                                        <li><a class="ui label blue" href="#">Lukasz</a></li>
+                                        <li><a class="ui label blue" href="#">Jakub</a></li>
+                                        <li><a class="ui label blue" href="#">Jaroslaw</a></li>
+                                        <li><a class="ui label blue" href="#">Hiroti</a></li>
+                                    </ul>
+                                </li>
+                                </li>
+                            </ul>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div><!--ORGANOGRAM-->
+
+          <!--MDH PEOPLE CH-->
+          <div class="ui tab" data-tab="tab-basel">
           <div class="ui bottom attached segment" id="ch_tab">
-            <!--MDH PEOPLE CH-->
             <div class="ui link cards">
               <!--MDH#1-->
-              <div class="card" id="hibellm1">
+              <div class="card" id="hibellm">
                 <div class="image">
                   <img src="./images/hibellm.jpg">
                 </div>
@@ -172,57 +226,237 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
+            </div>
+          </div>
+          </div><!--MDH PEOPLE CH-->
+
+          <!--MDH PEOPLE SSF-->
+          <div class="ui tab" data-tab="tab-ssf">
+          <div class="ui bottom attached segment" id="ch_tab">
+            <div class="ui link cards">
+              <!--MDH#1-->
+              <div class="card" id="hibellm1">
                 <div class="image">
-                  <img src="/images/avatar2/large/molly.png">
+                  <img src="./images/hibellm.jpg">
                 </div>
                 <div class="content">
-                  <div class="header">Molly</div>
-                  <div class="meta">
-                    <span class="date">Coworker</span>
+                  <div class="header">Steve Frikert</div>
+                  <div class="meta">Senior Technical Specialist</div>
+                  <div class="description">Steve description.</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green phone circular icon"></i>
+                      <div class="content middle aligned">+41 321 8040</div>
+                    </div>
+                    <div class="item">
+                      <i class="red marker circular icon"></i>
+                      <div class="content middle aligned">Bau 663 - 2.20 <i class="flag us"></i></div>
+                    </div>
+                    <div class="item">
+                      <i class="blue mail circular icon"></i>
+                      <div class="content middle aligned">
+                        <a href="mailto:steve.frikert@gene.com">steve.frikert@gene.com</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <script src="https://apis.google.com/js/platform.js" async defer></script>
+                      <g:hangout render="createhangout" invites="[{ id : 'steve.frikert@gene.com', invite_type : 'EMAIL' }]">
+                      </g:hangout>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image">
+                  <img src="./images/hibellm.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Ileana Fachinni</div>
+                  <div class="meta">Senior Technical Specialist</div>
+                  <div class="description">Ileana small description.</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green phone circular icon"></i>
+                      <div class="content middle aligned">+41 321 8040</div>
+                    </div>
+                    <div class="item">
+                      <i class="red marker circular icon"></i>
+                      <div class="content middle aligned">Bau 663 - 2.20 <i class="flag us"></i></div>
+                    </div>
+                    <div class="item">
+                      <i class="blue mail circular icon"></i>
+                      <div class="content middle aligned">
+                        <a href="mailto:ileana.fachinni@gene.com">ileana.fachinni@gene.com</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <script src="https://apis.google.com/js/platform.js" async defer></script>
+                      <g:hangout render="createhangout" invites="[{ id : 'ileana.fachinni@gene.com', invite_type : 'EMAIL' }]">
+                      </g:hangout>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image">
+                  <img src="./images/hibellm.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Joe Simpson</div>
+                  <div class="meta">Senior Technical Specialist</div>
+                  <div class="description">Joe small description.</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green phone circular icon"></i>
+                      <div class="content middle aligned">+1 321 8040</div>
+                    </div>
+                    <div class="item">
+                      <i class="red marker circular icon"></i>
+                      <div class="content middle aligned">Bau 663 - 2.20 <i class="flag us"></i></div>
+                    </div>
+                    <div class="item">
+                      <i class="blue mail circular icon"></i>
+                      <div class="content middle aligned">
+                        <a href="mailto:joews@gene.com">joews@gene.com</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <script src="https://apis.google.com/js/platform.js" async defer></script>
+                      <g:hangout render="createhangout" invites="[{ id : 'joews@gene.com', invite_type : 'EMAIL' }]">
+                      </g:hangout>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
+        </div><!--MDH PEOPLE SSF-->
 
-          <div class="ui bottom attached segment">
-            <div class="ui segment centered">
-              <div class="tree">
-                  <ul>
-                      <li><a class="ui label blue huge " href="#">Steve Frikert</a>
-                          <ul>
-                              <li><a class="ui label blue" href="#">
-                                <div class="ui header middle center aligned">Ileana Fachinni</div>
-                                <div class="ui content middle aligned small">Buisness Project Lead</div>
-                              </a></li>
-                              <li><a class="ui label large basic blue" href="#">Basel</a>
-                                  <ul class="vertical">
-                                      <li><a class="ui label blue" href="#hibellm1">
-                                        <div class="ui header middle center aligned">Marcus Hibell</div>
-                                        <div class="ui content middle aligned small">Senior Technical SPecialist</div>
-                                      </a></li>
-                                      <li><a class="ui label blue" href="#schem44">Markus Schneider</a></li>
-                                  </ul>
-                              </li>
-                              <li>
-                                  <a class="ui label basic blue" href="#">SSF</a>
-                                  <ul class="vertical">
-                                      <li><a class="ui label blue" href="#">Joe Simpson</a></li>
-                                      <li><a class="ui label blue" href="#">Shaaz Ansari</a></li>
-                                      <li><a class="ui label blue" href="#">Jerry Chen</a></li>
-                                  </ul>
-                              </li>
-                              </li>
-                          </ul>
+        <!--MDH PEOPLE PL-->
+        <div class="ui tab" data-tab="tab-pl">
+        <div class="ui bottom attached segment" id="ch_tab">
+          <div class="ui link cards">
+            <!--MDH#1-->
+            <div class="card" id="hibellm1">
+              <div class="image">
+                <img src="./images/hibellm.jpg">
+              </div>
+              <div class="content">
+                <div class="header">Fabian Wirotowski</div>
+                <div class="meta">Senior Technical Specialist</div>
+                <div class="description">description.</div>
+              </div>
+              <div class="extra content">
+                <div class="ui list">
+                  <div class="item">
+                    <i class="green phone circular icon"></i>
+                    <div class="content middle aligned">+41 321 8040</div>
+                  </div>
+                  <div class="item">
+                    <i class="red marker circular icon"></i>
+                    <div class="content middle aligned">Bau 663 - 2.20 <i class="flag pl"></i></div>
+                  </div>
+                  <div class="item">
+                    <i class="blue mail circular icon"></i>
+                    <div class="content middle aligned">
+                      <a href="mailto:fabian.wirotowski@roche.com">marcus.hibell@roche.com</a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <script src="https://apis.google.com/js/platform.js" async defer></script>
+                    <g:hangout render="createhangout" invites="[{ id : 'marcus.hibell@roche.com', invite_type : 'EMAIL' }]">
+                    </g:hangout>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="./images/hibellm.jpg">
+              </div>
+              <div class="content">
+                <div class="header">Lukasz Nawrot</div>
+                <div class="meta">Senior Technical Specialist
+                </div>
+                <div class="description">Lukasz Nawrot description.</div>
+              </div>
+              <div class="extra content">
+                <div class="ui list">
+                  <div class="item">
+                    <i class="green phone circular icon"></i>
+                    <div class="content middle aligned">+41 321 8040</div>
+                  </div>
+                  <div class="item">
+                    <i class="red marker circular icon"></i>
+                    <div class="content middle aligned">Bau 663 - 2.20 <i class="flag pl"></i></div>
+                  </div>
+                  <div class="item">
+                    <i class="blue mail circular icon"></i>
+                    <div class="content middle aligned">
+                      <a href="mailto:Lukasz.Nawrot@roche.com">Lukasz.Nawrot@roche.com</a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <script src="https://apis.google.com/js/platform.js" async defer></script>
+                    <g:hangout render="createhangout" invites="[{ id : 'Lukasz.Nawrot@roche.com', invite_type : 'EMAIL' }]">
+                    </g:hangout>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="./images/hibellm.jpg">
+              </div>
+              <div class="content">
+                <div class="header">Marcus Hibell</div>
+                <div class="meta">Senior Technical Specialist
+                </div>
+                <div class="description">Marcus small description.</div>
+              </div>
+              <div class="extra content">
+                <div class="ui list">
+                  <div class="item">
+                    <i class="green phone circular icon"></i>
+                    <div class="content middle aligned">+41 321 8040</div>
+                  </div>
+                  <div class="item">
+                    <i class="red marker circular icon"></i>
+                    <div class="content middle aligned">Bau 663 - 2.20 <i class="flag pl"></i></div>
+                  </div>
+                  <div class="item">
+                    <i class="blue mail circular icon"></i>
+                    <div class="content middle aligned">
+                      <a href="mailto:marcus.hibell@roche.com">marcus.hibell@roche.com</a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <script src="https://apis.google.com/js/platform.js" async defer></script>
+                    <g:hangout render="createhangout" invites="[{ id : 'marcus.hibell@roche.com', invite_type : 'EMAIL' }]">
+                    </g:hangout>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div><!--MDH PEOPLE PL-->
 
 
 
 
 </div><!-- END DIV OF MAIN CONTENT-->
+<!--SCRIPTS TO RUN-->
+<script type="text/javascript">
+
+$('.tabular.menu .item').tab();
+
+</script>
   </body>
 </html>
