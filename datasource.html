@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+
+    <!--TABLESORT-->
+    <script src="./tablesort.js"></script>
   </head>
 
   <!--MAIN PAGE CONTENT-->
@@ -30,10 +33,10 @@
 
 
       <div id="context1">
-        <div class="ui secondary menu">
-          <a class="item" data-tab="first">Real World Data Sources</a>
+        <div class="ui secondary menu blue">
+          <a class="item active" data-tab="first">Real World Data Sources</a>
           <a class="item" data-tab="second">Dictionaires</a>
-          <a class="item active" data-tab="third">Other</a>
+          <a class="item " data-tab="third">Other</a>
         </div>
         <div class="ui tab segment" data-tab="first">
           <div class="ui top attached tabular menu">
@@ -41,8 +44,120 @@
             <a class="item" data-tab="first/b">IMSEU</a>
             <a class="item" data-tab="first/c">CCAE</a>
           </div>
-          <div class="ui bottom attached active tab segment" data-tab="first/a">1A</div>
-          <div class="ui bottom attached tab segment" data-tab="first/b">1B</div>
+          <!--CPRD-->
+          <div class="ui bottom attached active tab segment padded blue" data-tab="first/a">
+
+            <!--ACCESS HEADER-->
+            <div class="ui segment tertiary green inverted">
+              <a class="item blue"><i class="flag eu" ></i>Server</a>
+              You have access
+            </div>
+            <!--CARDS-->
+            <div class="ui cards">
+              <div class="ui card">
+                <div class="content">
+                  <div class="ui three column label top right attached grid fluid">
+                    <a class="item"><i class="icon green check green square"></i>Access</a>
+                    <a class="item"><i class="icon database orange"></i>Teradata</a>
+                  </div>
+                  <div class="header">2017 Jan</div>
+                  <div class="meta">Batch title</div>
+                  <div class="description">This is the batch description</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui two buttons">
+                    <div class="ui basic green button">Notes</div>
+                    <div class="ui basic red button">Documentation</div>
+                  </div>
+                  <a href="http://rwdhelp.roche.com/rwd" target="_blank">
+                    <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
+                  </a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="ui three column label top right attached grid fluid">
+                    <a class="item"><i class="icon red minus square"></i>No Access</a>
+                    <a class="item"><i class="flag us"></i>Server</a>
+                    <a class="item"><i class="icon-hadoop" style="color:blue"> HIVE</i></a>
+                  </div>
+                  <div class="header">2017 Jan</div>
+                  <div class="meta">Friends of Veronika</div>
+                  <div class="description">This is the batch description</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui two buttons">
+                    <div class="ui basic green button">Notes</div>
+                    <div class="ui basic red button">Documentation</div>
+                  </div>
+                  <a href="mailto:mdh-d@gene.com?subject=Request for information">
+                    <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
+                  </a>
+                </div>
+              </div>
+            </div><!--END OF CARDS-->
+
+          </div>
+          <div class="ui bottom attached tab segment padded" data-tab="first/b">
+            <!--ACCESS HEADER-->
+            <div class="ui segment tertiary red inverted padded">
+              <div class="ui grid">
+            <div class="ui four columns">
+              <a class="item blue"><i class="flag eu" ></i>Server</a>
+              You do not have access
+            </div>
+              <a href="http://rwdhelp.roche.com/rwd" target="_blank">
+                <div class="ui column bottom attached yellow button mini"><i class="add icon"></i>Request access</div>
+              </a>
+            </div>
+          </div>
+
+            <!--CARDS-->
+            <div class="ui cards">
+              <div class="ui card">
+                <div class="content">
+                  <div class="ui three column label top right attached grid fluid">
+                    <a class="item"><i class="icon green check green square"></i>Access</a>
+                    <a class="item"><i class="icon database orange"></i>Teradata</a>
+                  </div>
+                  <div class="header">2017 Jan</div>
+                  <div class="meta">Batch title</div>
+                  <div class="description">This is the batch description</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui two buttons">
+                    <div class="ui basic green button">Notes</div>
+                    <div class="ui basic red button">Documentation</div>
+                  </div>
+                  <a href="http://rwdhelp.roche.com/rwd" target="_blank">
+                    <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
+                  </a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="ui three column label top right attached grid fluid">
+                    <a class="item"><i class="icon red minus square"></i>No Access</a>
+                    <a class="item"><i class="flag us"></i>Server</a>
+                    <a class="item"><i class="icon-hadoop" style="color:blue"> HIVE</i></a>
+                  </div>
+                  <div class="header">2017 Jan</div>
+                  <div class="meta">Friends of Veronika</div>
+                  <div class="description">This is the batch description</div>
+                </div>
+                <div class="extra content">
+                  <div class="ui two buttons">
+                    <div class="ui basic green button">Notes</div>
+                    <div class="ui basic red button">Documentation</div>
+                  </div>
+                  <a href="mailto:mdh-d@gene.com?subject=Request for information">
+                    <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
+                  </a>
+                </div>
+              </div>
+            </div><!--END OF CARDS-->
+
+          </div>
           <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
         </div>
         <div class="ui tab segment" data-tab="second">
@@ -85,6 +200,47 @@
       </div>
 
 
+Experimental display of table data
+      <table class="ui sortable celled table">
+        <thead>
+          <tr>
+            <th>Batch</th>
+            <th>Title</th>
+            <th class="sorted descending">Valid Start</th>
+            <th>Valid End</th>
+            <th>Data Dictionary</th>
+            <th>Batch Documentation</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="positive" style="background-color:lightgreen!important">JAN 2017</td>
+            <td class="positive" style="background-color:lightgreen!important">The batch title goes here</td>
+            <td class="warning" style="background-color:lightgreen!important">12JAN2017:12.12</td>
+            <td class="positive" style="background-color:lightgreen!important">31DEC9999:23:59</td>
+            <td class="positive" style="background-color:lightgreen!important"><i></td>
+            <td class="center aligned" style="background-color:lightgreen!important"><a href="#"><i class="ui icon file"></i></a></td>
+            <td class="center aligned" ><a href="#" class="blue">Latest</td>
+        </tr>
+        <tr>
+          <td class="positive" style="background-color:lightgray!important">JUL 2016</td>
+          <td class="positive" style="background-color:lightgray!important">The batch title goes here</td>
+          <td class="warning" style="background-color:lightgray!important">12JAN2017:12.12</td>
+          <td class="positive" style="background-color:lightgray!important">31DEC9999:23:59</td>
+          <td class="positive" style="background-color:lightgray!important"><i></td>
+          <td class="center aligned" style="background-color:lightgray!important"><a href="#"><i class="ui icon file"></i></a></td>
+        </tr>
+        <tr>
+          <td class="positive" style="background-color:lightgray!important">JAN 2016</td>
+          <td class="positive" style="background-color:lightgray!important">The batch title goes here</td>
+          <td class="warning" style="background-color:lightgray!important">12JAN2017:12.12</td>
+          <td class="positive" style="background-color:lightgray!important">31DEC9999:23:59</td>
+          <td class="positive" style="background-color:lightgray!important"><i></td>
+          <td class="center aligned" style="background-color:lightgray!important"><a href="#"><i class="ui icon file"></i></a></td>
+          <td class="center aligned"><a class="item"><i class="icon-hadoop" style="color:blue">HIVE</i></a></td>
+        </tr>
+      </tbody>
+      </table>
 
 
 
@@ -116,50 +272,6 @@
 
 
 
-      <div class="ui cards">
-        <div class="card">
-          <div class="content">
-            <div class="ui three column label top right attached grid fluid">
-              <a class="item"><i class="icon green check green square"></i>Access</a>
-              <a class="item"><i class="flag eu" ></i>Server</a>
-              <a class="item"><i class="icon database orange"></i>Teradata</a>
-            </div>
-            <div class="header">2017 Jan</div>
-            <div class="meta">Friends of Veronika</div>
-            <div class="description">This is the batch description</div>
-          </div>
-          <div class="extra content">
-            <div class="ui two buttons">
-              <div class="ui basic green button">Notes</div>
-              <div class="ui basic red button">Documentation</div>
-            </div>
-            <a href="http://rwdhelp.roche.com/rwd" target="_blank">
-              <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
-            </a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            <div class="ui three column label top right attached grid fluid">
-              <a class="item"><i class="icon red minus square"></i>No Access</a>
-              <a class="item"><i class="flag us"></i>Server</a>
-              <a class="item"><i class="icon-hadoop" style="color:blue"> HIVE</i></a>
-            </div>
-            <div class="header">2017 Jan</div>
-            <div class="meta">Friends of Veronika</div>
-            <div class="description">This is the batch description</div>
-          </div>
-          <div class="extra content">
-            <div class="ui two buttons">
-              <div class="ui basic green button">Notes</div>
-              <div class="ui basic red button">Documentation</div>
-            </div>
-            <a href="mailto:mdh-d@gene.com?subject=Request for information">
-              <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
-            </a>
-          </div>
-        </div>
-      </div>
 
 
 
@@ -176,6 +288,8 @@ $('#context2 .menu .item')
   context: 'parent'
 })
 ;
+
+$('table').tablesort()
 </script>
   </body>
 </html>
