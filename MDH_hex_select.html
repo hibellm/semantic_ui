@@ -24,15 +24,15 @@
     padding: 0;
 }
 body {
-    background: rgba(255,255,255,1.0);
+    background: #FFF;
 }
 .MDH-h1 {
-    font-family: Roboto;
-    font-size: 3.0em;
+    font-family: lato;
+    font-size: 4.0em;
     font-weight: bold;
     line-height: 2.0em;
     font-style: normal;
-	color: rgba(255,  0,  0,1.0);
+	  color: rgba(0,  0,  0,1.0);
 }
 .MDH-h3 {
     font-family: Roboto;
@@ -40,7 +40,7 @@ body {
     font-weight: bold;
     line-height: 1.0em;
     font-style: italic;
-	color: rgba(255,  0,  0,1.0);
+	  color: rgba(0,  0,  0,1.0);
 }
 #hexGrid {
     overflow: hidden;
@@ -76,7 +76,7 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    color: #aaa;/*ICON COLOR*/
+    color: #fff;/*ICON COLOR*/
     overflow: hidden;
     -webkit-transform: skewY(-30deg) rotate(60deg);
         -ms-transform: skewY(-30deg) rotate(60deg);
@@ -92,21 +92,25 @@ body {
     margin: 0 auto;
 }
 
+/*THE SLIDING COLOR PARTS*/
 .hex h1, .hex p {
     width: 102%;
     left:-1%; /* prevent line on the right where background doesn't cover image */
     padding: 5%;
     box-sizing:border-box;
-    background-color: rgba(0, 128, 128, 0.8);
+    background-color: rgba(33,133,208,0.8);/*#2185D0;*/
+    color:rgba(0, 0, 0, 1.0);
     font-weight: 300;
+    -webkit-font-smoothing: antialiased;
     -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
             transition:          transform .2s ease-out, opacity .3s ease-out;
 }
 .hex h1 {
-    bottom: 50%;
+    bottom: 43%;
     padding-top:50%;
-    font-size: 1.5em;
+    font-size: 2.5em;
     z-index: 1;
+    -webkit-font-smoothing: antialiased;
     -webkit-transform:translateY(-100%) translatez(-1px);
         -ms-transform:translateY(-100%) translatez(-1px);
             transform:translateY(-100%) translatez(-1px);
@@ -123,6 +127,7 @@ body {
 .hex p {
     top: 50%;
     padding-bottom:50%;
+    -webkit-font-smoothing: antialiased;transform: perspective(1px) scale(1.1);
     -webkit-transform:translateY(100%) translatez(-1px);
         -ms-transform:translateY(100%) translatez(-1px);
             transform:translateY(100%) translatez(-1px);
@@ -132,6 +137,7 @@ body {
 /*** HOVER EFFECT  **********************************************************************/
 .hexIn:hover h1, .hexIn:focus h1,
 .hexIn:hover p, .hexIn:focus p{
+  -webkit-font-smoothing: antialiased;
     -webkit-transform:translateY(0%) translatez(-1px);
         -ms-transform:translateY(0%) translatez(-1px);
             transform:translateY(0%) translatez(-1px);
@@ -350,77 +356,71 @@ corresponding value from the list below*/
   </div>
 
 
+<div class="ui centered grid">
+  <div class="column">
 
-
-
-<div class="segment">
        <ul id="hexGrid">
+
+         <li class="hex"></li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/DataHub+FAQ" target="_parent">
                     <i class=" hexaf fa fa-question-circle blu3" aria-hidden="true"></i>
-                   <h1>FAQ</h1>
-                   <p>Frequently Asked questions</p>
+                    <h1>FAQ</h1><p>Frequently Asked questions</p>
                 </a>
             </li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Latest+NEWS" target="_parent">
                     <i class=" hexaf fa fa-newspaper-o blu3" aria-hidden="true"></i>
-                    <h1>News</h1>
-                    <p>Latest News</p>
+                    <h1>News</h1><p>Latest News</p>
                 </a>
             </li>
+            <li class="hex"></li>
+            <li class="hex"></li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Database+Portal" target="_parent">
                     <i class=" hexaf fa fa-database blu3" aria-hidden="true"></i>
-                   <h1>Database</h1>
-                   <p>Information about the Data Sources</p>
+                   <h1>Database</h1><p>Information about the Data Sources</p>
                 </a>
+            </li>
+            <li class="hex">
+               <a class="hexIn" href="#"><img src="./images/slaine29.jpg" ></img></a>
             </li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Training+Portal" target="_parent">
                     <i class=" hexaf fa fa-graduation-cap blu3" aria-hidden="true"></i>
-                    <h1>Training</h1>
-                    <p>Increase your Knowledge</p>
+                    <h1>Training</h1><p>Increase your Knowledge</p>
                 </a>
             </li>
+            <li class="hex"></li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Tools+Portal" target="_parent">
                     <i class=" hexaf fa fa-cogs blu3" aria-hidden="true"></i>
-                   <h1>Tools</h1>
-                   <p>Other software </p>
+                   <h1>Tools</h1><p>Other software </p>
                 </a>
             </li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Medical+Data+Hub+and+RWDS+collaboration" target="_parent">
                     <i class=" hexaf fa fa-handshake-o blu3" aria-hidden="true"></i>
-                    <h1>Partnerships</h1>
-                    <p>The RWD community</p>
+                    <h1>Partnerships</h1><p>The RWD community</p>
                 </a>
             </li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Medical+Data+Hub+Portal" target="_parent">
                     <i class=" hexaf fa fa-user-md blu3" aria-hidden="true"></i>
-                    <h1>Medical<br>Data Hub</h1>
-                    <p>MDH portal</p>
+                    <h1>Medical<br>Data Hub</h1><p>MDH portal</p>
                 </a>
             </li>
             <li class="hex">
                 <a class="hexIn bg-grn1" href="http://rochewiki.roche.com/confluence/display/DataHub/Code+share+portal" target="_parent">
                     <i class=" hexaf fa fa-file-code-o blu3" aria-hidden="true"></i>
-                    <h1>Code Share</h1>
-                    <p>Good code needs to be shared</p>
+                    <h1>Code Share</h1><p>Good code needs to be shared</p>
                 </a>
             </li>
-            <li class="hex">
-                <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/home/help" target="_parent">
-                    <i class="hexaf fa fa-medkit red3" aria-hidden="true"></i>
-                    <h1>Help</h1>
-                    <p>Everyone needs help now and then</p>
-                </a>
-            </li>
-        </ul>
 
+        </ul>
+  </div>
 </div>
 </div>
+
 </body>
 </html>
