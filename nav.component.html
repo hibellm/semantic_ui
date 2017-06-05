@@ -1,0 +1,46 @@
+<div class="ui container">
+  <!--MENU-->
+  <div class="ui secondary large pointing menu blue">
+    <a class="item active" id="mi1" routerLink="/">Home</a>
+    <a class="item" id="mi2" routerLink="/training">Training</a>
+    <a class="item" id="mi3" routerLink="/datasource">Data Sources</a>
+    <a class="item" id="mi4" routerLink="/about">About</a>
+    <a class="item" id="mi5" routerLink="/item">Item testing</a>
+    <a class="item" id="mi6" routerLink="/organ">Organogram</a>
+    <a class="item" id="mi7" routerLink="/landing">Landing Page</a>
+    <div class="right menu">
+      <a class="ui item">Logout</a>
+    </div>
+  </div>
+  <div class="ui segment">
+    <p>breadcrumbs can go here</p>
+  </div>
+</div>
+
+<script>
+  /*MENU HIGHLIGHTING*/
+  $("#mi1").click(function(){
+          $("#mi1").toggleClass("active");
+          $("#mi2").toggleClass("active");
+          $("#mi3").toggleClass("active");
+        })
+  $("#mi2").click(function(){
+          $("#mi2").toggleClass("active");
+          })
+  $("#mi3").click(function(){
+          $("#mi3").toggleClass("active");
+          })
+  /*POPUP*/
+  $('.menu .browse')
+  .popup({
+    inline     : true,
+    hoverable  : true,
+    position   : 'bottom left',
+    delay: {
+      show: 300,
+      hide: 800
+    }
+  })
+;
+  /*$('.ui.modal#test').modal('show');*/
+</script>

@@ -277,32 +277,22 @@ Experimental display of table data
 
 
 
+    </div>
 
+  <script type="text/javascript">
+  $('#context1 .menu .item')
+  .tab({
+    context: $('#context1')
+  })
+  ;
+  $('#context2 .menu .item')
+  .tab({
+    // special keyword works same as above
+    context: 'parent'
+  })
+  ;
 
-
-
-
-
-
-
-
-
-
-</div>
-<script type="text/javascript">
-$('#context1 .menu .item')
-.tab({
-  context: $('#context1')
-})
-;
-$('#context2 .menu .item')
-.tab({
-  // special keyword works same as above
-  context: 'parent'
-})
-;
-
-$('table').tablesort()
-</script>
+  $('table').tablesort()
+  </script>
   </body>
 </html>
