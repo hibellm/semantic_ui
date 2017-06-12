@@ -23,18 +23,25 @@
     margin: 0;
     padding: 0;
 }
-bodytmp {
-  background: #FFF;
+body {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+bodytmp2 {
+
   /* fallback */
   background-color: #2F2727;
-  background-image: url(../images/slaine29.jpg);
+  background-image: url(../images/background.jpg);
 }
-body {
+bodytmp {
     background: #FFF;
 
   /* fallback */
   background-color: #2F2727;
-  background-image: url(../images/slaine29.jpg);
+  background-image: url(../images/background.jpg);
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -118,6 +125,7 @@ ul a{
     margin: 0 auto;
 }
 
+.hextran {opacity:100%}
 /*THE SLIDING COLOR PARTS*/
 .hex h1, .hex p {
     width: 102%;
@@ -391,7 +399,7 @@ corresponding value from the list below*/
 
        <ul id="hexGrid">
 
-         <li class="hex"><a class="hexIn" href="#"></a></li>
+         <li class="hex hextran"><a class="hexIn" href="#"></a></li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/DataHub+FAQ" target="_parent">
                     <i class=" hexaf fa fa-question-circle blu3" aria-hidden="true"></i>
