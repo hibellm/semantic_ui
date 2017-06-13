@@ -42,19 +42,37 @@
         <p>breadcrumbs can go here</p>
       </div>
 
+      <!--OVERLAY EASIER TO WORK WITH THAN THE ARE TAG-->
+      <style> a { border: 3px solid rgba(255,0,0,.1);}
+              a:hover{ border:3px solid rgba(0,0,255,.3); background-color: yellow;opacity:.5;}
+      </style>
+        <div id="mainimgdiv" style="position:relative" >
+          <img src="../images/Environment_diagram.svg" alt="" >
+          <a id="hs1" href="" title="Hadoop Cluster Info" style="display:block; width:65px; height:100px; left: 50px; top: 125px;position:absolute;"></a>
+          <a id="hs2" href="" title="SAS server" style="display:block; width:65px; height:100px; left: 200px; top: 125px;position:absolute;"></a>
+          <a id="hs3" href="" title="Teradata server" style="display:block; width:65px; height:100px; left: 350px; top: 125px;position:absolute;"></a>
+          <a id="hs4" href="" title="Viewpoint server" style="display:block; width:125px; height:32px; left: 360px; top: 140px;position:absolute;"></a>
+          <a id="hs5" href="" title="SAS server" style="display:block; width:65px; height:100px; left: 537px; top: 125px;position:absolute;"></a>
+          <a id="hs6" href="" title="Teradata server" style="display:block; width:65px; height:100px; left: 690px; top: 125px;position:absolute;"></a>
+          <a id="hs7" href="" title="Viewpoint server" style="display:block; width:125px; height:32px; left: 695px; top: 140px;position:absolute;"></a>
+          <a id="hs8" href="" title="BCE server" style="display:block; width:63px; height:100px; left: 890px; top: 125px;position:absolute;"></a>
+
+        </div>
+
       <!--STUFF GOES HERE-->
-      <div class="segment">
-      <img src="../images/Environment_diagram.svg" alt="" usemap="#planetmap">
-      <map name="planetmap">
-        <area class="htest" shape="rect" coords="50,120,105,205" href="sun.htm" alt="Sun">
-        <area shape="rect" coords="190,120,245,205" href="" alt="Mercury">
-        <area shape="rect" coords="330,120,385,205" href="mercur2.htm" alt="Mercury">
-        <area shape="rect" coords="505,120,560,205" href="mercur3.htm" alt="Mercury">
-        <area shape="rect" coords="650,120,705,205" href="mercur4.htm" alt="Mercury">
-        <area shape="rect" coords="840,120,890,205" href="mercur5.htm" alt="Mercury">
-        <area shape="rect" coords="235,250,345,305" href="venus.htm" alt="Venus">
-      </map>
+      <!--div class="segment">
+        <img src="../images/Environment_diagram.svg" alt="" usemap="#servermap">
       </div>
+      <map name="servermap">
+        <area id="hs1" shape="rect" coords="50,100,115,205" href="" title="Hadoop Info" >
+        <area id="hs2" shape="rect" coords="195,110,260,225" href="" title="SAS" >
+        <area id="hs3" shape="rect" coords="330,120,385,205" href="" title="Terdata">
+        <area id="hs4" shape="rect" coords="505,120,560,205" href="" title="SAS">
+        <area id="hs5" shape="rect" coords="650,120,705,205" href="" title="Teradata">
+        <area id="hs6" shape="rect" coords="840,120,890,205" href="" title="BCE">
+      </map>
+    </div-->
+
 
 </div>
 
@@ -68,7 +86,6 @@
       </button>
   </div>
   <div class="image content">
-
     <div class="description">
       <div class="ui header">The Hadoop cluster is a distributed file system, providing analytical ability to very large data.</div>
       <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
@@ -85,15 +102,144 @@
     </div>
   </div>
 </div>
+<!--SERVER 2-->
+<div class="ui modal padding" id="server2">
+  <i class="close icon"></i>
+  <div class="header">SAS server
+    <button class="ui labeled icon button float right small" title="Copy to Clipboard" onClick="ClipBoard();">
+        <i class="icon copy"></i>
+        <span ID="copytext">rkautms01.roche.com </span>
+      </button>
+  </div>
+  <div class="image content">
+    <div class="description">
+      <div class="ui header">The SAS server, can be accessed via SAS Enterise guide or SAS studio</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>This is the ...</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+<!--SERVER 3-->
+<div class="ui modal padding" id="server3">
+  <i class="close icon"></i>
+  <div class="header">Teradata server
+    <button class="ui labeled icon button float right small" title="Copy to Clipboard" onClick="ClipBoard();">
+        <i class="icon copy"></i>
+        <span ID="copytext">rkautms01.roche.com </span>
+      </button>
+  </div>
+  <div class="image content">
+    <div class="description">
+      <div class="ui header">The Teradata server, can be accessed ...</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>This is the ...</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+<!--SERVER 4-->
+<div class="ui modal padding" id="server4">
+  <i class="close icon"></i>
+  <div class="header">Teradata Viewpoint server
+    <button class="ui labeled icon button float right small" title="Copy to Clipboard" onClick="ClipBoard();">
+        <i class="icon copy"></i>
+        <span ID="copytext">rkautms01.roche.com </span>
+      </button>
+  </div>
+  <div class="image content">
+    <div class="description">
+      <div class="ui header">The Viewpoint server, can be accessed via ....</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>This is the ...</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+<!--SERVER 5-->
+<div class="ui modal padding" id="server5">
+  <i class="close icon"></i>
+  <div class="header">SAS server
+    <button class="ui labeled icon button float right small" title="Copy to Clipboard" onClick="ClipBoard();">
+        <i class="icon copy"></i>
+        <span ID="copytext">rkautms01.roche.com </span>
+      </button>
+  </div>
+  <div class="image content">
+    <div class="description">
+      <div class="ui header">The SAS server, can be accessed via SAS Enterise guide or SAS studio</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>This is the ...</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
 
 
-  </body>
+
+
+</body>
+
+
 <script type="text/javascript">
 
-$(".htest").on("click", function(e){
+$("#hs1").on("click", function(e){
     e.preventDefault();
 //alert('test alert');
 $('.ui.modal#server1').modal('show');
+});
+
+$("#hs2").on("click", function(e){
+    e.preventDefault();
+//alert('test alert');
+$('.ui.modal#server2').modal('show');
+});
+$("#hs3").on("click", function(e){
+    e.preventDefault();
+//alert('test alert');
+$('.ui.modal#server3').modal('show');
+});
+$("#hs4").on("click", function(e){
+    e.preventDefault();
+//alert('test alert');
+$('.ui.modal#server4').modal('show');
+});
+$("#hs5").on("click", function(e){
+    e.preventDefault();
+//alert('test alert');
+$('.ui.modal#server5').modal('show');
 });
 
 function ClipBoard()
