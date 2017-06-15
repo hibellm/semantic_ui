@@ -496,7 +496,16 @@ corresponding value from the list below*/
 <!--RAIL-->
 <div class="ui right internal rail">
   <div class="ui segment green">
-    Right Rail Content
+
+    <div class="ui icon message">
+      <i class="inbox icon"></i>  <i class="cross icon close"></i>
+      <div class="content">
+        <div class="header">
+          Have you heard about our mailing list?
+        </div>
+        <p>Get the best news in your e-mail every day.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -504,4 +513,18 @@ corresponding value from the list below*/
 </div>
 
 </body>
+<script type="text/javascript">
+
+/*FOR THE MESSAGES ON THE RIGHT RAIL*/
+$('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
+</script>
+
+
 </html>
