@@ -83,6 +83,8 @@ ul a{
 	height: 70px;
 	margin-bottom: -26px;
 	box-shadow: 4px 4px 9px -4px rgba(0,0,0,0.4);
+  -webkit-font-smoothing: subpixel-antialiased;
+-webkit-transform: translateZ(0) scale(1.0, 1.0);
 	-webkit-transition: all linear .1s;
 	-moz-transition: all linear .1s;
 	transition: all linear .1s;
@@ -101,6 +103,8 @@ ul a{
 	height: 70px;
 	margin-bottom: -26px;
 	box-shadow: 4px 4px 9px -4px rgba(0,0,0,0.4);
+  -webkit-font-smoothing: subpixel-antialiased;
+-webkit-transform: translateZ(0) scale(1.0, 1.0);
 	-webkit-transition: all linear .1s;
 	-moz-transition: all linear .1s;
 	transition: all linear .1s;
@@ -113,6 +117,8 @@ ul a{
     overflow: hidden;
     visibility: hidden;
     outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+    -webkit-font-smoothing: subpixel-antialiased;
+-webkit-transform: translateZ(0) scale(1.0, 1.0);
     -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
         -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
             transform: rotate(-60deg) skewY(30deg) translatez(-1px);
@@ -129,6 +135,8 @@ ul a{
     text-align: center;
     color: #fff;/*ICON COLOR*/
     overflow: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+-webkit-transform: translateZ(0) scale(1.0, 1.0);
     -webkit-transform: skewY(-30deg) rotate(60deg);
         -ms-transform: skewY(-30deg) rotate(60deg);
             transform: skewY(-30deg) rotate(60deg);
@@ -160,7 +168,8 @@ ul a{
     background-color: rgba(33,133,208,0.8);/*#2185D0;*/
     color:rgba(255, 255, 255, 1.0);
     font-weight: 300;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+-webkit-transform: translateZ(0) scale(1.0, 1.0);
     -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
             transition:          transform .2s ease-out, opacity .3s ease-out;
 }
@@ -169,7 +178,8 @@ ul a{
     padding-top:50%;
     font-size: 3.0em;
     z-index: 1;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
     -webkit-transform:translateY(-100%) translatez(-1px) perspective(1px) scale(1.1);
         -ms-transform:translateY(-100%) translatez(-1px) perspective(1px) scale(1.1);
             transform:translateY(-100%) translatez(-1px) perspective(1px) scale(1.1);
@@ -186,7 +196,8 @@ ul a{
 .hex p {
     top: 50%;
     padding-bottom:50%;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
     -webkit-transform:translateY(100%) translatez(-1px) perspective(1px) scale(1.1);
         -ms-transform:translateY(100%) translatez(-1px) perspective(1px) scale(1.1);
             transform:translateY(100%) translatez(-1px) perspective(1px) scale(1.1);
@@ -195,8 +206,8 @@ ul a{
 
 /*** HOVER EFFECT  **********************************************************************/
 .hexIn:hover h1, .hexIn:focus h1,
-.hexIn:hover p, .hexIn:focus p{
-  -webkit-font-smoothing: antialiased;
+.hexIn:hover p, .hexIn:focus p{-webkit-font-smoothing: subpixel-antialiased;
+-webkit-transform: translateZ(0) scale(1.0, 1.0);
     -webkit-transform:translateY(0%) translatez(-1px);
         -ms-transform:translateY(0%) translatez(-1px);
             transform:translateY(0%) translatez(-1px);
@@ -214,7 +225,8 @@ ul a{
     .hex:nth-child(9n+9) {
         margin-top: -4.676%;
         margin-bottom: -4.676%;
-        -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: subpixel-antialiased;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
         -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
             -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
                 transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -253,8 +265,8 @@ ul a{
     .hex:nth-child(7n+7) {
         margin-top: -6.134%;
         margin-bottom: -6.134%;
-        -webkit-font-smoothing: antialiased;
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -webkit-font-smoothing: subpixel-antialiased;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
             -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
                 transform: translateX(50%) rotate(-60deg) skewY(30deg);
     }
@@ -288,8 +300,9 @@ ul a{
     .hex:nth-child(5n+5) {
         margin-top: -8.564%;
         margin-bottom: -8.564%;
-        -webkit-font-smoothing: antialiased;
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -webkit-font-smoothing: subpixel-antialiased;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
+                -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
             -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
                 transform: translateX(50%) rotate(-60deg) skewY(30deg);
     }
@@ -317,7 +330,8 @@ ul a{
     .hex:nth-child(3n+3) {
         margin-top: -13.423%;
         margin-bottom: -13.423%;
-        -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: subpixel-antialiased;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
         -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
             -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
                 transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -380,24 +394,6 @@ corresponding value from the list below*/
     top:0px;
     left: 0;
 }
-/*FOR VIDEO*/
-.fullscreen-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-}
-
-.fullscreen-bg__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 </style>
 
 <body>
@@ -429,11 +425,11 @@ corresponding value from the list below*/
   </div>
 
 <div class="row">
-  <div class="column">
+  <div class="column centered">
 
        <ul id="hexGrid">
 
-         <li class="hex hextran"><a class="hexIn" href="#"></a></li>
+         <li class="hex hextran"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li>
             <li class="hex">
                 <a class="hexIn" href="http://ridlv717002.ind.roche.com/" target="_blank">
                     <i class="hexaf fa fa-comments-o blu3" aria-hidden="true"></i>
@@ -446,8 +442,8 @@ corresponding value from the list below*/
                     <h1>News</h1><p>Latest News</p>
                 </a>
             </li>
-            <li class="hex"><a class="hexIn" href="#"></a></li>
-            <li class="hex"></li>
+            <li class="hex"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li>
+            <li class="hex"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li>
             <li class="hex">
                 <a class="hexIn" href="./datasource.html" target="_parent">
                     <i class=" hexaf fa fa-database blu3" aria-hidden="true"></i>
@@ -463,7 +459,7 @@ corresponding value from the list below*/
                     <h1>Training</h1><p>Increase your Knowledge</p>
                 </a>
             </li>
-            <li class="hex"></li>
+            <li class="hex"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li>
             <li class="hex">
                 <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Tools+Portal" target="_parent">
                     <i class=" hexaf fa fa-cogs blu3" aria-hidden="true"></i>
@@ -488,6 +484,7 @@ corresponding value from the list below*/
                     <h1>Code Share</h1><p>Good code needs to be shared</p>
                 </a>
             </li>
+            <li class="hex"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li>
 
         </ul>
   </div>
@@ -495,9 +492,10 @@ corresponding value from the list below*/
 </div>
 <!--RAIL-->
 <div class="ui right internal rail">
-  <div class="ui segment green">
+  <div class="ui segment" style="background-color:transparent!important">
 
-    <div class="ui icon message">
+    <!--MESSAGE 1-->
+    <div class="ui icon message green tiny">
       <i class="inbox icon"></i>  <i class="cross icon close"></i>
       <div class="content">
         <div class="header">
@@ -506,8 +504,54 @@ corresponding value from the list below*/
         <p>Get the best news in your e-mail every day.</p>
       </div>
     </div>
+    <!--MESSAGE 2-->
+    <div class="ui icon message blue tiny">
+      <i class="calendar icon"></i>  <i class="cross icon close"></i>
+      <div class="content">
+        <div class="header">
+          Teradata downtime
+        </div>
+        <p>Teradata will be unavailable 25DEC2017-2JAN2018</p>
+      </div>
+    </div>
+    <!--MESSAGE 3-->
+    <div class="ui icon message purple tiny">
+      <i class="database icon"></i>  <i class="icon close"></i>
+      <div class="content">
+        <div class="header">
+          IPSOS - new data available
+        </div>
+        <p>New IPSOS data is available - please see <a href="#" onclick="$('.ui.modal#ipsosupdt').modal('show');">here</a> for details</p>
+      </div>
+    </div>
+    <!--MESSAGE 4-->
+    <div class="ui icon message purple tiny">
+      <i class="database icon"></i>  <i class="icon close"></i>
+      <div class="content">
+        <div class="header">
+          CPRD - New batch Loading!
+        </div>
+        <div class="ui purple progress " data-value="1" data-total="5" id="example6">
+           <div class="label"><a href="JIRA TICKET">MDH-123</a></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </div>
+
+<!--MODAL DIALOGS-->
+<div class="ui modal" id="ipsosupdt">
+  <i class="close icon"></i>
+  <div class="header">IPSOS update</div>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  </div>
+</div>
+
 
 
 </div>
@@ -524,6 +568,27 @@ $('.message .close')
     ;
   })
 ;
+/*NEED TO BE FIXED - NOT WORKING AND I DONT KNOW WHY
+$('.message .close')
+  .on('click', function() {
+   if(localStorage.blue !== '1') {
+     $(this)
+       .closest('.message')
+       .transition('fade');
+       localStorage.blue='1';
+    }
+});
+*/
+
+
+/*FOR MODAL LINK IN MEASSGES
+$('.ui.modal#ipsosupdt').modal('show');*/
+$('#example6')
+  .progress('increment')
+;
+
+
+
 </script>
 
 
