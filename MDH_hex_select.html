@@ -495,7 +495,7 @@ corresponding value from the list below*/
   <div class="ui segment" style="background-color:transparent!important">
 
     <!--MESSAGE 1-->
-    <div class="ui icon message green tiny">
+    <div class="ui icon message green tiny" id="msg1">
       <i class="inbox icon"></i>  <i class="cross icon close"></i>
       <div class="content">
         <div class="header">
@@ -505,7 +505,7 @@ corresponding value from the list below*/
       </div>
     </div>
     <!--MESSAGE 2-->
-    <div class="ui icon message blue tiny">
+    <div class="ui icon message blue tiny" id="msg2">
       <i class="calendar icon"></i>  <i class="cross icon close"></i>
       <div class="content">
         <div class="header">
@@ -515,7 +515,7 @@ corresponding value from the list below*/
       </div>
     </div>
     <!--MESSAGE 3-->
-    <div class="ui icon message purple tiny">
+    <div class="ui icon message purple tiny" id="msg3">
       <i class="database icon"></i>  <i class="icon close"></i>
       <div class="content">
         <div class="header">
@@ -525,7 +525,7 @@ corresponding value from the list below*/
       </div>
     </div>
     <!--MESSAGE 4-->
-    <div class="ui icon message purple tiny">
+    <div class="ui icon message purple tiny" id="msg4">
       <i class="database icon"></i>  <i class="icon close"></i>
       <div class="content">
         <div class="header">
@@ -564,10 +564,29 @@ $('.message .close')
   .on('click', function() {
     $(this)
       .closest('.message')
-      .transition('fade')
-    ;
+      .transition('fade');
+      /*setCookie(toClose, "closed", 365);*/
   })
 ;
+/*Not working but seems to be a good method http://www.cssnewbie.com/message-box-javascript-css/#.WUaoU-t96Uk
+function setCookie(cName, value, expiredays) {
+	var expDate = new Date();
+	expDate.setDate(expDate.getDate()+expiredays);
+	document.cookie=cName + "=" + escape(value) +
+	";expires=" + expDate.toGMTString();
+}
+function loadMsg(msgClass) {
+	msg = document.getElementsByTagName("div");
+	for (i=0; i<msg.length; i++) {
+		if(msg[i].className == message) {
+			if(document.cookie.indexOf(msg[i].id) == -1) {
+				msg[i].style.display = "block";
+			}
+		}
+	}
+}
+*/
+
 /*NEED TO BE FIXED - NOT WORKING AND I DONT KNOW WHY
 $('.message .close')
   .on('click', function() {
