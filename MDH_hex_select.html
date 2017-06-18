@@ -17,7 +17,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
 
 </head>
-
+<script>
+function closeBox(toClose) {
+   document.getElementById(toClose).style.display = "none";
+   setCookie(toClose, "closed", 365);
+}
+function setCookie(cName, value, expiredays) {
+   var expDate = new Date();
+   expDate.setDate(expDate.getDate()+expiredays);
+   document.cookie=cName + "=" + escape(value) +
+   ";expires=" + expDate.toGMTString();
+}
+function loadMsg(msgClass) {
+   msg = document.getElementsByTagName("div");
+   for (i=0; i<msg.length; i++) {
+      if(msg[i].className == msgClass) {
+         if(document.cookie.indexOf(msg[i].id) == -1) {
+            msg[i].style.display = "block";
+         }
+      }
+   }
+}
+</script>
 <style>
 * {
     margin: 0;
@@ -61,7 +82,7 @@ bodytmp {
     width: 90%;
     margin: 0 auto;
     padding:0.866% 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: Lato;
     font-size: 15px;
 }
 #hexGrid:after {
@@ -82,7 +103,7 @@ ul a{
 	color: #333;
 	height: 70px;
 	margin-bottom: -26px;
-	box-shadow: 4px 4px 9px -4px rgba(0,0,0,0.4);
+	/*box-shadow: 4px 4px 9px -4px rgba(0,0,0,0.4);*/
   -webkit-font-smoothing: subpixel-antialiased;
 -webkit-transform: translateZ(0) scale(1.0, 1.0);
 	-webkit-transition: all linear .1s;
@@ -206,7 +227,8 @@ ul a{
 
 /*** HOVER EFFECT  **********************************************************************/
 .hexIn:hover h1, .hexIn:focus h1,
-.hexIn:hover p, .hexIn:focus p{-webkit-font-smoothing: subpixel-antialiased;
+.hexIn:hover p, .hexIn:focus p{
+-webkit-font-smoothing: subpixel-antialiased;
 -webkit-transform: translateZ(0) scale(1.0, 1.0);
     -webkit-transform:translateY(0%) translatez(-1px);
         -ms-transform:translateY(0%) translatez(-1px);
@@ -394,9 +416,15 @@ corresponding value from the list below*/
     top:0px;
     left: 0;
 }
+
+/*FOR THE MESSAGES*/
+.msgbox {
+	display: none;
+}
+
 </style>
 
-<body>
+<body onload="loadMsg('msgbox');">
 
 <div class="ui container">
   <!--MENU-->
@@ -442,7 +470,13 @@ corresponding value from the list below*/
                     <h1>News</h1><p>Latest News</p>
                 </a>
             </li>
-            <li class="hex"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li>
+            <!--li class="hex"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li-->
+            <li class="hex">
+                <a class="hexIn" href="./environment.html" target="_parent">
+                    <i class=" hexaf fa fa-server blu3" aria-hidden="true"></i>
+                   <h1>Servers</h1><p>Server landscape</p>
+                </a>
+            </li>
             <li class="hex"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li>
             <li class="hex">
                 <a class="hexIn" href="./datasource.html" target="_parent">
@@ -495,7 +529,7 @@ corresponding value from the list below*/
   <div class="ui segment" style="background-color:transparent!important">
 
     <!--MESSAGE 1-->
-    <div class="ui icon message green tiny" id="msg1">
+    <div class="ui icon message green tiny msgbox" id="message-1">
       <i class="inbox icon"></i>  <i class="cross icon close"></i>
       <div class="content">
         <div class="header">
@@ -505,7 +539,7 @@ corresponding value from the list below*/
       </div>
     </div>
     <!--MESSAGE 2-->
-    <div class="ui icon message blue tiny" id="msg2">
+    <div class="ui icon message blue tiny msgbox" id="message-2">
       <i class="calendar icon"></i>  <i class="cross icon close"></i>
       <div class="content">
         <div class="header">
@@ -515,7 +549,7 @@ corresponding value from the list below*/
       </div>
     </div>
     <!--MESSAGE 3-->
-    <div class="ui icon message purple tiny" id="msg3">
+    <div class="ui icon message purple tiny msgbox" id="message-3">
       <i class="database icon"></i>  <i class="icon close"></i>
       <div class="content">
         <div class="header">
@@ -525,7 +559,7 @@ corresponding value from the list below*/
       </div>
     </div>
     <!--MESSAGE 4-->
-    <div class="ui icon message purple tiny" id="msg4">
+    <div class="ui icon message purple tiny msgbox" id="message-4">
       <i class="database icon"></i>  <i class="icon close"></i>
       <div class="content">
         <div class="header">
@@ -564,28 +598,13 @@ $('.message .close')
   .on('click', function() {
     $(this)
       .closest('.message')
-      .transition('fade');
-      /*setCookie(toClose, "closed", 365);*/
+      .transition('fade')
+      document.getElementById(toClose).style.display = "none"
+      setCookie(toClose, "closed", 365);
   })
 ;
-/*Not working but seems to be a good method http://www.cssnewbie.com/message-box-javascript-css/#.WUaoU-t96Uk
-function setCookie(cName, value, expiredays) {
-	var expDate = new Date();
-	expDate.setDate(expDate.getDate()+expiredays);
-	document.cookie=cName + "=" + escape(value) +
-	";expires=" + expDate.toGMTString();
-}
-function loadMsg(msgClass) {
-	msg = document.getElementsByTagName("div");
-	for (i=0; i<msg.length; i++) {
-		if(msg[i].className == message) {
-			if(document.cookie.indexOf(msg[i].id) == -1) {
-				msg[i].style.display = "block";
-			}
-		}
-	}
-}
-*/
+
+/*Not working but seems to be a good method http://www.cssnewbie.com/message-box-javascript-css/#.WUaoU-t96Uk*/
 
 /*NEED TO BE FIXED - NOT WORKING AND I DONT KNOW WHY
 $('.message .close')
