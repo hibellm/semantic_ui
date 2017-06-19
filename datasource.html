@@ -52,7 +52,20 @@
             <div class="ui segment tertiary green inverted">
               <a class="item blue"><i class="flag eu" ></i>Server</a>You have access
             </div>
-            <div class="ui grid segment blue tertiary inverted" id="cprd_v">
+            <!--SHORT HEADING-->
+            <div class="ui segment blue tertiary inverted" id="cprd_sh">
+              <div class="ui two column grid">
+              <div class="four wide column">
+                <h1>CPRD</h1>
+              </div>
+              <div class="twelve wide column"><p>Clinical Practice Research Link
+                <a class="ui purple right corner label" href="">
+                <i class="ui icon plus"></i></a>
+              </div>
+              </div>
+            </div>
+            <!--FULL HEADING-->
+            <div class="ui grid segment blue tertiary inverted" id="cprd_fh">
               <div class="four wide column">
                 <h1>CPRD</h1>
                 <div class="column"><p>Clinical Practice Research Link
@@ -69,26 +82,42 @@
 
             <!--CARDS-->
             <div class="ui cards">
+              <!--CARD1-->
               <div class="ui card">
                 <div class="content">
-                  <div class="ui three column label top right attached grid fluid">
-                    <a class="item"><i class="icon green check green square"></i>Access</a>
+                  <div class="ui two column label top right attached grid fliud padded">
+                    <a class="item"><i class="icon file blue"></i>ER Diagram</a>
+                    <a class="item"><i class="icon book blue"></i>Dictionary</a>
+                    <a class="item"><i class="icon database orange"></i>Teradata</a>
                     <a class="item"><i class="icon database orange"></i>Teradata</a>
                   </div>
-                  <div class="header">2017 Jan</div>
-                  <div class="meta">Batch title</div>
-                  <div class="description">This is the batch description</div>
+                  <div class="ui section divider"></div>
+                  <div class="header">2017 Jul</div>
+                  <div class="meta">July 2017 data load</div>
+                  <div class="description">This is the batch description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                    <table class="ui sortable celled table compact small center">
+                      <thead>
+                        <tr>
+                          <th>Valid Start</th>
+                          <th>Valid End</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td style="background-color:lightgreen!important">12JAN2017:12.12</td>
+                        <td style="background-color:lightgreen!important">31DEC9999:23:59</td>
+                      </tr>
+                    </tbody>
+                    </table>
                 </div>
                 <div class="extra content">
                   <div class="ui two buttons">
                     <div class="ui basic green button">Notes</div>
                     <div class="ui basic red button">Documentation</div>
                   </div>
-                  <a href="http://rwdhelp.roche.com/rwd" target="_blank">
-                    <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
-                  </a>
                 </div>
               </div>
+              <!--CARD2-->
               <div class="card">
                 <div class="content">
                   <div class="ui three column label top right attached grid fluid">
@@ -97,17 +126,14 @@
                     <a class="item"><i class="icon-hadoop" style="color:blue"> HIVE</i></a>
                   </div>
                   <div class="header">2017 Jan</div>
-                  <div class="meta">Friends of Veronika</div>
-                  <div class="description">This is the batch description</div>
+                  <div class="meta">January 2017 data load for CPRD</div>
+                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                 </div>
                 <div class="extra content">
                   <div class="ui two buttons">
                     <div class="ui basic green button">Notes</div>
                     <div class="ui basic red button">Documentation</div>
                   </div>
-                  <a href="mailto:mdh-d@gene.com?subject=Request for information">
-                    <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
-                  </a>
                 </div>
               </div>
             </div><!--END OF CARDS-->
@@ -144,9 +170,6 @@
                     <div class="ui basic green button">Notes</div>
                     <div class="ui basic red button">Documentation</div>
                   </div>
-                  <a href="http://rwdhelp.roche.com/rwd" target="_blank">
-                    <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
-                  </a>
                 </div>
               </div>
               <div class="card">
@@ -165,9 +188,6 @@
                     <div class="ui basic green button">Notes</div>
                     <div class="ui basic red button">Documentation</div>
                   </div>
-                  <a href="mailto:mdh-d@gene.com?subject=Request for information">
-                    <div class="ui bottom attached red button"><i class="add icon"></i>Request access</div>
-                  </a>
                 </div>
               </div>
             </div><!--END OF CARDS-->
