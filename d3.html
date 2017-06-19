@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 example</title>
+    <!--CDN for Semontic UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+
+    <link rel="stylesheet" href="./css/organ.css">
+    <link rel="stylesheet" type="text/css" href="./css/sequence.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+
+    <script src="//d3js.org/d3.v4.min.js"></script>
+  </head>
+
+  <!--MAIN PAGE CONTENT-->
+  <body>
+
+    <div class="ui container">
+      <!--MENU-->
+      <div class="ui secondary large pointing menu blue">
+        <a class="item" id="mi1" href="./index.html">Home</a>
+        <a class="item" id="mi2" href="./training.html">Training</a>
+        <a class="item" id="mi3" href="./datasource.html">Data Sources</a>
+        <a class="item active" id="mi4" href="./about.html">About</a>
+        <div class="right menu">
+          <a class="ui item">Logout</a>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>breadcrumbs can go here</p>
+      </div>
+
+      <!--STUFF GOES HERE-->
+      <div class="ui segment">
+        <div class="ui page grid">
+          <div class="column">
+
+            <div id="sequence"></div>
+                  <div id="chart">
+                    <div id="explanation" style="visibility: hidden;">
+                      <span id="percentage"></span><br/>
+                      of visits begin with this sequence of pages
+                    </div>
+                  </div>
+                </div>
+                <div id="sidebar">
+                  <input type="checkbox" id="togglelegend"> Legend<br/>
+                  <div id="legend" style="visibility: hidden;"></div>
+                </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+   </div>
+
+   <script type="text/javascript" src="sequence.js"></script>
+   <script type="text/javascript">
+     // Hack to make this example display correctly in an iframe on bl.ocks.org
+     d3.select(self.frameElement).style("height", "700px");
+ </script>
+  </body>
+</html>
