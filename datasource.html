@@ -15,7 +15,7 @@
 
   <!--MAIN PAGE CONTENT-->
   <body>
-
+    <!--MAIN CONTAINER-->
     <div class="ui container">
       <!--MENU-->
       <div class="ui secondary large pointing menu blue">
@@ -50,51 +50,88 @@
 
             <!--ACCESS HEADER-->
             <div class="ui segment tertiary green inverted">
-              <a class="item blue"><i class="flag eu" ></i>Server</a>You have access
+              <a class="item blue"><i class="flag eu" ></i>Server</a> You have access
             </div>
-            <!--SHORT HEADING-->
-            <div class="ui segment blue tertiary inverted" id="cprd_sh">
-              <div class="ui two column grid">
-              <div class="four wide column">
-                <h1>CPRD</h1>
-              </div>
-              <div class="twelve wide column"><p>Clinical Practice Research Link
-                <a class="ui purple right corner label" href="">
-                <i class="ui icon plus"></i></a>
-              </div>
+
+            <!--HEADING-->
+            <div class="ui inverted blue tertiary segment">
+              <div class="ui inverted accordion wide">
+                <div class="active title">
+                  <div class="grid two column fluid">
+                    <div class="four column wide">
+                      <h1 class="ui inverted">CPRD
+                      </h1>
+                    </div>
+                    <div class="twelve column wide">
+                      <div class="header large">Clinical Practice Research Datalink
+                      </div>
+                    </div>
+                  </div>
+                </div><!--END OF TITLE SECTION-->
+                <div class="content">
+                  <div class="two wide columns">
+                    <div class="column"><h4>Medicines and Healthcare products Regulatory Agency</h4></div>
+                    <div class="four columns">Medicines and Healthcare products Regulatory Agency 5th Floor<br>151 Buckingham Palace Road<br>Victoria<br>London SW1W 9SZ
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!--FULL HEADING-->
-            <div class="ui grid segment blue tertiary inverted" id="cprd_fh">
-              <div class="four wide column">
-                <h1>CPRD</h1>
-                <div class="column"><p>Clinical Practice Research Link
-                </div>
-                <div class="four columns">
-                </div>
-              </div>
-              <div class="two wide columns">
-                <div class="column"><h4>Medicines and Healthcare products Regulatory Agency</h4></div>
-                <div class="four columns">Medicines and Healthcare products Regulatory Agency 5th Floor<br>151 Buckingham Palace Road<br>Victoria<br>London SW1W 9SZ
-                </div>
-              </div>
+
             </div>
 
             <!--CARDS-->
             <div class="ui cards">
               <!--CARD1-->
-              <div class="ui card">
+              <div class="ui card" style="background-color:#e2fde2">
                 <div  class="extra content" >
-                <div class="ui labeled icon menu tiny fluid three">
-                  <a class="item"><i class="icon file blue"></i>ER Diagram</a>
-                  <a class="item"><i class="icon book blue"></i>Dictionary</a>
-                  <a class="item"><i class="icon database orange"></i>Teradata</a>
+                  <div class="ui three item menu labeled icon tiny fluid">
+                    <a class="item" data-position="top left" title="Entity Relationship diagram" href="./CPRD_VDM _CORE_TABLES.html" target="_blank"><i class="icon file blue"></i>ER Diagram</a>
+                    <a class="item" data-position="top center" title="Data Dictionary"><i class="icon book blue"></i>Dictionary</a>
+                    <a class="item" data-position="top right" title="Location of the data"><i class="icon database orange"></i>Teradata</a>
+                  </div>
                 </div>
-              </div>
                 <div class="content">
                   <div class="header">2017 Jul</div>
                   <div class="meta">July 2017 data load</div>
                   <div class="description">This is the batch description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                </div>
+                <div class="extra content">
+                    <table class="ui sortable celled table compact small center">
+                      <thead>
+                        <tr>
+                          <th>Valid Start</th>
+                          <th>Valid End</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td style="background-color:lightgreen!important">12JAN2017:12.12</td>
+                        <td style="background-color:lightgreen!important">31DEC9999:23:59</td>
+                      </tr>
+                    </tbody>
+                    </table>
+                  <div class="ui two buttons">
+                    <div class="ui basic green button">Notes</div>
+                    <div class="ui basic red button">Documentation</div>
+                  </div>
+                </div>
+              </div>
+              <!--CARD2-->
+              <div class="card">
+                  <div class="extra content" >
+                    <div class="ui three item menu labeled icon tiny fluid">
+                      <a class="item"><i class="icon file blue"></i>ER Diagram</a>
+                      <a class="item"><i class="icon book blue"></i>Dictionary</a>
+                      <a class="item" title="Location of the data"><i class="icon-hadoop icon " style="color:blue"></i>Hadoop</a>
+                    </div>
+                  </div>
+                <div class="content">
+                  <div class="header">2017 Jan</div>
+                  <div class="meta">January 2017 data load for CPRD</div>
+                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+                <div class="extra content">
                     <table class="ui sortable celled table compact small center">
                       <thead>
                         <tr>
@@ -110,34 +147,12 @@
                     </tbody>
                     </table>
 
-                </div>
-                <div class="extra content">
                   <div class="ui two buttons">
                     <div class="ui basic green button">Notes</div>
                     <div class="ui basic red button">Documentation</div>
                   </div>
                 </div>
-              </div>
-              <!--CARD2-->
-              <div class="card">
-                <div class="content">
-                  <div class="ui three column label top right attached grid fluid">
-                    <a class="item"><i class="icon red minus square"></i>No Access</a>
-                    <a class="item"><i class="flag us"></i>Server</a>
-                    <a class="item"><i class="icon-hadoop" style="color:blue"> HIVE</i></a>
-                  </div>
-                  <div class="header">2017 Jan</div>
-                  <div class="meta">January 2017 data load for CPRD</div>
-                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                </div>
-                <div class="extra content">
-                  <div class="ui two buttons">
-                    <div class="ui basic green button">Notes</div>
-                    <div class="ui basic red button">Documentation</div>
-                  </div>
-                </div>
-              </div>
-            </div><!--END OF CARDS-->
+              </div><!--END OF CARDS-->
 
           </div>
           <div class="ui bottom attached tab segment padded" data-tab="first/b">
@@ -230,74 +245,64 @@
           <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
         </div>
       </div>
-      <div class="ui divider"></div>
 
-
-Experimental display of table data
-      <table class="ui sortable celled table">
-        <thead>
-          <tr>
-            <th>Batch</th>
-            <th>Title</th>
-            <th class="sorted descending">Valid Start</th>
-            <th>Valid End</th>
-            <th>Data Dictionary</th>
-            <th>Batch Documentation</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td class="positive" style="background-color:lightgreen!important">JAN 2017</td>
-            <td class="positive" style="background-color:lightgreen!important">The batch title goes here</td>
-            <td class="warning" style="background-color:lightgreen!important">12JAN2017:12.12</td>
-            <td class="positive" style="background-color:lightgreen!important">31DEC9999:23:59</td>
-            <td class="positive" style="background-color:lightgreen!important"><i></td>
-            <td class="center aligned" style="background-color:lightgreen!important"><a href="#"><i class="ui icon file"></i></a></td>
-            <td class="center aligned" ><a href="#" class="blue">Latest</td>
-        </tr>
-        <tr>
-          <td class="positive" style="background-color:lightgray!important">JUL 2016</td>
-          <td class="positive" style="background-color:lightgray!important">The batch title goes here</td>
-          <td class="warning" style="background-color:lightgray!important">12JAN2017:12.12</td>
-          <td class="positive" style="background-color:lightgray!important">31DEC9999:23:59</td>
-          <td class="positive" style="background-color:lightgray!important"><i></td>
-          <td class="center aligned" style="background-color:lightgray!important"><a href="#"><i class="ui icon file"></i></a></td>
-        </tr>
-        <tr>
-          <td class="positive" style="background-color:lightgray!important">JAN 2016</td>
-          <td class="positive" style="background-color:lightgray!important">The batch title goes here</td>
-          <td class="warning" style="background-color:lightgray!important">12JAN2017:12.12</td>
-          <td class="positive" style="background-color:lightgray!important">31DEC9999:23:59</td>
-          <td class="positive" style="background-color:lightgray!important"><i></td>
-          <td class="center aligned" style="background-color:lightgray!important"><a href="#"><i class="ui icon file"></i></a></td>
-          <td class="center aligned"><a class="item"><i class="icon-hadoop" style="color:blue">HIVE</i></a></td>
-        </tr>
-      </tbody>
-      </table>
-
-
-
-
-
-
-
-
-
-
-
-     <!--Data source Table - sortable-->
-     <div class="ui container segment">
-       <h1>Data Source list</h1>
-       <div class="">
-
-       </div>
-     </div>
-
-
-
-
-
+   <!--RAILS FOR LEGEND-->
+   <div class="ui right internal rail">
+     <div class="ui segment" style="background-color:transparent!important">
+       <div class="ui accordion">
+<div class="active title">
+  <i class="dropdown icon"></i>
+  Legend
+</div>
+<div class="content">
+  <h3>Tips:</h3>
+    <div class="ui list">
+      <div class="item">
+        <i class="info blue icon large"></i>
+        <div class="content">Click on the Data source name to reveal further information about it.</div>
+      </div>
+      <div class="item">
+        <i class="users blue icon large"></i>
+        <div class="content">Contact a SME or MDH colleague</div>
+      </div>
+      <div class="item">
+        <i class="file blue icon large"></i>
+        <div class="content">Entity relationship diagram for understanding the table relationships</div>
+      </div>
+      <div class="item">
+        <i class="book blue icon large"></i>
+        <div class="content">Data Dictionary: What are the columns in the tables?</div>
+      </div>
+      <div class="item">
+        <i class="bar chart blue icon large"></i>
+        <div class="content">Data source Vizualization</div>
+      </div>
+      <div class="item">
+        <i class="database blue icon large"></i>
+        <div class="content">Location of the data (Teradata or Hadoop)</div>
+      </div>
+      <div class="item">
+        <i class="mail icon blue large"></i>
+        <div class="content"><a href="mailto:jack@semantic-ui.com">SMEusergroup@roche.com</a></div>
+      </div>
+      <div class="item">
+        <i class="linkify icon blue large"></i>
+        <div class="content">
+          <a href="http://www.semantic-ui.com">Access the exchange.roche.com group</a>
+        </div>
+      </div>
+      <div class="item">
+        <i class="privacy icon blue large"></i>
+        <div class="content">Restricted access</div>
+      </div>
     </div>
+</div>
+</div>
+     </div>
+   </div>
+
+
+    </div><!--MAIN CONTAINER-->
 
   <script type="text/javascript">
   $('#context1 .menu .item')
@@ -312,7 +317,26 @@ Experimental display of table data
   })
   ;
 
-  $('table').tablesort()
+  $('table').tablesort();
+
+  //POPUP LAYOUT
+  $('.item')
+  .popup({
+    inline: true,
+    hoverable  : true
+  })
+  ;
+  //ACCORDION
+  $('.ui.accordion')
+  .accordion()
+;
+  //STICKY LEGEND
+  $('.ui.sticky')
+  .sticky({
+    context: '#legend'
+  })
+;
+
   </script>
   </body>
 </html>
