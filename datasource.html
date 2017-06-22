@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/markdown-themes/default.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/highlight-themes/default.css">
 
-	
+
     <!--TABLESORT-->
     <script src="./tablesort.js"></script>
   </head>
@@ -45,6 +45,94 @@
           <a class="item" data-tab="second">Dictionaires</a>
           <a class="item " data-tab="third">Other</a>
         </div>
+         <!--FILTER SECTION-->
+        <div class="ui segment">
+        <div class="ui accordion">
+          <div class="title">
+            <i class="filter icon"></i>
+            Data source Filters
+          </div>
+          <div class="content">
+            <p class="transition hidden">Example filters</p>
+
+            <div class="ui form">
+              <div class="inline fields">
+                <label for="fruit">Geographical Coverage:</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="US" checked="" tabindex="0" class="hidden">
+                    <label>US</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="EU" tabindex="0" class="hidden">
+                    <label>EU</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="asia" tabindex="0" class="hidden">
+                    <label>Asia</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="Global" tabindex="0" class="hidden">
+                    <label>Global</label>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Therapeutic area - select all of interest</label>
+                <select multiple="" class="ui dropdown">
+                  <option value="ALL">Select ALL TA</option>
+                  <option value="AF">Oncology</option>
+                  <option value="AX">Neverous System</option>
+                  <option value="AL">Infectious Disease</option>
+                  <option value="DZ">Neurology</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="ui search">
+                <div class="ui icon input">
+                  <input class="prompt" type="text" placeholder="Search countries...">
+                  <i class="search icon"></i>
+                </div>
+                <div class="results"></div>
+            </div>
+            <button class="ui button compact " type="submit">Submit</button>
+
+          </div>
+        </div>
+        </div><!--END OF FILTER SECTION-->
+        <div class="ui segment">
+          Default list of data sources:<br>
+          <div class="ui two column grid">
+
+          <div class="column">
+          <div class="ui large labels">
+            <a class="ui label" onclick=""><i class="mail icon"></i>CPRD</a>
+            <a class="ui label"><i class="mail icon"></i>IMSEU</a>
+            <a class="ui label"><i class="mail icon"></i>CCAE</a>
+            <a class="ui label"><i class="mail icon"></i>IPSOS</a>
+            <a class="ui label"><i class="mail icon"></i>FLATIRON</a>
+            <a class="ui label"><i class="mail icon"></i>SEERM</a>
+          </div>
+        </div>
+                  <div class="column">
+          <div class="ui huge labels">
+            <a class="ui label"><i class="mail icon"></i>ICD9</a>
+            <a class="ui label"><i class="mail icon"></i>ICD10</a>
+            <a class="ui label"><i class="mail icon"></i>Redbook</a>
+            <a class="ui label"><i class="mail icon"></i>HCPCS</a>
+          </div>          </div>
+        </div>
+
+        </div>
+
+
         <div class="ui tab segment" data-tab="first">
           <div class="ui top attached tabular menu">
             <a class="active item" data-tab="first/a">CPRD</a>
@@ -111,6 +199,22 @@
 
                     <div class="ui eight wide column grid">
                     <br>
+                      <div class="ui list basic inverted">
+                        <div class="item">
+                          <i class="ui icon users large"></i>
+                          <div class="content">
+                            <a class="header">SME User Group</a>
+                            <div class="content"><a href="mailto:jack@semantic-ui.com">SMEusergroup@roche.com</a></div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon linkify large"></i>
+                          <div class="content">
+                            <a class="header">Exchange.roche.com</a>
+                            <div class="description">Ask a question about the data source</div>
+                          </div>
+                        </div>
+                    </div>
                     <h4 class="ui horizontal divider header">Summary</h4>
                     <!--1ST COL FOR SUMMARY-->
                     <div class="eight wide column">
@@ -518,7 +622,6 @@ H~~ell~~o *W*o**r**l***d***!
      <div class="ui sticky">
      <div class="ui segment">
        <div class="ui accordion">
-<<<<<<< Updated upstream
           <div class="active title">
             <i class="dropdown icon"></i>Legend
           </div>
@@ -527,10 +630,10 @@ H~~ell~~o *W*o**r**l***d***!
               <div class="ui list">
                 <div class="item">
                   <i class="info blue icon large"></i>
-                  <div class="content">Click on the Data source name to reveal further information about it</div>
+                  <div class="content">Click on the <strong>Data source name</strong> to reveal further information about it</div>
                 </div>
                 <div class="item">
-                  <i class="info blue icon large"></i>
+                  <i class="file green icon large"></i>
                   <div class="content">Green card indicates the latest batch</div>
                 </div>
                 <div class="item">
@@ -571,56 +674,7 @@ H~~ell~~o *W*o**r**l***d***!
           </div>
         </div><!--ACCORDION-->
       </div><!--SEGEMENT-->
-=======
-<div class="active title">
-  <i class="dropdown icon"></i>
-  Legend
-</div>
-<div class="content">
-  <h3>Tips:</h3>
-    <div class="ui list">
-      <div class="item">
-        <i class="info blue icon large"></i>
-        <div class="content">Click on the Data source name to reveal further information about it</div>
-      </div>
-      <div class="item">
-        <i class="sticky note green tertiary icon large"></i>
-        <div class="content">Green card indicates the latest batch</div>
-      </div>
-      <div class="item">
-        <i class="users blue icon large"></i>
-        <div class="content">Contact a SME or MDH colleague</div>
-      </div>
-      <div class="item">
-        <i class="file blue icon large"></i>
-        <div class="content">Entity relationship diagram for understanding the table relationships</div>
-      </div>
-      <div class="item">
-        <i class="book blue icon large"></i>
-        <div class="content">Data Dictionary: What are the columns in the tables?</div>
-      </div>
-      <div class="item">
-        <i class="bar chart blue icon large"></i>
-        <div class="content">Data source Vizualization</div>
-      </div>
-      <div class="item">
-        <i class="database blue icon large"></i>
-        <div class="content">Location of the data (Teradata or Hadoop)</div>
-      </div>
-      <div class="item">
-        <i class="mail icon blue large"></i>
-        <div class="content"><a href="mailto:jack@semantic-ui.com">SMEusergroup@roche.com</a></div>
-      </div>
-      <div class="item">
-        <i class="linkify icon blue large"></i>
-        <div class="content">
-          <a href="http://www.semantic-ui.com">Access the exchange.roche.com group</a>
-        </div>
-      </div>
-      <div class="item">
-        <i class="privacy icon blue large"></i>
-        <div class="content">Restricted access</div>
->>>>>>> Stashed changes
+
       </div>
     </div><!--RAIL-->
 
@@ -659,7 +713,18 @@ H~~ell~~o *W*o**r**l***d***!
     context: '#legend'
   })
 ;
-
+  //RADIO BUTTON ON FILTER FORM
+  $('.ui.radio.checkbox')
+  .checkbox()
+;
+$('.ui.dropdown')
+  .dropdown()
+;
+$('.ui.search')
+  .search({
+    source: content
+  })
+;
   </script>
   </body>
 </html>
