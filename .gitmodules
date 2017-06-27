@@ -1,3 +1,3 @@
 [submodule "forweb"]
 	path = forweb
-	url = https://github.com/hibellm/MDtest/tree/forweb
+	url = https://github.com/hibellm/MDtest/forweb
