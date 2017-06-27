@@ -8,11 +8,20 @@
     <!-- Edit your site info here -->
     <meta name="description" content="EXAMPLE SITE DESCRIPTION">
     <title>EXAMPLE SITE TITLE</title>
+    <!--CDN for Semontic UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/v0.7.15/webcomponents-lite.min.js"></script>
     <link rel="import" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/build/zero-md.html">
     <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/markdown-themes/default.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/highlight-themes/default.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+
   </head>
   <body unresolved>
     <style>
@@ -37,7 +46,6 @@
     </zero-md>
   </div>
 
-
 	<!--METHOD 2 - Simply input the markdown string using the text attribute.-->
 	<!--
    <zero-md text="H~~ell~~o *W*o**r**l***d***!">
@@ -58,5 +66,15 @@ H~~ell~~o *W*o**r**l***d***!
    </zero-md>
    </div>
 
+
+   <div class="ui segment">
+     <!--TESTING EMEDDING-->
+     <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="/images/bear-waving.jpg"></div>
+  </div>
+
+
   </body>
+  <script type="text/javascript">
+  $('.ui.embed').embed();
+  </script>
 </html>
