@@ -30,16 +30,38 @@
       .md-html { min-width: 200px; max-width: 790px; margin: 56px auto 0 auto; padding: 20px; }
     </style>
 
+
   <div class="ui container">
   <!-- Edit your Markdown URL file location here -->
 
   <!--TEST-->
+
+
+
+<div class="u button" onclick="$('.ui.modal#test').modal('show');">
+    <i class="icon large blue rocket"></i>
+</div>
+
+  <!--MODAL FOR SME-->
+  <div class="ui modal" id="test">
+    <i class="close icon"></i>
+    <div class="header">
+      CPRD SME documentation
+    </div>
+    <div class="ui segment">
+       <zero-md file="https://raw.github.roche.com/RWDSsme/CPRD/master/README.md">
+          <div class="md-html"></div>
+       </zero-md>
+     </div>
+    </div>
+
   <a href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en-US">Link to enable CORS (Chrome Extentsion)</a>
 
+
   <div class="ui segment blue secondary inverted">
-    <h1>Documentation on MDtest repo (from the README.md)</h1>
+    <h1>Documentation on CPRDSME (from the README.md)</h1>
     <div class="ui segment">
-     <zero-md file="https://raw.github.roche.com/MDH/JIRA-162/master/README.md">
+     <zero-md file="https://raw.github.roche.com/RWDSsme/CPRD/master/README.md">
         <div class="md-html"></div>
      </zero-md>
    </div>
@@ -83,5 +105,6 @@ H~~ell~~o *W*o**r**l***d***!
   </body>
   <script type="text/javascript">
   $('.ui.embed').embed();
+
   </script>
 </html>
