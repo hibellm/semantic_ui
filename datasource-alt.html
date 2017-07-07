@@ -31,10 +31,9 @@
       </div>
 
       <!--A MENU LIKE CONTIANER FOR THE DATA SOURCES-->
+<div class="ui equal width center aligned padded grid segment" id="dsselect">
 
-<div class="ui equal width center aligned padded grid">
-
-      <div class="ui vertical menu compact ">
+      <div class="ui vertical menu compact">
         <h1>CPRD</h1><hr>
         <div class="ui vertical buttons">
           <a href="www.bbc.co.uk"><button class="ui button green">Jul 2017</button></a>
@@ -68,14 +67,21 @@
 
 
   </div>
-  </div>
 
-<!--THE IFRAME BIT-->
-  <div class="container hidden">
-   this should display
 
-  </div>
+
+
+</DIV>
 
 
   </body>
+  <script>
+  $('.trigger.example .accordion')
+    .accordion({
+      selector: {
+        trigger: '.title .icon'
+      }
+    })
+  ;
+  </script>
 </html>
