@@ -9,8 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
 
-    <!--CHARTJS GRAPHICS-->
+    <!--CHARTJS/D3v4 GRAPHICS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
   </head>
 
   <!--MAIN PAGE CONTENT-->
@@ -56,8 +57,15 @@
           <div class="column blue ">
               <div class="ui cards ">
                 <div class="ui card fluid">
-                  <div class="h1">test1</div>
-                  <div class="h3">test3</div>
+                  <div class="content">
+                      <a class="header">Some Chart with chart.js</a>
+                      <div class="meta">
+                        <span class="date">Updated JULY 2017</span>
+                      </div>
+                      <div class="description">
+                        A small description
+                      </div>
+                    </div>
                   <canvas id="myChart" width="400" height="400"></canvas>
                 </div>
               </div>
@@ -66,20 +74,20 @@
             <div class="ui cards">
               <div class="ui card fluid">
                 <div class="content">
-                    <a class="header">Some Chart</a>
+                    <a class="header">Some Chart with D3</a>
                     <div class="meta">
                       <span class="date">Updated JULY 2017</span>
                     </div>
                     <div class="description">
-                      The chart shows.....in the Teradata system
+                      A small desceription
                     </div>
-                  </div>
-                  <div class="extra content">
-                <canvas id="<myDoughnutChart" width="200" height="200"></canvas>
-                </div>
-              </div>
+               </div>
+               <div class="extra content">
+               </div>
             </div>
           </div>
+        </div>
+
         </div>
       </div>
 
@@ -189,7 +197,8 @@
 
 
 
-    </div>
+</div>
+
   <script>
   var ctx = document.getElementById("myChart").getContext('2d');
   var myChart = new Chart(ctx, {
@@ -230,31 +239,118 @@
   });
   </script>
   <script>
-      // And for a doughnut chart
-      var ctx2 = document.getElementById("myDoughnutChart").getContext('2d');
-      var myDoughnutChart = new Chart(ctx2, {
-          type: 'doughnut',
-           data = [
-                      {
-                          value: 270,
-                          color: "cornflowerblue",
-                          highlight: "lightskyblue",
-                          label: "JavaScript"
-                      },
-                      {
-                          value: 50,
-                          color: "lightgreen",
-                          highlight: "yellowgreen",
-                          label: "HTML"
-                      },
-                      {
-                          value: 40,
-                          color: "orange",
-                          highlight: "darkorange",
-                          label: "CSS"
-                      }
-                  ]
-      });
+  var width = 960,
+      height = 500,
+      radius = Math.min(width, height) / 2;
+
+  var color = d3.scale.category20();
+
+  var pie = d3.layout.pie()
+      .value(function(d) { return d.count; })
+      .sort(null);
+
+  var arc = d3.svg.arc()
+      .innerRadius(radius - 100)
+      .outerRadius(radius - 20);
+
+  var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+    .append("g")
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+  var path = svg.selectAll("path");
+
+  d3.tsv("data.tsv", type, function(error, data) {
+    var regionsByFruit = d3.nest()
+        .key(function(d) { return d.fruit; })
+        .entries(data)
+        .reverse();
+
+    var label = d3.select("form").selectAll("label")
+        .data(regionsByFruit)
+      .enter().append("label");
+
+    label.append("input")
+        .attr("type", "radio")
+        .attr("name", "fruit")
+        .attr("value", function(d) { return d.key; })
+        .on("change", change)
+      .filter(function(d, i) { return !i; })
+        .each(change)
+        .property("checked", true);
+
+    label.append("span")
+        .text(function(d) { return d.key; });
+
+    function change(region) {
+      var data0 = path.data(),
+          data1 = pie(region.values);
+
+      path = path.data(data1, key);
+
+      path.enter().append("path")
+          .each(function(d, i) { this._current = findNeighborArc(i, data0, data1, key) || d; })
+          .attr("fill", function(d) { return color(d.data.region); })
+        .append("title")
+          .text(function(d) { return d.data.region; });
+
+      path.exit()
+          .datum(function(d, i) { return findNeighborArc(i, data1, data0, key) || d; })
+        .transition()
+          .duration(750)
+          .attrTween("d", arcTween)
+          .remove();
+
+      path.transition()
+          .duration(750)
+          .attrTween("d", arcTween);
+    }
+  });
+
+  function key(d) {
+    return d.data.region;
+  }
+
+  function type(d) {
+    d.count = +d.count;
+    return d;
+  }
+
+  function findNeighborArc(i, data0, data1, key) {
+    var d;
+    return (d = findPreceding(i, data0, data1, key)) ? {startAngle: d.endAngle, endAngle: d.endAngle}
+        : (d = findFollowing(i, data0, data1, key)) ? {startAngle: d.startAngle, endAngle: d.startAngle}
+        : null;
+  }
+
+  // Find the element in data0 that joins the highest preceding element in data1.
+  function findPreceding(i, data0, data1, key) {
+    var m = data0.length;
+    while (--i >= 0) {
+      var k = key(data1[i]);
+      for (var j = 0; j < m; ++j) {
+        if (key(data0[j]) === k) return data0[j];
+      }
+    }
+  }
+
+  // Find the element in data0 that joins the lowest following element in data1.
+  function findFollowing(i, data0, data1, key) {
+    var n = data1.length, m = data0.length;
+    while (++i < n) {
+      var k = key(data1[i]);
+      for (var j = 0; j < m; ++j) {
+        if (key(data0[j]) === k) return data0[j];
+      }
+    }
+  }
+
+  function arcTween(d) {
+    var i = d3.interpolate(this._current, d);
+    this._current = i(0);
+    return function(t) { return arc(i(t)); };
+  }
   </script>
   </body>
 </html>
