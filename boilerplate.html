@@ -23,6 +23,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
 
   </head>
+
+  <!--MAIN PAGE CONTENT-->
   <body unresolved>
     <style>
       /* Edit your header styles here */
@@ -30,17 +32,50 @@
       .md-html { min-width: 200px; max-width: 790px; margin: 56px auto 0 auto; padding: 20px; }
     </style>
 
-
   <div class="ui container">
+
+  <!--MENU-->
+  <div class="ui secondary large pointing menu blue">
+    <a class="item" id="mi1" href="./index.html">Home</a>
+    <a class="item active" id="mi2" href="./training.html">Training</a>
+    <a class="item" id="mi3" href="./datasource.html">Data Sources</a>
+    <a class="item" id="mi4" href="./about.html">About</a>
+    <div class="right menu">
+      <a class="ui item">Logout</a>
+    </div>
+  </div>
+  <div class="ui segment">
+    <p>breadcrumbs can go here</p>
+  </div>
+  <div class="ui inverted segment blue tertiary center aligned">
+    <h1><i>Welcome to the</i><br>Medical Data Hub Training Space</h1>
+    <div class="ui basic segment left aligned">
+      <p>The MDH Training Page is your central place for information about the Medical Data Hub training offerings, including but not limited to technical, compliance and vendors provided trainings.</p>
+    </div>
+  </div>
+
+
   <!-- Edit your Markdown URL file location here -->
 
   <!--TEST-->
-<iframe id="kmsembed-1_va1yb38a" width="528" height="297" src="https://streamingmedia.roche.com/embed/secure/iframe/entryId/1_va1yb38a/uiConfId/38807381?flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" title="Kaltura Player"></iframe>
+  <div class="ui segment">
+    <div class="ui grid two columns">
+      <div class="column">
+        <h3>This video comes from the webcast page</h3>
+        <iframe id="kmsembed-1_np5y69j8" width="528" height="297" src="https://streamingmedia.roche.com/embed/secure/iframe/entryId/1_np5y69j8/uiConfId/38807381?flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" title="Kaltura Player"></iframe>
+      </div>
+      <div class="column">
+        <h3>This video comes from the webcast page</h3>
+        <iframe id="kmsembed-1_va1yb38a" width="528" height="297" src="https://streamingmedia.roche.com/embed/secure/iframe/entryId/1_va1yb38a/uiConfId/38807381?flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" title="Kaltura Player"></iframe>
+      </div>
+    </div>
+  </div>
 
-
-<div class="u button" onclick="$('.ui.modal#test').modal('show');">
-    <i class="icon huge blue rocket"></i>Flatiron June 2017 update
-</div>
+  <div class="ui segment">
+    <div class="u button" onclick="$('.ui.modal#test').modal('show');">
+        <h3><i class="icon huge blue rocket"></i>Flatiron June 2017 update</h3>
+    </div>
+  </div>
 
   <!--MODAL FOR SME-->
   <div class="ui modal" id="test">

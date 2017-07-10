@@ -203,14 +203,14 @@
                         <div class="item">
                           <i class="ui icon users large"></i>
                           <div class="content">
-                            <a class="header">SME User Group</a>
+                            <a class="header" href="https://pages.github.roche.com/RWDSsme/CPRD/" target="_blank">SME User Group</a>
                             <div class="content"><a href="mailto:jack@semantic-ui.com">SMEusergroup@roche.com</a></div>
                           </div>
                         </div>
                         <div class="item">
                           <i class="ui icon linkify large"></i>
                           <div class="content">
-                            <a class="header">Exchange.roche.com</a>
+                            <a class="header" href="http://ridlv717002.ind.roche.com/c/rwd/cprd" target="_blank">Exchange.roche.com</a>
                             <div class="description">Ask a question about the data source</div>
                           </div>
                         </div>
@@ -313,7 +313,8 @@
                     </tbody>
                     </table>
                   <div class="ui two buttons">
-                    <div class="ui basic green button">Notes</div>
+                    <div class="ui basic green button" onclick="$('.ui.modal#fijun2017').modal('show');">Notes</div>
+
                     <div class="ui basic red button">Documentation</div>
                   </div>
                 </div>
@@ -570,7 +571,18 @@
           </div>
 
           <!--CCAE-->
-          <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
+          <div class="ui bottom attached tab segment" data-tab="first/c">
+            <script type='text/javascript' src='https://tabemeat.roche.com/javascripts/api/viz_v1.js'></script>
+            <div class='tableauPlaceholder' style='width: 1004px; height: 836px;'>
+              <object class='tableauViz' width='1004' height='836' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Ftabemeat.roche.com%2F' />
+                <param name='site_root' value='' />
+                <param name='name' value='IPSOS_Demo_pyramid&#47;Dashboard1' />
+                <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                <param name='showShareOptions' value='true' />
+              </object>
+            </div>
+          </div>
         </div><!--END OF RWD DATA SOURCES-->
 
         <!--SECOND TAB-->
@@ -690,7 +702,18 @@ H~~ell~~o *W*o**r**l***d***!
     </div><!--RAIL-->
 
 
+    <!--MODAL-->
+    <div class="ui modal" id="fijun2017">
+      <i class="close icon"></i>
+      <div class="ui segment">
+         <zero-md file="https://raw.github.roche.com/MDH/Flatiron/master/JUN2017.md">
+            <div class="md-html"></div>
+         </zero-md>
+       </div>
+    </div>
+
     </div><!--MAIN CONTAINER-->
+
 
   <script type="text/javascript">
   $('#context1 .menu .item')

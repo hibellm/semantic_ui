@@ -7,7 +7,7 @@
 <style type='text/css'>
 body {
     font-family: 'Segoe UI', 'Lucida sans', Dialog;
-    font-size: 13px;
+    font-size: 24px;
     color: #444;
     margin: 10px;
     padding: 0;
@@ -33,7 +33,7 @@ table {
     border: none;
     border-bottom: 1px solid #cccccc;
     padding: 3px 3px 3px 3px;
-    font-size: 13px;
+    font-size: 24px;
     font-weight: normal;
     text-align: left;
     color: #333333;
@@ -41,7 +41,7 @@ table {
 
 .section-header h2 {
     background-color: #f0f0f0;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: normal;
     border-top: solid 1px #D5D5D5;
     border-bottom: solid 1px #D5D5D5;
@@ -85,13 +85,13 @@ h1 {
   <script type='text/ecmascript'>
   <![CDATA[
   function hghl(el) { for ( var i in el ){ document.getElementById(el[i]).setAttribute('class','highlight');  }  }
-  function uhghl(el) { for ( var i in el ){ document.getElementById(el[i]).setAttribute('class','scene'); }  } 
+  function uhghl(el) { for ( var i in el ){ document.getElementById(el[i]).setAttribute('class','scene'); }  }
   ]]>
-  </script> 
+  </script>
 
 <style type='text/css'>
-  text                { fill:#000000; font-family: Tahoma, 'Trebuchet MS', Dialog; font-size:5px; }
-  a text:hover        { text-shadow: 0 0 6px #d0ce00; }
+  text                { fill:#000000; font-family: Tahoma, 'Trebuchet MS', Dialog; font-size:11px; }
+a text:hover          { text-shadow: 0 0 6px  #333/*#d0ce00;*/ }
   text.highlight      { text-shadow: 0 0 4px #eac533; }
   text.colType        { fill:#b3b3b3; }
   text.relName        { fill:#b09c7c; }
@@ -105,36 +105,36 @@ h1 {
   rect.grp            { stroke:#b1b1b1; stroke-width:1.7; opacity:0.8; }
 </style>
 <defs>
-  <pattern id='layoutBgA' patternUnits='userSpaceOnUse'  width='10' height='20' x='0' y='0' viewBox='0 0 5 10'>  
-     <line x1='-2' y1='1' x2='7' y2='10' stroke='#efefef' stroke-width='.5'/>  
-     <line x1='-2' y1='6' x2='7' y2='15' stroke='#efefef' stroke-width='.5'/>  
-     <line x1='-2' y1='-4' x2='7' y2='5' stroke='#efefef' stroke-width='.5'/>  
-  </pattern>  
+  <pattern id='layoutBgA' patternUnits='userSpaceOnUse'  width='10' height='20' x='0' y='0' viewBox='0 0 5 10'>
+     <line x1='-2' y1='1' x2='7' y2='10' stroke='#efefef' stroke-width='.5'/>
+     <line x1='-2' y1='6' x2='7' y2='15' stroke='#efefef' stroke-width='.5'/>
+     <line x1='-2' y1='-4' x2='7' y2='5' stroke='#efefef' stroke-width='.5'/>
+  </pattern>
   <radialGradient id='layoutBgB' gradientUnits='userSpaceOnUse' cx='50%' cy='50%' r='75%' fx='46%' fy='22%'>
-     <stop offset='0%' stop-opacity='.2' stop-color='#f5f5f5' />  
-     <stop offset='100%' stop-color='#efefef' />  
+     <stop offset='0%' stop-opacity='.2' stop-color='#f5f5f5' />
+     <stop offset='100%' stop-color='#efefef' />
   </radialGradient>
-  <pattern id='layoutBgTr' patternUnits='userSpaceOnUse'  width='300' height='300' x='0' y='0' viewBox='0 0 300 300'>  
-    <text x='-85' y='200' transform='rotate(-45)' style='font-family:Arial;font-size:78px;font-weight:bold;fill:#e7e7e7;'>&#84;&#82;&#73;&#65;&#76;</text> 
-    <text x='-130' y='230' transform='rotate(-45)' style='font-family:Arial;font-size:24px;font-weight:bold;fill:#e7e7e7;'>&#77;ove &#116;he m&#111;use &#111;ver &#116;ables</text> 
-    <text x='-85' y='250' transform='rotate(-45)' style='font-family:Arial;font-size:24px;font-weight:bold;fill:#e7e7e7;'>&#116;o re&#97;d &#116;he c&#111;mmen&#116;s</text> 
-  </pattern>  
+  <pattern id='layoutBgTr' patternUnits='userSpaceOnUse'  width='300' height='300' x='0' y='0' viewBox='0 0 300 300'>
+    <text x='-85' y='200' transform='rotate(-45)' style='font-family:Arial;font-size:78px;font-weight:bold;fill:#e7e7e7;'>&#84;&#82;&#73;&#65;&#76;</text>
+    <text x='-130' y='230' transform='rotate(-45)' style='font-family:Arial;font-size:24px;font-weight:bold;fill:#e7e7e7;'>&#77;ove &#116;he m&#111;use &#111;ver &#116;ables</text>
+    <text x='-85' y='250' transform='rotate(-45)' style='font-family:Arial;font-size:24px;font-weight:bold;fill:#e7e7e7;'>&#116;o re&#97;d &#116;he c&#111;mmen&#116;s</text>
+  </pattern>
   <linearGradient id='groupUnderTitleLine' x1='0%' y1='0%' x2='100%' y2='0%' >
-          <stop offset='0%' stop-color='#999999' stop-opacity='0.7'/> 
-          <stop offset='100%' stop-color='#999999' stop-opacity='0' /> 
+          <stop offset='0%' stop-color='#999999' stop-opacity='0.7'/>
+          <stop offset='100%' stop-color='#999999' stop-opacity='0' />
    </linearGradient>
   <radialGradient id='calloutGradient' cx='25%' cy='20%' r='80%' fx='10%' fy='10%'>
 	   <stop offset='0%' stop-color='#ffffff' />
     <stop offset='100%' stop-color='#f8f6d1' />
   </radialGradient>
-  <filter id='shadow' width='120%' height='120%'> 
-      <feOffset result='offOut' in='SourceGraphic' dx='1' dy='1' /> 
-      <feColorMatrix result='matrixOut' in='offOut' type='matrix' 
-      values='0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.3 0' /> 
-      <feGaussianBlur result='blurOut' in='matrixOut' stdDeviation='3' /> 
-      <feBlend in='SourceGraphic' in2='blurOut' mode='normal' /> 
-    </filter> 
-  <filter id='fkShadow' height='130%'> 
+  <filter id='shadow' width='120%' height='120%'>
+      <feOffset result='offOut' in='SourceGraphic' dx='1' dy='1' />
+      <feColorMatrix result='matrixOut' in='offOut' type='matrix'
+      values='0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.3 0' />
+      <feGaussianBlur result='blurOut' in='matrixOut' stdDeviation='3' />
+      <feBlend in='SourceGraphic' in2='blurOut' mode='normal' />
+    </filter>
+  <filter id='fkShadow' height='130%'>
     <feGaussianBlur in='SourceAlpha' stdDeviation='1.5'/> <!-- stdDeviation is how much to blur -->
     <feOffset dx='1.2' dy='1.2' result='offsetblur'/> <!-- how much to offset -->
     <feMerge>
@@ -143,8 +143,8 @@ h1 {
     </feMerge>
   </filter>
   <radialGradient id='legendGradient' fx='5%' fy='5%' r='75%' spreadMethod='pad'>
-          <stop offset='0%' stop-color='#eefbf2' stop-opacity='1'/> 
-          <stop offset='100%' stop-color='#cff9cb' stop-opacity='1' /> 
+          <stop offset='0%' stop-color='#eefbf2' stop-opacity='1'/>
+          <stop offset='100%' stop-color='#cff9cb' stop-opacity='1' />
    </radialGradient>
   <symbol id='calloutArrowDown' overflow='visible' >
       <path d='M 0,0 L 7,11 L 15,0 z' style='fill:#f8f6d1;stroke:none; filter: url(#shadow);' />
@@ -248,8 +248,8 @@ h1 {
     <circle cx='2.50' cy='7.50' r='2.50' style='fill:#5e554d;' />
 <text x='5.00' y='7.50' style='font-size:9px;fill:#5e554d;'>P</text>  </marker>
   <linearGradient id='tbg_b3cef5' x1='0%' y1='0%' x2='0%' y2='100%' >
-     <stop offset='0%' stop-color='#b3cef5' /> 
-     <stop offset='100%' stop-color='#b3cef5' /> 
+     <stop offset='0%' stop-color='#b3cef5' />
+     <stop offset='100%' stop-color='#b3cef5' />
   </linearGradient>
 </defs>
 
@@ -259,9 +259,9 @@ h1 {
 
 <!-- ============= Legend ============= -->
 <g transform='translate(10,10)'>
-  <rect x='10' y='10' width='270' height='52' rx='6' ry='6' style='fill:url(#legendGradient);filter:url(#shadow);'/> 
-  <text x='65' y='33'>VDM Core Tables</text> 
-  <text x='65' y='49' style='fill:#aaaaaa; font-size:11px;'><tspan>Schema comments as mouse-over tooltips.</tspan></text> 
+  <rect x='10' y='10' width='270' height='52' rx='6' ry='6' style='fill:url(#legendGradient);filter:url(#shadow);'/>
+  <text x='65' y='33'>VDM Core Tables</text>
+  <text x='65' y='49' style='fill:#aaaaaa; font-size:11px;'><tspan>Schema comments as mouse-over tooltips.</tspan></text>
 <g transform="scale(0.75,0.75) translate(10,7)" >
 <a xlink:href='http://www.dbschema.com'>
 <rect style="fill:#eb7f2c;stroke:none;shape-rendering:geometricPrecision;" width="13.27" height="11.26" x="40.04" y="59.44" ry="3.14" transform="matrix(0.90187511,-0.43199686,0,1,0,0)" />
@@ -518,7 +518,7 @@ CPRD - All Patient Details - [Index=PATID]</title></a>
 <a xlink:href='#lkp_patients.patid'><text id='PC_RWD_VDM_CPRD.lkp_patients.patid' x='1233' y='786' onmouseover="hghl(['patient_fk_patient','patient_fk_patient_0'])" onmouseout="uhghl(['patient_fk_patient','patient_fk_patient_0'])">patid</text><title>patid
 integer
 Patient Identifier</title></a>
-<a xlink:href='#lkp_patients.patid'><use id='ref' x='1324' y='776' xlink:href='#ref'/><title>Referred by patient ( patid ) 
+<a xlink:href='#lkp_patients.patid'><use id='ref' x='1324' y='776' xlink:href='#ref'/><title>Referred by patient ( patid )
 Referred by patient ( patid ) </title></a>
   <a xlink:href='#lkp_patients.gender'><text id='PC_RWD_VDM_CPRD.lkp_patients.gender' x='1233' y='801'>gender</text><title>gender
 integer
@@ -659,9 +659,9 @@ CPRD - Practice Information - [NUPI=PRACID]</title></a>
 <a xlink:href='#practice.pracid'><text id='PC_RWD_VDM_CPRD.practice.pracid' x='888' y='276' onmouseover="hghl(['practice_fk_practice','patient_fk_patient_3','patient_fk_patient_3','patient_fk_patient_3'])" onmouseout="uhghl(['practice_fk_practice','patient_fk_patient_3','patient_fk_patient_3','patient_fk_patient_3'])">pracid</text><title>pracid
 integer
 Practice identifier</title></a>
-<a xlink:href='#practice.pracid'><use id='fk' x='979' y='266' xlink:href='#fk'/><title>References lkp_allpractices ( pracid ) 
-Referred by patient ( patid -&gt; pracid ) 
-Referred by patient ( patid -&gt; pracid ) 
+<a xlink:href='#practice.pracid'><use id='fk' x='979' y='266' xlink:href='#fk'/><title>References lkp_allpractices ( pracid )
+Referred by patient ( patid -&gt; pracid )
+Referred by patient ( patid -&gt; pracid )
 Referred by patient ( patid -&gt; pracid ) </title></a>
   <a xlink:href='#practice.region'><text id='PC_RWD_VDM_CPRD.practice.region' x='888' y='291'>region</text><title>region
 integer
@@ -695,8 +695,8 @@ CPRD - Staff Information - [NUPI=STAFFID]</title></a>
 <a xlink:href='#staff.staffid'><text id='PC_RWD_VDM_CPRD.staff.staffid' x='888' y='456' onmouseover="hghl(['therapy_fk_therapy_0','consultation_fk_consultation_0','clinical_fk_clinical_0'])" onmouseout="uhghl(['therapy_fk_therapy_0','consultation_fk_consultation_0','clinical_fk_clinical_0'])">staffid</text><title>staffid
 integer
 Staff Identifier</title></a>
-<a xlink:href='#staff.staffid'><use id='ref' x='979' y='446' xlink:href='#ref'/><title>Referred by therapy ( staffid ) 
-Referred by consultation ( staffid ) 
+<a xlink:href='#staff.staffid'><use id='ref' x='979' y='446' xlink:href='#ref'/><title>Referred by therapy ( staffid )
+Referred by consultation ( staffid )
 Referred by clinical ( staffid ) </title></a>
   <a xlink:href='#staff.gender'><text id='PC_RWD_VDM_CPRD.staff.gender' x='888' y='471'>gender</text><title>gender
 integer
@@ -884,7 +884,7 @@ CPRD - Medical Codes - [NUPI=MEDCODE]</title></a>
 <a xlink:href='#lkp_medical.medcode'><text id='PC_RWD_VDM_CPRD.lkp_medical.medcode' x='708' y='786' onmouseover="hghl(['referral_fk_referral_0','immunisation_fk_immunisation_0'])" onmouseout="uhghl(['referral_fk_referral_0','immunisation_fk_immunisation_0'])">medcode</text><title>medcode
 integer
 Medical Code</title></a>
-<a xlink:href='#lkp_medical.medcode'><use id='ref' x='799' y='776' xlink:href='#ref'/><title>Referred by referral ( medcode ) 
+<a xlink:href='#lkp_medical.medcode'><use id='ref' x='799' y='776' xlink:href='#ref'/><title>Referred by referral ( medcode )
 Referred by immunisation ( medcode ) </title></a>
   <a xlink:href='#lkp_medical.readcode'><text id='PC_RWD_VDM_CPRD.lkp_medical.readcode' x='708' y='801'>readcode</text><title>readcode
 varchar(7)
@@ -1144,13 +1144,13 @@ Description</title></a>
 <a xlink:href='#lkp_xxx.lkpname'><text id='PC_RWD_VDM_CPRD.lkp_xxx.lkpname' x='888' y='816' onmouseover="hghl(['lkp_entity_fk_lkp_entity','lkp_entity_fk_lkp_entity_0','lkp_entity_fk_lkp_entity_1','lkp_entity_fk_lkp_entity_2','lkp_entity_fk_lkp_entity_3','lkp_entity_fk_lkp_entity_4','lkp_entity_fk_lkp_entity_5','lkp_entity_fk_lkp_entity_6'])" onmouseout="uhghl(['lkp_entity_fk_lkp_entity','lkp_entity_fk_lkp_entity_0','lkp_entity_fk_lkp_entity_1','lkp_entity_fk_lkp_entity_2','lkp_entity_fk_lkp_entity_3','lkp_entity_fk_lkp_entity_4','lkp_entity_fk_lkp_entity_5','lkp_entity_fk_lkp_entity_6'])">lkpname</text><title>lkpname
 varchar(3)
 3-letter lookup name</title></a>
-<a xlink:href='#lkp_xxx.lkpname'><use id='ref' x='979' y='806' xlink:href='#ref'/><title>Referred by lkp_entity ( data1_lkup -&gt; lkpname ) 
-Referred by lkp_entity ( data2_lkup -&gt; lkpname ) 
-Referred by lkp_entity ( data3_lkup -&gt; lkpname ) 
-Referred by lkp_entity ( data4_lkup -&gt; lkpname ) 
-Referred by lkp_entity ( data5_lkup -&gt; lkpname ) 
-Referred by lkp_entity ( data6_lkup -&gt; lkpname ) 
-Referred by lkp_entity ( data7_lkup -&gt; lkpname ) 
+<a xlink:href='#lkp_xxx.lkpname'><use id='ref' x='979' y='806' xlink:href='#ref'/><title>Referred by lkp_entity ( data1_lkup -&gt; lkpname )
+Referred by lkp_entity ( data2_lkup -&gt; lkpname )
+Referred by lkp_entity ( data3_lkup -&gt; lkpname )
+Referred by lkp_entity ( data4_lkup -&gt; lkpname )
+Referred by lkp_entity ( data5_lkup -&gt; lkpname )
+Referred by lkp_entity ( data6_lkup -&gt; lkpname )
+Referred by lkp_entity ( data7_lkup -&gt; lkpname )
 Referred by lkp_entity ( data8_lkup -&gt; lkpname ) </title></a>
   <a xlink:href='#lkp_xxx.load_id'><text id='PC_RWD_VDM_CPRD.lkp_xxx.load_id' x='888' y='831'>load_id</text><title>load_id
 integer
@@ -1482,16 +1482,16 @@ CPRD - Patient Information - [NUPI=PATID]</title></a>
 <a xlink:href='#patient.patid'><text id='PC_RWD_VDM_CPRD.patient.patid' x='708' y='276' onmouseover="hghl(['patient_fk_patient_3','patient_fk_patient','patient_fk_patient_0','referral_fk_referral','therapy_fk_therapy','test_fk_test','test_fk_test','clinical_fk_clinical','immunisation_fk_immunisation','consultation_fk_consultation','additional_fk_additional_0'])" onmouseout="uhghl(['patient_fk_patient_3','patient_fk_patient','patient_fk_patient_0','referral_fk_referral','therapy_fk_therapy','test_fk_test','test_fk_test','clinical_fk_clinical','immunisation_fk_immunisation','consultation_fk_consultation','additional_fk_additional_0'])">patid</text><title>patid
 integer
 Patient Identifier</title></a>
-<a xlink:href='#patient.patid'><use id='fk' x='799' y='266' xlink:href='#fk'/><title>References practice ( patid -&gt; pracid ) 
-References lkp_patients ( patid ) 
-References lkp_patients ( patid ) 
-Referred by referral ( patid ) 
-Referred by therapy ( patid ) 
-Referred by test ( patid ) 
-Referred by test ( patid ) 
-Referred by clinical ( patid ) 
-Referred by immunisation ( patid ) 
-Referred by consultation ( patid ) 
+<a xlink:href='#patient.patid'><use id='fk' x='799' y='266' xlink:href='#fk'/><title>References practice ( patid -&gt; pracid )
+References lkp_patients ( patid )
+References lkp_patients ( patid )
+Referred by referral ( patid )
+Referred by therapy ( patid )
+Referred by test ( patid )
+Referred by test ( patid )
+Referred by clinical ( patid )
+Referred by immunisation ( patid )
+Referred by consultation ( patid )
 Referred by additional ( patid ) </title></a>
   <a xlink:href='#patient.vmid'><text id='PC_RWD_VDM_CPRD.patient.vmid' x='708' y='291'>vmid</text><title>vmid
 decimal(14)

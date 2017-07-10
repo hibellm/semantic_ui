@@ -13,6 +13,11 @@
   <!--link rel="stylesheet" href="./css/bg.css"-->
   <link rel="stylesheet" href="./css/circular.css">
 
+  <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/v0.7.15/webcomponents-lite.min.js"></script>
+  <link rel="import" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/build/zero-md.html">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/markdown-themes/default.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/highlight-themes/default.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
 
@@ -461,7 +466,8 @@ corresponding value from the list below*/
             <li class="hex">
                 <a class="hexIn" href="http://ridlv717002.ind.roche.com/" target="_blank">
                     <i class="hexaf fa fa-comments-o blu3" aria-hidden="true"></i>
-                    <h1>QNA</h1><p>Frequently Asked questions<br>via Exchange.Overflow</p>
+                    <!--img height=64 width=64 src="http://ridlv717002.ind.roche.com/uploads/default/original/1X/436813049aa00f328f93e6db7961bfe2df403103.png" alt="Exchange" id="site-logo" class="logo-big"-->
+                    <h1>Exchange</h1><p>Frequently Asked questions<br>via Exchange.Overflow</p>
                 </a>
             </li>
             <li class="hex">
@@ -495,7 +501,7 @@ corresponding value from the list below*/
             </li>
             <li class="hex"><a class="hexIn" href="#" style="background-color:white!important"></a></li>
             <li class="hex">
-                <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Tools+Portal" target="_parent">
+                <a class="hexIn" href="./tools.html" target="_parent">
                     <i class=" hexaf fa fa-cogs blu3" aria-hidden="true"></i>
                    <h1>Tools</h1><p>Other software </p>
                 </a>
@@ -553,9 +559,9 @@ corresponding value from the list below*/
       <i class="database icon"></i>  <i class="icon close"></i>
       <div class="content">
         <div class="header">
-          IPSOS - new data available
+          Flatiron - (2017 JUN ) data available
         </div>
-        <p>New IPSOS data is available - please see <a href="#" onclick="$('.ui.modal#ipsosupdt').modal('show');">here</a> for details</p>
+        <p>New FLATIRON data are available - please see <a href="#" onclick="$('.ui.modal#ipsosupdt').modal('show');">here</a> for details</p>
       </div>
     </div>
     <!--MESSAGE 4-->
@@ -564,10 +570,10 @@ corresponding value from the list below*/
         <i class="icon close"></i>
       <div class="content">
         <div class="header">
-          CPRD - New batch Loading!
+          CPRD HES removal
         </div>
         <div class="ui purple progress " data-value="1" data-total="5" id="example6">
-           <div class="label"><a href="JIRA TICKET">MDH-123</a></div>
+           <div class="label"><a href="http://jira.glide.roche.com/jira/browse/MDH-206" target="_blank">MDH-206</a></div>
           <div class="bar"></div>
         </div>
       </div>
@@ -581,9 +587,11 @@ corresponding value from the list below*/
 <!--MODAL DIALOGS-->
 <div class="ui modal" id="ipsosupdt">
   <i class="close icon"></i>
-  <div class="header">IPSOS update</div>
+  <div class="header">Flatiron update</div>
   <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    <zero-md file="https://raw.github.roche.com/MDH/Flatiron/master/JUN2017.md">
+       <div class="md-html"></div>
+    </zero-md>
   </div>
 </div>
 
