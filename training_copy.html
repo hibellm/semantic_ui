@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Semontic UI Sandbox</title>
+    <!--CDN for Semontic UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+    <link rel="sytlesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+
+  </head>
+
+  <!--MAIN PAGE CONTENT-->
+  <body>
+
+    <div class="ui container">
+      <!--MENU-->
+      <div class="ui secondary large pointing menu blue">
+        <a class="item" id="mi1" href="./index.html">Home</a>
+        <a class="item active" id="mi2" href="./training.html">Training</a>
+        <a class="item" id="mi3" href="./datasource.html">Data Sources</a>
+        <a class="item" id="mi4" href="./about.html">About</a>
+        <div class="right menu">
+          <a class="ui item">Logout</a>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>breadcrumbs can go here</p>
+      </div>
+      <div class="ui inverted segment blue tertiary center aligned">
+        <h1><i>Welcome to the</i><br>Medical Data Hub Training Space</h1>
+        <div class="ui basic segment left aligned">
+          <p>The MDH Training Page is your central place for information about the Medical Data Hub training offerings, including but not limited to technical, compliance and vendors provided trainings.</p>
+        </div>
+      </div>
+
+      <!--3 MAIN ITEMS-->
+      <div class="ui grid container segment center aligned padded">
+          <div class="five wide column"  id="tab-ft" data-tab="tab-ft">
+            <i class="circular icon massive cube blue tertiary inverted"></i>
+            <div class="ui header" style="font-size:3em">Foundational</div>
+            <div class="ui header medium"><i>Foundational training are the basis of understanding the Medical Data Hub and what we do.</i></div>
+          </div>
+          <div class="five wide column" id="tab-cp"  data-tab="tab-cp">
+            <i class="circular icon massive university blue tertiary inverted"></i>
+            <div class="ui header" style="font-size:3em">Compliance</div>
+            <div class="ui header medium"><i>Read &amp; Understand guidelines essential for data source access.</i></div>
+          </div>
+          <div class="five wide column" id="tab-ds" data-tab="tab-ds">
+            <i class="circular icon massive database blue tertiary inverted"></i>
+            <div class="ui header" style="font-size:3em">Data Source</div>
+            <div class="ui header medium"><i>Vendor and SME trainings to help you understand the data sources themselves and how to best use them.</i></div>
+          </div>
+      </div>
+
+
+
+
+
+      <div class="ui segment tab" data-tab="tab-ft">
+      <!--TRAINING CARDS-->
+      <div class="ui three column grid">
+        <!--CARD 1-->
+        <div class="column">
+        <div class="ui card fluid">
+          <div class="content">
+              <div class="ui purple ribbon label right large">Mandatory</div>
+          </div>
+          <div class="content">
+            <i class="right floated graduation blue huge icon"></i>
+            <div class="header huge">MDH Basic Training</div>
+          </div>
+          <div class="content meta"><i class="slideshare icon"></i>Classroom based</div>
+          <div class="content description">This is the basic MDH course, used to understand the fundementals of who the Medical Data Hub are and what Teradata is.</div>
+          <ul>
+            <li>Who are MDH</li>
+            <li>Data available</li>
+            <li>Get started</li>
+          </ul>
+          <div class="extra content">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRNF262FYZKGiFveSoXyeK33UfXGADdFnyIedl8OTz8Pyfwg/viewform?usp=sf_link" target="_blank">
+            <div class="ui one column">
+              <div class="ui bottom attached purple button"><i class="add icon"></i>Register</div>
+            </div>
+            </a>
+          </div>
+        </div>
+        </div>
+         <!--CARD 2-->
+         <div class="column">
+         <div class="ui card fluid">
+         <div class="content">
+             <div class="ui purple ribbon label right large">Optional</div>
+         </div>
+         <div class="content">
+           <i class="right floated rocket blue huge icon"></i>
+           <div class="header huge">MDH Advanced Training</div>
+         </div>
+         <div class="content meta"><i class="slideshare icon"></i>Classroom based</div>
+         <div class="content description">This is the Advanced MDH course, used to understand the fundementals of Teradata and the Medical Data hub.
+         <ul>
+           <li>Teradata</li>
+           <li>SQL</li>
+           <li>SAS</li>
+         </ul>
+       </div>
+         <div class="extra content">
+           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRNF262FYZKGiFveSoXyeK33UfXGADdFnyIedl8OTz8Pyfwg/viewform?usp=sf_link" target="_blank">
+           <div class="ui one column">
+             <div class="ui bottom attached purple button"><i class="add icon"></i>Register</div>
+           </div>
+           </a>
+         </div>
+        </div>
+        </div>
+        <!--CARD 3-->
+        <div class="column">
+        <div class="ui card fluid">
+        <div class="content">
+            <div class="ui purple ribbon label right large">Recomended</div>
+        </div>
+        <div class="content">
+          <i class="right floated world blue huge icon"></i>
+          <div class="header huge">MDH Data Source Training</div>
+        </div>
+        <div class="content meta "><i class="slideshare icon"></i>Classroom based / <i class="wechat icon"></i>Web-Ex</div>
+        <div class="content description">These are trainings given by collaboration between MDH and SMEs on data sources available within the MDH.
+          <ul>
+            <li>Vendor Offical training</li>
+            <li>In-house Training</li>
+            <li>Ad Hoc</li>
+          </ul>
+      </div>
+        <div class="extra content">
+          <div class="ui one column">
+            <div class="ui bottom attached purple button"><i class="add icon"></i>Learn More</div>
+          </div>
+        </div>
+        </div>
+        </div>
+     </div>
+
+   </div>
+
+   <div class="ui segment tab padded" data-tab="tab-cp">
+    <div class="ui grid">
+        <iframe src="./access.html" width="100%" height="700"></iframe>
+      <p>In order to gain access to any Datasource, you must first have a completed Read &amp; understood.</p><br>
+      <p>The process is as follows:</p>
+      <ol>
+        <li>Find the LSO code fo rthe data source you want access for <a onclick="$('.ui.modal#train-ru').modal('show');" href="#" >Click here for a list</a></li>
+        <li>Go to the LSO portal and enter the code</li>
+        <li>Save the R&amp;U completion PDF</li>
+        <li>Using the <a href="http://rwdhelp.roche.com/rwd" target="_blank">RWD web form</a>, attach the R&amp;U completion, and request access for the data source.</li>
+      </ol>
+
+
+    </div>
+  </div>
+  <div class="ui segment tab" data-tab="tab-ds">
+     <!--TRAINING CARDS-->
+     <div class="ui two column grid">
+       <!--CARD 1-->
+       <div class="column">
+       <div class="ui card fluid">
+         <div class="content">
+             <div class="ui purple ribbon label right large">CPRD</div>
+         </div>
+         <div class="content">
+           <i class="right floated graduation blue huge icon"></i>
+           <div class="header huge">Vendor Training</div>
+         </div>
+         <div class="content meta"><i class="slideshare icon"></i>Classroom based</div>
+         <div class="content description">These are the available Vendor Data source Trainings courses.</div>
+         <ul>
+           <li>CPRD</li>
+           <li>Truven</li>
+           <li>Optum</li>
+         </ul>
+         <div class="extra content">
+           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRNF262FYZKGiFveSoXyeK33UfXGADdFnyIedl8OTz8Pyfwg/viewform?usp=sf_link" target="_blank">
+           <div class="ui one column">
+             <div class="ui bottom attached purple button"><i class="add icon"></i>Register</div>
+           </div>
+           </a>
+         </div>
+       </div>
+       </div>
+        <!--CARD 2-->
+        <div class="column">
+        <div class="ui card fluid">
+        <div class="content">
+            <div class="ui purple ribbon label right large">Optional</div>
+        </div>
+        <div class="content">
+          <i class="right floated rocket blue huge icon"></i>
+          <div class="header huge">MDH/SME Data Source Training</div>
+        </div>
+        <div class="content meta"><i class="slideshare icon"></i>Classroom based</div>
+        <div class="content description">This is the Advanced MDH course, used to understand the fundementals of Teradata and the Medical Data hub.
+        <ul>
+          <li>CPRD - <i> 4 hr - Classroom</i> <div class="ui mini button" title="Enroll me!">25DEC2017</div></li>
+          <li>Premier - <i> 4 hr - Classroom</i> <div class="ui mini button" title="Enroll me!">25DEC2017</div></li>
+          <li>SAS</li>
+        </ul>
+      </div>
+        <div class="extra content">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRNF262FYZKGiFveSoXyeK33UfXGADdFnyIedl8OTz8Pyfwg/viewform?usp=sf_link" target="_blank">
+          <div class="ui one column">
+            <div class="ui bottom attached purple button"><i class="add icon"></i>Register</div>
+          </div>
+          </a>
+        </div>
+       </div>
+       </div>
+    </div>
+
+   </div>
+ </div>
+
+ <button class="ui basic purple button" type="button" name="button" onclick="$('.ui.modal#train-dates').modal('show');">Press me</button>
+
+<!--MODAL-->
+<div class="ui fullscreen modal" id="train-dates">
+  <i class="close icon yellow"></i>
+  <div id="mypdf">
+  <iframe src="http://we3.collaboration.roche.com/team/201266f4/Documents/TRAINING/Schedule%20MDH%20Technical%20Trainings.pdf" style="width: 100%; height: 800px;" frameborder="0" scrolling="no">
+  <p>Your web browser doesn't support iframes.</p>
+  </iframe>
+  </div>
+</div>
+<div class="ui fullscreen modal" id="train-ru">
+  <i class="close icon yellow"></i>
+  <div id="mypdf">
+  <iframe src="http://www.google.com/url?q=http%3A%2F%2Fwe3.collaboration.roche.com%2Fteam%2F201266f4%2FDocuments%2FTRAINING%2F03_Compliance%2520Trainings%2FMDH%2520Read%2520and%2520Understand%2520LSO%2520LMS%2520Codes%2520Febr%25202017.pdf&sa=D&sntz=1&usg=AFQjCNE9a0sbOD-vHApYp1x1DPt0GgdWxQ" style="width: 100%; height: 800px;" frameborder="0" scrolling="no">
+  <p>Your web browser doesn't support iframes.</p>
+  </iframe>
+  </div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+$('#tab-ft')
+  .on('click', function() {
+    $.tab('change tab', 'tab-ft');
+  })
+;
+$('#tab-cp')
+  .on('click', function() {
+    $.tab('change tab', 'tab-cp');
+  })
+;
+$('#tab-ds')
+  .on('click', function() {
+    $.tab('change tab', 'tab-ds');
+  })
+;
+</script>
+
+  </body>
+</html>
