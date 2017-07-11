@@ -3,1288 +3,299 @@
   <head>
     <meta charset="utf-8">
     <title>Semontic UI Sandbox</title>
-    <!--CDN for Semontic UI-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/organ.css">
-    <!--link rel="stylesheet" href="./bg.css"-->
-    <link rel="stylesheet" href="./css/circular.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  </head>
+  <!-- Site Properties -->
+  <title>Landing Page - MDH</title>
 
-<style media="screen">
-html{
-  height:100%;
-}
+  <!--CDN for Semontic UI-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-body {
-  background-color: #222222;
-  margin: 0;
-  overflow: hidden;
-  height:100%;
-}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
 
-.hcontainer {
-  position: absolute;
-  width: 2300px;
-  left: 50%;
-  margin-left: -1200px;
-  top: -40px;
-  z-index: 999;
-}
+  <style type="text/css">
 
-.hwrapper {
-  position: absolute;
-  width: 988px;
-  left: 50%;
-  margin-left: -480px;
-  top: 229px;
-  z-index: 9999;
-}
+    .hidden.menu {
+      display: none;
+    }
 
-.wrapper .row2 {
-  margin-left: 67px;
-}
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
 
-.hex {
-  display: inline-block;
-  margin-left: 2px;
-  margin-right: 2px;
-  -webkit-user-select:none;
-}
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
 
-.content {
-  height: 0px;
-  position: relative;
-  margin 0 auto;
-  width: 100%;
-  background: #333;
-  color: #ccc;
-  margin: 0px 0px 0px 0px;
-}
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
 
-.hex:before {
-  content: " ";
-  width: 0;
-  height: 0;
-  border-bottom: 30px solid #272727;
-  border-left: 53px solid transparent;
-  border-right: 53px solid transparent;
-  position: absolute;
-  top: -29px;
-  left: 0;
-}
+    .footer.segment {
+      padding: 5em 0em;
+    }
 
-.hex {
-  margin-top: 30px;
-  width: 104px;
-  height: 60px;
-  background-color: #272727;
-  position: absolute;
-  text-align: center;
-  color: #bbb;
-  white-space: normal;
-  overflow: visible;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  line-height: 1.2;
-  -webkit-transform: scale(3, 3, 3);
-  -ms-transform: scale3d(3, 3, 3);
-  transform: scale3d(3, 3, 3);
-  z-index:1;
-}
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
 
-.one .hex {
-  background-color: #242424
-}
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+  </style>
 
-.one .hex:after {
-  border-top: 30px solid #242424;
-}
+  <script src="assets/library/jquery.min.js"></script>
+  <script src="../dist/components/visibility.js"></script>
+  <script src="../dist/components/sidebar.js"></script>
+  <script src="../dist/components/transition.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
 
-.one .hex:before {
-  border-bottom: 30px solid #242424;
-}
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
 
-.two .hex {
-  background-color: #252525
-}
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
 
-.two .hex:after {
-  border-top: 30px solid #252525;
-}
+    })
+  ;
+  </script>
+</head>
+<body class="pushable">
 
-.two .hex:before {
-  border-bottom: 30px solid #252525;
-}
-
-.three .hex {
-  background-color: #262626
-}
-
-.three .hex:after {
-  border-top: 30px solid #262626;
-}
-
-.three .hex:before {
-  border-bottom: 30px solid #262626;
-}
-
-.hex:after {
-  content: "";
-  width: 0;
-  position: absolute;
-  bottom: -29px;
-  left: 0px;
-  z-index:1;
-  border-top: 30px solid #272727;
-  border-left: 53px solid transparent;
-  border-right: 53px solid transparent;
-}
-
-/*.hex.hover {
-  z-index:10000;
-}*/
-
-.hex-row {
-  white-space: nowrap
-}
-
-.hex-row.even {
-  margin-left: 68px;
-  white-space: nowrap;
-}
-
-.hex.hover:hover {
-  background-color: #333;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.hex:hover {
-  background-color: #333;
-}
-
-.hex:hover:after {
-  border-top: 30px solid #333;
-}
-
-.hex:hover:before {
-  border-bottom: 30px solid #333;
-}
-
-.hex.hover span {
-  top: 20px;
-  position: relative;
-}
-
-.lab_item {
-  width: 130px;
-  height: 110px;
-  position: relative;
-  display: inline-block;
-  z-index:-1;
-}
-
-.lab_item.has-text {
-  z-index:1;
-}
-</style>
-
-
-  <!--MAIN PAGE CONTENT-->
-  <body>
-
-    <div class="ui container">
-      <!--MENU-->
-      <div class="ui secondary large pointing menu blue">
-        <a class="item active" id="mi1" href="./index.html">Home</a>
-        <a class="item" id="mi2" href="./training.html">Training</a>
-        <a class="item" id="mi3" href="./datasource.html">Data Sources</a>
-        <a class="item" id="mi4" href="./about.html">About</a>
-
-        <div class="right menu">
-          <a class="ui item">Logout</a>
-        </div>
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
       </div>
-      <div class="ui segment">
-        <p>breadcrumbs can go here</p>
-      </div>
-
-      <!--STUFF GOES HERE-->
-      <div class="segment">
-
-  <div class="hwrapper">
-    <div class="row1">
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item has-text">
-        <div class="hex hover"><span>GENERATION</span></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item has-text">
-        <div class="hex hover"><span>PROGRAM MANAGEMENT</span></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="row2">
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item has-text">
-        <div class="hex hover"><span>DISTRIBUTION</span></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item has-text">
-        <div class="hex hover"><span>MDH</span></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item has-text">
-        <div class="hex hover"><span>GEOSPATIAL</span></div>
-      </div>
-    </div>
-    <div class="row2">
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item has-text">
-        <div class="hex hover"><span>ENVIRONMENTAL</span></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item has-text">
-        <div class="hex hover"><span>CONSTRUCTION MANAGEMENT</span></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item has-text">
-        <div class="hex hover"><span>STUDIES</span></div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
       </div>
     </div>
   </div>
-  <div class="background">
-    <div class="hex-row">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row even">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row even">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="content">
-    </div>
-    <div class="hex-row">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row even">
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row even">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row even">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row even">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row">
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item three">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-    <div class="hex-row even one">
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item two">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-      <div class="lab_item one">
-        <div class="hex"></div>
-      </div>
-    </div>
-  </div>
-
-      </div>
-
 </div>
 
-  </body>
-<script type="text/javascript">
-// comment out due to webkit transform perspective bug
-//CSSPlugin.defaultTransformPerspective = 600;
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu left">
+  <a class="active item">Home</a>
+  <a class="item">Work</a>
+  <a class="item">Company</a>
+  <a class="item">Careers</a>
+  <a class="item">Login</a>
+  <a class="item">Signup</a>
+</div>
 
-// use perspective property instead on .hex parent
-TweenMax.set(".lab_item", {
-  css: {
-    perspective: 600
-  }
-});
 
-TweenMax.staggerFromTo(".background .hex", .5, {
-  scaleX: 0,
-  scaleY: 0,
-  autoAlpha: 0,
-  transformOrigin: "50% 50%"
-}, {
-  scaleX: 1.2,
-  scaleY: 1.2,
-  autoAlpha: 0.99,
-  transformOrigin: "50% 50%"
-}, .015);
-TweenMax.staggerFromTo(".wrapper .hex", .5, {
-  scaleX: 0,
-  scaleY: 0,
-  autoAlpha: 0,
-  transformOrigin: "50% 50%"
-}, {
-  autoAlpha: 0.99,
-  scaleX: 1.2,
-  scaleY: 1.2,
-  transformOrigin: "50% 50%",
-  delay: 1.5
-}, .1);
+<!-- Page Contents -->
+<div class="pusher">
 
-$(".hex.hover").mouseover(function() {
-  TweenMax.set(this,  {
-    //zIndex: 9999
-  });
-  TweenMax.to(this, .2, {
-    scaleX: 2,
-    scaleY: 2,
-    autoAlpha: 1,
-    transformOrigin: "50% 50%"
-  });
-});
+  <!--THE MASTHEAD-->
+  <div class="ui inverted vertical masthead center aligned segment blue tertiary">
 
-$(".hex.hover").mouseout(function() {
-  TweenMax.to(this, .2, {
-    scale: 1.2,
-    //zIndex: 99,
-    transformOrigin: "50% 50%"
-  });
-});
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a class="active item">Home</a>
+        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
+        <div class="right item">
+          <a class="ui inverted button">Log in</a>
+          <a class="ui inverted button">Sign Up</a>
+        </div>
+      </div>
+    </div>
 
-</script>
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        Medical Data Hub
+      </h1>
+      <h2><i>"Providing medical data to drive tomorrow's actionable insights"</i></h2>
+      <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+    </div>
+
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header">Who are we?</h3>
+          <p>The Medical Data Hub are:
+            <ul>
+              <li>A small but highly functional team with complimentary skill sets</li>
+              <li>Able to impliment Big Data technologies</li>
+              <li>Flexable and focused on delivering the analytical environment required for the future</li>
+            </ul>
+          <h3 class="ui header">What does the Medical Data Hub do?</h3>
+          <p>The MDH supports Roche in its mission to be a leader using Real Word Data (RWD) and Continous Evidence Research (CER). RWD and CER development help to optimize medical practice and patient benefit, accelerate and appropriately sustain patient access to therapies and innovate drug development. Please click the video to hear our CEO, Severin Schwan discuss Foundation Medicine, Ownership of RWD and how we will work it in the future, and the important partnerships that we will develop to drive success.</p>
+        </div>
+        <div class="six wide right floated column">
+          <img src="./images/background2.jpg" class="ui large bordered rounded image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="center aligned column">
+          <a class="ui huge button">Check Them Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+          <h3>"Why we are needed"</h3>
+          <p>Severin Schwann - CEO talk</p>
+          <video src="./images/severin.mp4" width="420" height="250" poster="./images/poster_severin.png" controls="" preload=""></video>
+        </div>
+        <div class="column">
+          <h3>"PHC 2.0 and EDIS"</h3>
+          <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+      <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+      <a class="ui large button">Read More</a>
+      <h4 class="ui horizontal header divider">
+        <a href="#">Case Studies</a>
+      </h4>
+      <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+      <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
+      <a class="ui large button">I'm Still Quite Interested</a>
+    </div>
+  </div>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="#" class="item">Contact Us</a>
+            <a href="#" class="item">Religious Ceremonies</a>
+            <a href="#" class="item">Gazebo Plans</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Banana Pre-Order</a>
+            <a href="#" class="item">DNA FAQ</a>
+            <a href="#" class="item">How To Access</a>
+            <a href="#" class="item">Favorite X-Men</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
 </html>
