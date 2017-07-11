@@ -111,10 +111,6 @@
     }
   </style>
 
-  <script src="assets/library/jquery.min.js"></script>
-  <script src="../dist/components/visibility.js"></script>
-  <script src="../dist/components/sidebar.js"></script>
-  <script src="../dist/components/transition.js"></script>
   <script>
   $(document)
     .ready(function() {
@@ -136,7 +132,6 @@
       $('.ui.sidebar')
         .sidebar('attach events', '.toc.item')
       ;
-
     })
   ;
   </script>
@@ -208,23 +203,16 @@
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
-          <h3 class="ui header">Who are we?</h3>
-          <p>The Medical Data Hub are:
-            <ul>
-              <li>A small but highly functional team with complimentary skill sets</li>
-              <li>Able to impliment Big Data technologies</li>
-              <li>Flexable and focused on delivering the analytical environment required for the future</li>
-            </ul>
           <h3 class="ui header">What does the Medical Data Hub do?</h3>
-          <p>The MDH supports Roche in its mission to be a leader using Real Word Data (RWD) and Continous Evidence Research (CER). RWD and CER development help to optimize medical practice and patient benefit, accelerate and appropriately sustain patient access to therapies and innovate drug development. Please click the video to hear our CEO, Severin Schwan discuss Foundation Medicine, Ownership of RWD and how we will work it in the future, and the important partnerships that we will develop to drive success.</p>
+          <p>The MDH supports Roche in its mission to be a leader using Real Word Data (RWD) and Continous Evidence Research (CER).</p>
+          <h3 class="ui header">Why are RWD and CET important?</h3>
+          <p>The development of Roche's RWD and CER capabilities help to optimize medical practice and patient benefit, accelerate and appropriately sustain patient access to therapies and innovate drug development.</p>
+          <p>Please click the video to hear our CEO, Severin Schwan discuss Foundation Medicine, Ownership of RWD and how we will work it in the future, and the important partnerships that we will develop to drive success.</p>
         </div>
-        <div class="six wide right floated column">
-          <img src="./images/background2.jpg" class="ui large bordered rounded image">
-        </div>
-      </div>
-      <div class="row">
-        <div class="center aligned column">
-          <a class="ui huge button">Check Them Out</a>
+        <div class="six wide right floated column center aligned">
+          <h3>Severin Schwann - <i>CEO talk</i></h3>
+          <video src="./images/severin.mp4" width="400" height="250" poster="./images/poster_severin.png" controls="" preload=""></video>
+
         </div>
       </div>
     </div>
@@ -234,15 +222,30 @@
   <div class="ui vertical stripe quote segment">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
-        <div class="column">
-          <h3>"Why we are needed"</h3>
-          <p>Severin Schwann - CEO talk</p>
-          <video src="./images/severin.mp4" width="420" height="250" poster="./images/poster_severin.png" controls="" preload=""></video>
+        <div class="column grey left aligned" >
+          <h3 class="ui header center aligned">Who are we?</h3>
+          <div class="ui six column wide right">
+          <p>The Medical Data Hub are:
+            <ul style="font-size:1.33em;line-height: 1.4285em;">
+              <li>A small but highly functional team with complimentary skill sets</li>
+              <li>Able to impliment Big Data technologies to deliver an analytical environment required for the future</li>
+              <li>Provide support for analysis, provide training</li>
+              <li>Provide support for analysis</li>
+              <li>Training on the system and the Data SOurces</li>
+              </ul>
+            </ul>
+            </div>
+            <div class="row">
+              <div class="center aligned column">
+                <a class="ui huge button" href="mailto:mdh-d@gene.com">Contact us</a>
+              </div>
+            </div>
         </div>
-        <div class="column">
-          <h3>"PHC 2.0 and EDIS"</h3>
+        <!--div class="column" style="background-image: url(https://developer.playphone.com/App/Landing/img/main-slide-1.png)"-->
+          <div class="column red">
+          <h1 style="font-size:4em;">PHC 2.0 and EDIS</h1>
+          <img src="./images/image3.jpg" class="ui large bordered rounded image">
           <p>
-            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
           </p>
         </div>
       </div>
@@ -250,16 +253,19 @@
   </div>
 
   <div class="ui vertical stripe segment">
-    <div class="ui text container">
-      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-      <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-      <a class="ui large button">Read More</a>
+    <div class="ui text container center aligned">
+      <h3 class="ui header">The Technology</h3>
+      <p>To handle Big Data , you need the right tools.</p>
+      <p>Roche has invested in Teradata&trade;, and Cloudera&trade; to answer these questions, and bring fast analytics to the increasingly large data lake!</p>
+      <p> </p>
+      <a class="ui large button orange">Read More</a>
       <h4 class="ui horizontal header divider">
         <a href="#">Case Studies</a>
       </h4>
-      <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-      <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-      <a class="ui large button">I'm Still Quite Interested</a>
+      <h3 class="ui header">Real World Data</h3>
+      <p>Teradata is the platofrm allowing all of Roche to access an use Real World Data to answer </p>
+      <p>Associated with the data sources are training courses, job aids and </p>
+      <a class="ui large button orange">Tell me more</a>
     </div>
   </div>
 
