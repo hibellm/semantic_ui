@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Semontic UI Sandbox</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.jpg" />
+
+  <!--CDN for Semontic UI-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--link rel="stylesheet" href="./css/organ.css"-->
+  <!--link rel="stylesheet" href="./css/bg.css"-->
+  <link rel="stylesheet" href="./css/circular.css">
+
+  <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/v0.7.15/webcomponents-lite.min.js"></script>
+  <link rel="import" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/build/zero-md.html">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/markdown-themes/default.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/highlight-themes/default.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+
+</head>
+<script>
+function closeBox(toClose) {
+   document.getElementById(toClose).style.display = "none";
+   setCookie(toClose, "closed", 365);
+}
+function setCookie(cName, value, expiredays) {
+   var expDate = new Date();
+   expDate.setDate(expDate.getDate()+expiredays);
+   document.cookie=cName + "=" + escape(value) +
+   ";expires=" + expDate.toGMTString();
+}
+function loadMsg(msgClass) {
+   msg = document.getElementsByTagName("div");
+   for (i=0; i<msg.length; i++) {
+      if(msg[i].className == msgClass) {
+         if(document.cookie.indexOf(msg[i].id) == -1) {
+            msg[i].style.display = "block";
+         }
+      }
+   }
+}
+</script>
+<style>
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  background-color: #4858e8;
+  margin: 28.87px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 28.87px solid #4858e8;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 28.87px solid #4858e8;
+}
+</style>
+
+<body onload="loadMsg('msgbox');">
+
+<div class="ui container">
+  <!--MENU-->
+  <div class="ui secondary large pointing menu inverted">
+    <a class="item active" id="mi1" href="./index.html">Home</a>
+    <a class="item" id="mi2" href="./training.html">Training</a>
+    <a class="item" id="mi3" href="./datasource.html">Data Sources</a>
+    <a class="item" id="mi4" href="./about.html">About</a>
+
+    <div class="right menu inverted">
+      <a class="ui item">Logout</a>
+    </div>
+  </div>
+  <div class="ui segment">
+    <p>breadcrumbs can go here</p>
+  </div>
+
+
+<div class="ui centered grid">
+  <div class="row">
+    <div class="column blue">
+      <div class="ui header inverted huge centered"><i>Welcome to the</i><br>
+        <span style="font-size: 46px !important;">Medical Data Hub</span><br>
+         <i>&quot;Providing medical data to drive <strong>tomorrow&#39;s actionable insights&quot;</strong></i></div>
+    </div>
+  </div>
+
+<div class="row">
+
+  <div class="ten wide column">
+<div class="hexagon">CPRD</div>
+<div class="hexagon"></div>
+<div class="hexagon"></div>
+<div class="hexagon"></div>
+<div class="hexagon"></div>
+       <ul id="hexGrid">
+
+         <li class="hex hextran"><div class="hexagon"></div></li>
+            <li class="hex">
+                <a class="hexIn" href="#" target="_blank">
+                    <i class="hexaf fa fa-comments-o blu3" aria-hidden="true"></i>
+                    <!--img height=64 width=64 src="http://ridlv717002.ind.roche.com/uploads/default/original/1X/436813049aa00f328f93e6db7961bfe2df403103.png" alt="Exchange" id="site-logo" class="logo-big"-->
+                    <h1>Exchange</h1><p>Frequently Asked questions<br>via Exchange.Overflow</p>
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#" target="_parent">
+                    <i class=" hexaf fa fa-newspaper-o blu3" aria-hidden="true"></i>
+                    <h1>Truven</h1><p>Latest News</p>
+                </a>
+            </li>
+            <!--li class="hex"><a class="hexIn" href="#" style="background-color:transparent!important"></a></li-->
+            <li class="hex">
+                <a class="hexIn" href="#" target="_parent">
+                    <i class=" hexaf fa fa-server blu3" aria-hidden="true"></i>
+                   <h1>Servers</h1><p>Server landscape</p>
+                </a>
+            </li>
+            <li class="hex"><a class="hexIn" href="#" style="background-color:white!important"></a></li>
+            <li class="hex">
+                <a class="hexIn" href="#" target="_parent">
+                    <i class=" hexaf fa fa-database blu3" aria-hidden="true"></i>
+                   <h1>Database</h1><p>Information about the Data Sources</p>
+                </a>
+            </li>
+            <li class="hex hexicon">
+               <a class="hexIn" href=""><img src="./images/MDH_256_tb.png" height="10" width="10"></img></a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="./training.html" target="_parent">
+                    <i class=" hexaf fa fa-graduation-cap blu3" aria-hidden="true"></i>
+                    <h1>Training</h1><p>Increase your Knowledge</p>
+                </a>
+            </li>
+            <li class="hex"><a class="hexIn" href="#" style="background-color:white!important"></a></li>
+            <li class="hex">
+                <a class="hexIn" href="./tools.html" target="_parent">
+                    <i class=" hexaf fa fa-cogs blu3" aria-hidden="true"></i>
+                   <h1>Tools</h1><p>Other software </p>
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Medical+Data+Hub+and+RWDS+collaboration" target="_parent">
+                    <i class=" hexaf fa fa-handshake-o blu3" aria-hidden="true"></i>
+                    <h1>Partnerships</h1><p>The RWD community</p>
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="http://rochewiki.roche.com/confluence/display/DataHub/Medical+Data+Hub+Portal" target="_parent">
+                    <i class=" hexaf fa fa-user-md blu3" aria-hidden="true"></i>
+                    <h1>Medical<br>Data Hub</h1><p>MDH portal</p>
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn bg-grn1" href="http://rochewiki.roche.com/confluence/display/DataHub/Code+share+portal" target="_parent">
+                    <i class=" hexaf fa fa-file-code-o blu3" aria-hidden="true"></i>
+                    <h1>Code Share</h1><p>Good code needs to be shared</p>
+                </a>
+            </li>
+            <li class="hex"><a class="hexIn" href="#" style="background-color:white!important"></a></li>
+
+        </ul>
+  </div>
+</div>
+</div>
+
+
+</div>
+
+</body>
+
+
+</html>

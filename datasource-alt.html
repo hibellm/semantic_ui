@@ -30,6 +30,72 @@
         <p>breadcrumbs can go here</p>
       </div>
 
+      <div class="ui segment">
+        <div class="ui header huge">Vendor and Data source information</div>
+         Medical Data Hub has the following data sources available.
+
+         <div class="ui two column fluid grid">
+
+<div class="ui column">
+           <div class="ui card fluid">
+            <div class="content">
+            <a class="ui header huge">CPRD</a>
+             <div class="meta"><span class="date">2 Data sources</span></div>
+             <div class="description">Clinical research Practice Link (short description)</div>
+             <div class="extra content">
+               <!--EXPANDABLE CONTENT-->
+               <div class="ui accordion">
+                 <div class="title">
+                   <i class="add square icon large"></i>Data sources
+                 </div>
+                 <div class="content">
+                   <p class="transition visible" style="display: block !important;">
+                     <ul>
+                       <li>CPRD - (short description)</li>
+                       <li>HES - (short description)</li>
+                     </ul>
+                   </p>
+                 </div>
+               </div>
+           </div>
+         </div>
+</div>
+</div>
+<div class="ui column">
+           <div class="ui card fluid">
+             <div class="content">
+                 <a class="ui header huge">Truven</a>
+                 <div class="meta"><span class="date">5 Data Sources</span></div>
+                 <div class="description">Truven is...(short description)</div>
+               </div>
+               <div class="extra content">
+                 <!--EXPANDABLE CONTENT-->
+                 <div class="ui accordion">
+                   <div class="title">
+                     <i class="add square icon large"></i>Data sources
+                   </div>
+                   <div class="content">
+                     <p class="transition visible" style="display: block !important;">
+                       <ul>
+                         <li>CCAE - Claims data base covering USA (Medicaid)</li>
+                         <li>MCDR - (short description)</li>
+                         <li>HDD - (short description)</li>
+                       </ul>
+                     </p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+</div>
+
+         </div>
+
+
+      </div>
+
+
+
+
       <!--A MENU LIKE CONTIANER FOR THE DATA SOURCES-->
 <div class="ui equal width center aligned padded grid segment" id="dsselect">
 
@@ -71,7 +137,7 @@
 
 
 
-</DIV>
+</div>
 
 
   </body>
@@ -83,5 +149,9 @@
       }
     })
   ;
+
+  $('.ui.accordion')
+  .accordion()
+;
   </script>
 </html>
