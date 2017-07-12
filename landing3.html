@@ -24,6 +24,49 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
 
   <style type="text/css">
+  #mydiv {
+    height:100%;
+    width:100%;
+    background-image:url(https://hibellm.github.io/semantic_ui/images/background3.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #maintitle{
+    background-color: rgba(100,100,100,0.5);
+    color: #FFF!important;
+    padding-bottom: 20px;
+    border-radius: 5px;
+
+  }
+  #mainMDH{
+    color: #FFF!important;
+    font-weight: bold;
+    font-family: lato;
+  }
+  #midleft{
+    background-image:url(https://hibellm.github.io/semantic_ui/images/background4.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #midright{
+    background-image:url(https://hibellm.github.io/semantic_ui/images/background2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+.lpul {
+  font-size:2em;
+  line-height: 1.4285em;"
+}
+.mdhbb{
+  color: #FFF!important;
+  font-size:4em!important;
+  font-weight: bold;
+  font-family: lato;
+}
+
+.menubg{
+  background-color: #D3D3D3!important;
+}
 
     .hidden.menu {
       display: none;
@@ -44,6 +87,7 @@
       margin-bottom: 0em;
       font-size: 4em;
       font-weight: normal;
+      color: rgba(200,200,200,1);
     }
     .masthead h2 {
       font-size: 1.7em;
@@ -139,7 +183,7 @@
 <body class="pushable">
 
 <!-- Following Menu -->
-<div class="ui large top fixed hidden menu">
+<div class="ui large top fixed hidden menu menubg">
   <div class="ui container">
     <a class="active item">Home</a>
     <a class="item">Work</a>
@@ -157,7 +201,7 @@
 </div>
 
 <!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu left">
+<div class="ui vertical inverted sidebar menu left menubg">
   <a class="active item">Home</a>
   <a class="item">Work</a>
   <a class="item">Company</a>
@@ -172,10 +216,10 @@
 
   <!--THE MASTHEAD-->
   <div class="ui inverted vertical masthead center aligned segment blue tertiary"
-       style="background-image:url(https://hibellm.github.io/semantic_ui/images/background3.jpg)">
+       id="mydiv">
 
     <div class="ui container">
-      <div class="ui large secondary inverted pointing menu">
+      <div class="ui large secondary blue pointing menu menubg">
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
@@ -190,10 +234,8 @@
       </div>
     </div>
 
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Medical Data Hub
-      </h1>
+    <div class="ui text container " id="maintitle">
+      <h1 class="ui inverted header" id="mainMDH">Medical Data Hub</h1>
       <h2><i>"Providing medical data to drive tomorrow's actionable insights"</i></h2>
       <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
     </div>
@@ -224,12 +266,12 @@
       <div class="center aligned row">
 
 
-        <div class="column blue left aligned" style="background-image:url(https://hibellm.github.io/semantic_ui/images/background4.jpg)">
-          <h1 class="ui header center aligned" style="font-size:3em;">Who are we?</h1>
+        <div class="column blue left aligned" id="midleft">
+          <h1 class="ui header center aligned mdhbb">Who are we?</h1>
           <div class="ui grid">
-            <div class="twelve wide column right floated">
-            <p>The Medical Data Hub are:
-            <ul style="font-size:1.33em;line-height: 1.4285em;">
+            <div class="twelve wide column right floated ">
+            <h2>The Medical Data Hub are:</h2>
+            <ul class="lpul">
               <li>A small but highly functional team with complimentary skill sets</li>
               <li>Able to impliment Big Data technologies to deliver an analytical environment required for the future</li>
               <li>Provide support and advice for analysis</li>
@@ -240,32 +282,26 @@
           <h1 class="ui header center aligned" style="font-size:3em;"><a class="ui huge button" href="mailto:mdh-d@gene.com">Contact us</a></h1>
         </div>
 
-        <!--div class="column" style="background-image: url(https://developer.playphone.com/App/Landing/img/main-slide-1.png)"-->
-          <div class="column purple left aligned" >
-            <h1 class="ui header center aligned" style="font-size:3em;">Who are we?</h1>
-            <div class="ui grid">
-              <div class="twelve wide column right floated">
-              <p>The Medical Data Hub are:
-              <ul style="font-size:1.33em;line-height: 1.4285em;">
-                <li>A small but highly functional team with complimentary skill sets</li>
-                <li>Able to impliment Big Data technologies to deliver an analytical environment required for the future</li>
-                <li>Provide support for analysis, provide training</li>
-                <li>Provide support for analysis</li>
-                <li>Training on the system and the Data SOurces</li>
-                </ul>
-             </div>
-             <div class="ui row center aligned">
-                <div class="ui center aligned column">
-                  <a class="ui huge button" href="mailto:mdh-d@gene.com">Contact us</a>
-                </div>
-             </div>
+        <div class="column blue left aligned" id="midright">
+          <h1 class="ui header center aligned mdhbb">How we can help?</h1>
+          <div class="ui grid">
+            <div class="twelve wide column right floated ">
+            <h2>The Medical Data Hub are:</h2>
+            <ul class="lpul">
+              <li>A small but highly functional team with complimentary skill sets</li>
+              <li>Able to impliment Big Data technologies to deliver an analytical environment required for the future</li>
+              <li>Provide support and advice for analysis</li>
+              <li>Training on the system and the Data Sources</li>
+            </ul>
             </div>
           </div>
-
+          <h1 class="ui header center aligned" style="font-size:3em;"><a class="ui huge button" href="mailto:mdh-d@gene.com">Contact us</a></h1>
+        </div>
 
       </div>
     </div>
   </div>
+
 
   <div class="ui vertical stripe segment">
     <div class="ui text container center aligned">
@@ -274,11 +310,11 @@
       <p>Roche has invested in Teradata&trade; and Cloudera&trade; to answer these questions, and bring fast analytics to the increasingly large data lake!</p>
       <p> </p>
       <a class="ui large button orange">Read More</a>
-      <h4 class="ui horizontal header divider">
+      <h2 class="ui horizontal header divider">
         <a href="#">Case Studies</a>
-      </h4>
+      </h2>
       <h3 class="ui header">Real World Data</h3>
-      <p>Teradata is the platofrm allowing all of Roche to access an use Real World Data to answer </p>
+      <p>Teradata is the platform allowing all of Roche to access and use Real World Data to answer ...</p>
       <p>Associated with the data sources are training courses, job aids and </p>
       <a class="ui large button orange">Tell me more</a>
     </div>
@@ -293,8 +329,7 @@
           <div class="ui inverted link list">
             <a href="#" class="item">Sitemap</a>
             <a href="#" class="item">Contact Us</a>
-            <a href="#" class="item">Religious Ceremonies</a>
-            <a href="#" class="item">Gazebo Plans</a>
+            <a href="#" class="item">Support</a>
           </div>
         </div>
         <div class="three wide column">
