@@ -147,6 +147,36 @@
         font-size: 1.5em;
       }
     }
+
+    #big-container {
+    	width: 800px;
+    	height: 400px;
+    }
+
+    .topsqr {
+    	width: 500px;
+    	height: 500px;
+    	margin: 0;
+    	padding: 0;
+    	position:inherit;
+      margin-top:-70%;
+      margin-left:30%;
+    	z-index:2;
+    }
+
+
+    div.topbox { height: 575px; float: left; width: 575px; }
+    #a { background: blue;    	margin: 0;
+        	padding: 0;}
+    #b { background: red;    	margin: 0;
+        	padding: 0;}
+    #c { background: green; clear: left;    	margin: 0;
+        	padding: 0;}
+    #d { background: black;    	margin: 0;
+        	padding: 0;}
+
+
+
   </style>
 
   <script>
@@ -236,27 +266,46 @@
   </div>
 
   <div class="ui vertical stripe segment">
-    <div class="ui middle aligned stackable grid container">
-      <h3 class="ui header center aligned">Technology employed</h3>
+    <div class="ui middle aligned stackable grid container fluid">
+
       <div class="row">
         <div class="eight wide column">
           <img src="./images/Logo-Teradata-2013.jpg" id="print-logo" alt="Print Logo" width="300" height="200">
           <h3>Enterprise-Class Data Warehouse Performance</h3>
           <p>This powerful enterprise-ready system delivers everything you need pre-packaged into a base cabinet to help you start running analytics within hours – from small departmental data marts to a test and development box to an integrated data warehouse.</p>
-          <div class="segment ui menubg " id="midleft">
-            <a href="http://www.teradata.com/3dtour/Teradata-Data-Warehouse-Appliance-2850?pid=6235&LangType=1033&LangSelect=true" target="_blank">3d- Tour of the appliance</a>
+          <div class="ui fluid" >
+            <h1 class="ui header center aligned" style="font-size:3em;">
+            <a class="ui button large center" href="http://www.teradata.com/3dtour/Teradata-Data-Warehouse-Appliance-2850?pid=6235&LangType=1033&LangSelect=true" target="_blank">3d- Tour of the appliance</a>
+            </h1>
           </div>
         </div>
         <div class="eight wide column">
           <img src="./images/Logo-cloudera.png" id="print-logo" alt="Print Logo" height="100">
           <h3>Hadoop on the cluster</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="segment ui menubg " id="midright">
+          <h1 class="ui header center aligned" style="font-size:3em;">
+          <a class="ui button large center" href="http://www.teradata.com/3dtour/Teradata-Data-Warehouse-Appliance-2850?pid=6235&LangType=1033&LangSelect=true" target="_blank">3d- Tour of the appliance</a>
+          </h1>
           </div>
         </div>
       </div>
+
     </div>
   </div>
+
+  <div class="ui container stackable grid fluid" >
+  	<div class="topbox" id="a"><img src="./images/square.jpg" alt=""/ width="100%" height="100%"></div>
+  	<div class="topbox" id="b"><img src="./images/rendered.jpg" alt=""/ width="100%" height="100%"></div>
+  	<div class="topbox" id="c"><img src="./images/slaine29.jpg" alt=""/ width="100%" height="100%"></div>
+  	<div class="topbox" id="d"><img src="./images/human.jpg" alt=""/ width="100%" height="100%"></div>
+  	<div class="topsqr"><img src="./images/docker.jpg" alt=""/ width="500px" height="500px" style="border-radius:50%;"></div>
+  </div>
+
+
+
+
+
+
 
 
   <div class="ui vertical stripe quote segment">
