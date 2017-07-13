@@ -1,0 +1,121 @@
+.haccordion h1 {
+  text-align: center;
+  font-family: "Lato";
+  color: #333;
+  margin-top:150px;
+}
+
+.haccordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 500px;
+  overflow: hidden;
+  margin: 50px auto;
+  background-color: white!important;
+}
+
+.haccordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.haccordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+
+.haccordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.haccordion ul li div a {
+  display: block;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+
+.haccordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.haccordion ul li div a h2 {
+  font-family: "Lato";
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+
+.haccordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+
+.haccordion ul li:nth-child(1) { background-image: url("../images/human-sqr.jpg"); }
+.haccordion ul li:nth-child(2) { background-image: url("../images/whitedr-sqr.jpg"); }
+.haccordion ul li:nth-child(3) { background-image: url("../images/connect-sqr.jpg"); }
+.haccordion ul li:nth-child(4) { background-image: url("../images/world-sqr.jpg"); }
+.haccordion ul li:nth-child(5) { background-image: url("../images/analytic-sqr.jpg"); }
+.haccordion ul li:nth-child(6) { background-image: url("../images/datawave-sqr.jpg"); }
+
+.haccordion ul:hover li { width: 8%; }
+
+.haccordion ul:hover li:hover { width: 60%; }
+
+.haccordion ul:hover li:hover a { background: rgba(0, 0, 0, 0.4); }
+
+.haccordion ul:hover li:hover a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+ @media screen and (max-width: 600px) {
+
+body { margin: 0; }
+
+.haccordion { height: auto; }
+
+.haccordion ul li,
+.haccordion ul li:hover,
+.haccordion ul:hover li,
+.haccordion ul:hover li:hover {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -webkit-transition: none;
+  transition: none;
+}
+}
