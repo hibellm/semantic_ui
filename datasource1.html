@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Semontic UI Sandbox</title>
+    <!--CDN for Semontic UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+
+	<!--FOR THE MARKDOWN-->
+    <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/v0.7.15/webcomponents-lite.min.js"></script>
+    <link rel="import" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/build/zero-md.html">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/markdown-themes/default.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/highlight-themes/default.css">
+
+
+    <!--TABLESORT-->
+    <script src="./tablesort.js"></script>
+  </head>
+
+  <!--MAIN PAGE CONTENT-->
+  <body>
+    <!--MAIN CONTAINER-->
+    <div class="ui container">
+      <!--MENU-->
+      <div class="ui secondary large pointing menu blue">
+        <a class="item" id="mi1" href="./index.html">Home</a>
+        <a class="item" id="mi2" href="./training.html">Training</a>
+        <a class="item active" id="mi3" href="./datasource.html">Data Sources</a>
+        <a class="item" id="mi4" href="./about.html">About</a>
+        <div class="right menu">
+          <a class="ui item">Logout</a>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>breadcrumbs can go here</p>
+      </div>
+
+      <!--TABS-->
+      <div id="context1">
+        <div class="ui secondary menu blue active">
+          <a class="item active" data-tab="first">Real World Data Sources</a>
+          <a class="item" data-tab="second">Dictionaires</a>
+          <a class="item " data-tab="third">Other</a>
+        </div>
+         <!--FILTER SECTION-->
+        <div class="ui segment">
+        <div class="ui accordion">
+          <div class="title">
+            <i class="filter icon"></i>
+            Data source Filters
+          </div>
+          <div class="content">
+            <p class="transition hidden">Example filters</p>
+
+            <div class="ui form">
+              <div class="inline fields">
+                <label for="fruit">Geographical Coverage:</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="US" checked="" tabindex="0" class="hidden">
+                    <label>US</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="EU" tabindex="0" class="hidden">
+                    <label>EU</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="asia" tabindex="0" class="hidden">
+                    <label>Asia</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="Global" tabindex="0" class="hidden">
+                    <label>Global</label>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Therapeutic area - select all of interest</label>
+                <select multiple="" class="ui dropdown">
+                  <option value="ALL">Select ALL TA</option>
+                  <option value="AF">Oncology</option>
+                  <option value="AX">Neverous System</option>
+                  <option value="AL">Infectious Disease</option>
+                  <option value="DZ">Neurology</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="ui search">
+                <div class="ui icon input fluid">
+                  <input class="prompt" type="text" placeholder="Search Data Source metadata...">
+                  <i class="search icon"></i>
+                </div>
+                <div class="results"></div>
+            </div>
+            <button class="ui button compact " type="submit">Submit</button>
+
+          </div>
+        </div>
+        </div><!--END OF FILTER SECTION-->
+        <div class="ui segment">
+          <div class="ui two column grid">
+          <div class="column">
+            <div class="ui large labels">
+              <h3>Data source</h3>
+              <a class="ui label basic green" onclick=""><i class="flag eu"></i>CPRD</a>
+              <a class="ui label basic red"><i class="flag eu"></i>IMSEU</a>
+              <a class="ui label basic green"><i class="flag eu"></i>CCAE</a>
+              <a class="ui label basic green"><i class="flag eu"></i>IPSOS</a>
+              <a class="ui label basic green"><i class="flag eu"></i>FLATIRON</a>
+              <a class="ui label basic red"><i class="flag us"></i>SEERM</a>
+            </div>
+         </div>
+         <div class="column">
+           <div class="ui large labels">
+              <h3>Dictionaries</h3>
+              <a class="ui label basic green"><i class="flag eu"></i>ICD9</a>
+              <a class="ui label basic green"><i class="flag eu"></i>ICD10</a>
+              <a class="ui label basic green"><i class="flag eu"></i>Redbook</a>
+              <a class="ui label basic green"><i class="flag eu"></i>HCPCS</a>
+            </div>
+         </div>
+         </div>
+       </div><!--END OF SEGMENT-->
+
+
+        <div class="ui tab segment" data-tab="first">
+          <div class="ui top attached tabular menu">
+            <a class="active item" data-tab="first/a">CPRD</a>
+            <a class="item" data-tab="first/b">IMSEU</a>
+            <a class="item" data-tab="first/c">CCAE</a>
+          </div>
+
+<!----------------------------------------------->
+          <!--CPRD-->
+          <div class="ui bottom attached active tab segment padded blue" data-tab="first/a">
+            <!--ACCESS HEADER-->
+            <div class="ui segment tertiary green inverted">
+              <a class="item blue"><i class="flag eu" ></i>Server</a> You have access
+            </div>
+            <!--HEADING-->
+            <div class="ui inverted blue tertiary segment">
+              <div class="ui inverted accordion wide">
+                <div class="active title">
+                  <div class="grid two column fluid">
+                    <div class="four column wide">
+                      <h1 class="ui inverted">CPRD</h1>
+                    </div>
+                    <div class="twelve column wide">
+                      <div class="header large">Clinical Practice Research Datalink</div>
+                    </div>
+                  </div>
+                </div><!--END OF TITLE SECTION-->
+                <!--EXPANDABLE SECTION-->
+                <div class="content">
+                  <h4 class="ui horizontal divider header">Data Source Details</h4>
+                  <div class="ui grid">
+                    <div class="eight wide column">
+                       <h3>Medicines and Healthcare products Regulatory Agency</h3>
+                      <p>The Clinical Practice Research Datalink (CPRD) is the new English NHS observational data and interventional research service, jointly funded by the NHS National Institute for Health Research (NIHR) and the Medicines and Healthcare products Regulatory Agency (MHRA).  CPRD services are designed to maximize the way anonymized NHS clinical data can be linked to enable many types of observational research and deliver research outputs that are beneficial to improving and safeguarding public health.</p><p>This e-health secure research service combines the expertise of the MHRA&#39;s General Practice Research Database (GPRD) and the Department of Health’s NIHR Research Capability Programme (RCP) which piloted the service over the last four years. CPRD combines the activities of GPRD and RCP.</p>
+                    <div class="segment inverted">
+                      <br>
+                      <h4 class="ui horizontal divider header">Vendor Contact Details</h4>
+                      <div class="ui list">
+                        <div class="item">
+                          <i class="marker icon blue large"></i>
+                          <div class="content">Medicines and Healthcare products Regulatory Agency 5th Floor<br>151 Buckingham Palace Road<br>Victoria<br>London SW1W 9SZ</div>
+                        </div>
+                        <div class="item">
+                          <i class="user blue icon large"></i>
+                          <div class="content">Arlene Gallager (Research Contact)</div>
+                        </div>
+                        <div class="item">
+                          <i class="mail icon blue large"></i>
+                          <div class="content"><a href="mailto:jack@semantic-ui.com">enquires@cprd.co.uk</a></div>
+                        </div>
+                        <div class="item">
+                          <i class="phone icon blue large"></i>
+                          <div class="content">
+                            <a href="http://www.semantic-ui.com">+44 (0) 20 3080 6383</a>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="globe icon blue large"></i>
+                          <div class="content"><a href="http://www.cprd.com/intro.asp" target="_blank">website</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="ui eight wide column grid">
+                    <br>
+                      <div class="ui list basic inverted">
+                        <div class="item">
+                          <i class="ui icon users large"></i>
+                          <div class="content">
+                            <a class="header" href="https://pages.github.roche.com/RWDSsme/CPRD/" target="_blank">SME User Group</a>
+                            <div class="content"><a href="mailto:jack@semantic-ui.com">SMEusergroup@roche.com</a></div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon linkify large"></i>
+                          <div class="content">
+                            <a class="header" href="http://ridlv717002.ind.roche.com/c/rwd/cprd" target="_blank">Exchange.roche.com</a>
+                            <div class="description">Ask a question about the data source</div>
+                          </div>
+                        </div>
+                    </div>
+                    <h4 class="ui horizontal divider header">Summary</h4>
+                    <!--1ST COL FOR SUMMARY-->
+                    <div class="eight wide column">
+                      <div class="ui list basic inverted">
+                        <div class="item">
+                          <i class="ui icon database large"></i>
+                          <div class="content">
+                            <a class="header">SCHEMA</a>
+                            <div class="description">RWD_VDM_CPRD</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon globe large"></i>
+                          <div class="content">
+                            <a class="header">Geographical Coverage</a>
+                            <div class="description">Europe - UK</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon doctor large"></i>
+                          <div class="content">
+                            <a class="header">Therapeutic Area</a>
+                            <div class="description">Multiple</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon doctor large"></i>
+                          <div class="content">
+                            <a class="header">Therapeutic Area</a>
+                            <div class="description">Multiple</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!--END OF 1ST COL-->
+                    <!--2ND COL FOR SUMMARY-->
+                    <div class="eight wide column">
+                      <div class="ui list basic inverted">
+                        <div class="item">
+                          <i class="ui icon setting large"></i>
+                          <div class="content">
+                            <a class="header">Data Type</a>
+                            <div class="description">Electronic Health Records</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon book large"></i>
+                          <div class="content">
+                            <a class="header">Dictionary</a>
+                            <div class="description">ICD9</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon calendar large"></i>
+                          <div class="content">
+                            <a class="header">Status</a>
+                            <div class="description">Active: Bi-annual loading</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!--END OF 2ND COL-->
+                  </div><!--END OF 8 COL-->
+                  </div>
+                </div><!--END OF EXPANDABLE SECTION-->
+                </div>
+              </div><!--END OF HEADING-->
+
+            <!--CARDS-->
+            <div class="ui cards">
+              <!--CARD1-->
+              <div class="ui card" style="background-color:#e2fde2">
+                <div  class="extra content" >
+                  <div class="ui three item menu labeled icon tiny fluid">
+                    <a class="item" data-position="top left" title="Entity Relationship diagram" href="./CPRD_VDM _CORE_TABLES.html" target="_blank"><i class="icon file blue"></i>ER Diagram</a>
+                    <a class="item" data-position="top center" title="Data Dictionary"><i class="icon book blue"></i>Dictionary</a>
+                    <a class="item" data-position="top right" title="Location of the data"><i class="icon database orange"></i>Teradata</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="header">2017 Jul</div>
+                  <div class="meta">July 2017 data load</div>
+                  <div class="description">This is the batch description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                </div>
+                <div class="extra content">
+                    <table class="ui sortable celled table compact small center">
+                      <thead>
+                        <tr>
+                          <th>Valid Start</th>
+                          <th>Valid End</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td style="background-color:lightgreen!important">12JAN2017:12.12</td>
+                        <td style="background-color:lightgreen!important">31DEC9999:23:59</td>
+                      </tr>
+                    </tbody>
+                    </table>
+                  <div class="ui two buttons">
+                    <div class="ui basic green button" onclick="$('.ui.modal#fijun2017').modal('show');">Notes</div>
+
+                    <div class="ui basic red button">Documentation</div>
+                  </div>
+                </div>
+              </div>
+              <!--CARD2-->
+              <div class="card">
+                  <div class="extra content" >
+                    <div class="ui three item menu labeled icon tiny fluid">
+                      <a class="item" data-position="top left" title="Entity Relationship diagram" href="./CPRD_VDM _CORE_TABLES.html" target="_blank"><i class="icon file blue"></i>ER Diagram</a>
+                      <a class="item" data-position="top center" title="Data Dictionary"><i class="icon book blue"></i>Dictionary</a>
+                      <a class="item" data-position="top right" title="Location of the data"><i class="icon database orange"></i>Teradata</a>
+                    </div>
+                  </div>
+                <div class="content">
+                  <div class="header">2017 Jan</div>
+                  <div class="meta">January 2017 data load for CPRD</div>
+                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+                <div class="extra content">
+                    <table class="ui sortable celled table compact small center">
+                      <thead>
+                        <tr>
+                          <th>Valid Start</th>
+                          <th>Valid End</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td style="background-color:lightgreen!important">12JAN2017:12.12</td>
+                        <td style="background-color:lightgreen!important">31DEC9999:23:59</td>
+                      </tr>
+                    </tbody>
+                    </table>
+
+                  <div class="ui two buttons">
+                    <div class="ui basic green button">Notes</div>
+                    <div class="ui basic red button">Documentation</div>
+                  </div>
+                </div>
+              </div><!--END OF CARDS-->
+
+          </div>
+          </div><!--END OF CPRD-->
+
+<!-------------------------------------------------------------->
+          <!--IMSEU-->
+          <div class="ui bottom attached tab segment padded" data-tab="first/b">
+            <!--ACCESS HEADER-->
+            <div class="ui segment tertiary red inverted">
+              <a class="item blue"><i class="flag eu" ></i>Server</a> You do not have access
+              <a href="http://rwdhelp.roche.com/rwd" target="_blank">
+              <div class="ui yellow button mini compact"><i class="add icon"></i>Request access</div>
+              </a>
+            </div>
+
+            <!--HEADING-->
+            <div class="ui inverted blue tertiary segment">
+              <div class="ui inverted accordion wide">
+                <div class="active title">
+                  <div class="grid two column fluid">
+                    <div class="four column wide">
+                      <h1 class="ui inverted">IMSEU</h1>
+                    </div>
+                    <div class="twelve column wide">
+                      <div class="header large">IMS Health (European data)</div>
+                    </div>
+                  </div>
+                </div><!--END OF TITLE SECTION-->
+                <div class="content">
+                  <h4 class="ui horizontal divider header">Data Source Details</h4>
+                  <div class="ui grid">
+                    <div class="eight wide column">
+                      <h4>QuintilesIMS</h4>
+                      <p>QuintilesIMS Delivers Integrated Information and Technology Solutions to Drive Healthcare Forward<br>
+                      Around the world healthcare stakeholders are working to improve real-world patient outcomes through treatment innovations, care provision and access to healthcare. For the information, technology and service solutions they need to drive new insights and approaches, they count on QuintilesIMS. With a global team of 50,000, we harness insights, commercial and scientific depth, and executional expertise to empower clients to achieve some of their most important goals: Improving clinical, scientific and commercial results. Realizing the full potential of innovations. And, ultimately, driving healthcare forward.</p>
+                      <div class="segment inverted">
+                        <br>
+                        <h4 class="ui horizontal divider header">Vendor Contact Details</h4>
+                        <div class="ui list">
+                          <div class="item">
+                            <i class="marker icon blue large"></i>
+                            <div class="content">QuntilesIMS<br>151 Buckingham Palace Road<br>Victoria<br>London SW1W 9SZ</div>
+                          </div>
+                          <div class="item">
+                            <i class="user blue icon large"></i>
+                            <div class="content">Arlene Gallager (Research Contact)</div>
+                          </div>
+                          <div class="item">
+                            <i class="mail icon blue large"></i>
+                            <div class="content"><a href="mailto:Service@imshealth.com">Service@imshealth.com </a></div>
+                          </div>
+                          <div class="item">
+                            <i class="phone icon blue large"></i>
+                            <div class="content">
+                              <a href="http://www.semantic-ui.com">+44 (0) 20 3080 6383</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <i class="globe icon blue large"></i>
+                            <div class="content"><a href="http://www.imshealth.com/" target="_blank">website</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--1ST COL FOR SUMMARY-->
+                    <div class="four wide column">
+                      <h3>Summary</h3>
+                      <div class="ui list basic inverted">
+                        <div class="item">
+                          <i class="ui icon database large"></i>
+                          <div class="content">
+                            <a class="header">SCHEMA</a>
+                            <div class="description">RWD_VDM_IMSEU</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon globe large"></i>
+                          <div class="content">
+                            <a class="header">Geographical Coverage</a>
+                            <div class="description">Europe - UK</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ui list basic">
+                        <div class="item">
+                          <i class="ui icon doctor large"></i>
+                          <div class="content">
+                            <a class="header">Therapeutic Area</a>
+                            <div class="description">Multiple</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ui list basic">
+                        <div class="item">
+                          <i class="ui icon doctor large"></i>
+                          <div class="content">
+                            <a class="header">Therapeutic Area</a>
+                            <div class="description">Multiple</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--2ND COL FOR SUMMARY-->
+                    <div class="four wide column">
+                      <div class="ui list basic inverted">
+                        <div class="item">
+                          <i class="ui icon globe large"></i>
+                          <div class="content">
+                            <a class="header">Data Type</a>
+                            <div class="description">Claims</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="ui icon globe large"></i>
+                          <div class="content">
+                            <a class="header">Geographical Coverage</a>
+                            <div class="description">Europe - UK</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ui list basic">
+                        <div class="item">
+                          <i class="ui icon doctor large"></i>
+                          <div class="content">
+                            <a class="header">Therapeutic Area</a>
+                            <div class="description">Multiple</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                </div>
+              </div>
+
+              <!--CARDS-->
+              <div class="ui cards">
+                <!--CARD1-->
+                <div class="ui card" style="background-color:#e2fde2">
+                  <div  class="extra content" >
+                    <div class="ui three item menu labeled icon tiny fluid">
+                      <a class="item" data-position="top left" title="Entity Relationship diagram" href="./CPRD_VDM _CORE_TABLES.html" target="_blank"><i class="icon file blue"></i>ER Diagram</a>
+                      <a class="item" data-position="top center" title="Data Dictionary"><i class="icon book blue"></i>Dictionary</a>
+                      <a class="item" data-position="top right" title="Location of the data"><i class="icon database orange"></i>Teradata</a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="header">2017 Jul</div>
+                    <div class="meta">July 2017 data load</div>
+                    <div class="description">This is the batch description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                  </div>
+                  <div class="extra content">
+                      <table class="ui sortable celled table compact small center">
+                        <thead>
+                          <tr>
+                            <th>Valid Start</th>
+                            <th>Valid End</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td style="background-color:lightgreen!important">12JAN2017:12.12</td>
+                          <td style="background-color:lightgreen!important">31DEC9999:23:59</td>
+                        </tr>
+                      </tbody>
+                      </table>
+                    <div class="ui two buttons">
+                      <div class="ui basic green button">Notes</div>
+                      <div class="ui basic red button">Documentation</div>
+                    </div>
+                  </div>
+                </div>
+                <!--CARD2-->
+                <div class="card">
+                    <div class="extra content" >
+                      <div class="ui three item menu labeled icon tiny fluid">
+                        <a class="item" data-position="top left" title="Entity Relationship diagram" href="./CPRD_VDM _CORE_TABLES.html" target="_blank"><i class="icon file blue"></i>ER Diagram</a>
+                        <a class="item" data-position="top center" title="Data Dictionary"><i class="icon book blue"></i>Dictionary</a>
+                        <a class="item" data-position="top right" title="Location of the data"><i class="icon database orange"></i>Teradata</a>
+                      </div>
+                    </div>
+                  <div class="content">
+                    <div class="header">2017 Jan</div>
+                    <div class="meta">January 2017 data load for CPRD</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  </div>
+                  <div class="extra content">
+                      <table class="ui sortable celled table compact small center">
+                        <thead>
+                          <tr>
+                            <th>Valid Start</th>
+                            <th>Valid End</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td style="background-color:lightgreen!important">12JAN2017:12.12</td>
+                          <td style="background-color:lightgreen!important">31DEC9999:23:59</td>
+                        </tr>
+                      </tbody>
+                      </table>
+
+                    <div class="ui two buttons">
+                      <div class="ui basic green button">Notes</div>
+                      <div class="ui basic red button">Documentation</div>
+                    </div>
+                  </div>
+                </div><!--END OF CARDS-->
+
+            </div>
+
+          </div>
+
+          <!--CCAE-->
+          <div class="ui bottom attached tab segment" data-tab="first/c">
+            <div class="ui header">This is an embedded Tableau dashboard</div>
+            <script type='text/javascript' src='https://tabemeat.roche.com/javascripts/api/viz_v1.js'></script>
+            <div class='tableauPlaceholder' style='width: 1004px; height: 836px;'>
+              <object class='tableauViz' width='1004' height='836' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Ftabemeat.roche.com%2F' />
+                <param name='site_root' value='' />
+                <param name='name' value='IPSOS_Demo_pyramid&#47;Dashboard1' />
+                <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                <param name='showShareOptions' value='true' />
+              </object>
+            </div>
+          </div>
+        </div><!--END OF RWD DATA SOURCES-->
+
+        <!--SECOND TAB-->
+        <div class="ui tab segment" data-tab="second">
+          <div class="ui top attached tabular menu">
+            <a class="item active" data-tab="second/a">Redbook</a>
+            <a class="item" data-tab="second/b">CPT</a>
+            <a class="item" data-tab="second/c">ICD (9/10)</a>
+          </div>
+          <div class="ui bottom attached tab segment active" data-tab="second/a">
+            <div class="ui segement">
+              Redbook info would go here - but going to try markdown!!
+<zero-md>
+<div class="md-html"></div>
+<xmp>
+# This is my markdown
+
+## This should be another title
+H~~ell~~o *W*o**r**l***d***!
+</xmp>
+</zero-md>
+            </div>
+          </div>
+          <div class="ui bottom attached tab segment" data-tab="second/b">
+            <div class="ui segement">
+              CPT info would go here
+            </div>
+          </div>
+          <div class="ui bottom attached tab segment" data-tab="second/c">
+            <div class="ui segement">
+              ICD9/10 info would go here
+            </div>
+          </div>
+        </div>
+        <div class="ui tab segment" data-tab="third">
+          <div class="ui top attached tabular menu">
+            <a class="item active" data-tab="third/a">3A</a>
+            <a class="item" data-tab="third/b">3B</a>
+            <a class="item" data-tab="third/c">3C</a>
+          </div>
+          <div class="ui bottom attached tab segment active" data-tab="third/a">3A</div>
+          <div class="ui bottom attached tab segment" data-tab="third/b">3B</div>
+          <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
+        </div>
+      </div>
+
+   <!--RAILS FOR LEGEND-->
+   <div class="ui right internal rail" id="legend">
+     <div class="ui sticky">
+     <div class="ui segment">
+       <div class="ui accordion">
+          <div class="active title">
+            <i class="dropdown icon"></i>Legend
+          </div>
+          <div class="content">
+            <h3>Tips:</h3>
+              <div class="ui list">
+                <div class="item">
+                  <i class="info blue icon large"></i>
+                  <div class="content">Click on the <strong>Data source name</strong> to reveal further information about it</div>
+                </div>
+                <div class="item">
+                  <i class="square outline green icon large"></i>
+                  <div class="content">You have access to the data source</div>
+                </div>
+                <div class="item">
+                  <i class="square outline red icon large"></i>
+                  <div class="content">You do not have access to the data source</div>
+                </div>
+                <div class="item">
+
+
+
+                  <i class="file icon large"  style="color:#a2fde2;"></i>
+                  <div class="content">Green card indicates the latest batch</div>
+                </div>
+                <div class="item">
+                  <i class="users blue icon large"></i>
+                  <div class="content">Contact a SME or MDH colleague</div>
+                </div>
+                <div class="item">
+                  <i class="file blue icon large"></i>
+                  <div class="content">Entity relationship diagram for understanding the table relationships</div>
+                </div>
+                <div class="item">
+                  <i class="book blue icon large"></i>
+                  <div class="content">Data Dictionary: What are the columns in the tables?</div>
+                </div>
+                <div class="item">
+                  <i class="bar chart blue icon large"></i>
+                  <div class="content">Data source Vizualization</div>
+                </div>
+                <div class="item">
+                  <i class="database blue icon large"></i>
+                  <div class="content">Location of the data (Teradata or Hadoop)</div>
+                </div>
+                <div class="item">
+                  <i class="mail icon blue large"></i>
+                  <div class="content"><a href="mailto:jack@semantic-ui.com">SMEusergroup@roche.com</a></div>
+                </div>
+                <div class="item">
+                  <i class="linkify icon blue large"></i>
+                  <div class="content">
+                    <a href="http://www.semantic-ui.com">Access the exchange.roche.com group</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="privacy icon blue large"></i>
+                  <div class="content">Restricted access</div>
+                </div>
+              </div>
+          </div>
+        </div><!--ACCORDION-->
+      </div><!--SEGEMENT-->
+
+      </div>
+    </div><!--RAIL-->
+
+
+    <!--MODAL-->
+    <div class="ui modal" id="fijun2017">
+      <i class="close icon"></i>
+      <div class="ui segment">
+         <zero-md file="https://raw.github.roche.com/MDH/Flatiron/master/JUN2017.md">
+            <div class="md-html"></div>
+         </zero-md>
+       </div>
+    </div>
+
+    </div><!--MAIN CONTAINER-->
+
+
+  <script type="text/javascript">
+  $('#context1 .menu .item')
+  .tab({
+    context: $('#context1')
+  })
+  ;
+  $('#context2 .menu .item')
+  .tab({
+    // special keyword works same as above
+    context: 'parent'
+  })
+  ;
+
+  $('table').tablesort();
+
+  //POPUP LAYOUT
+  $('.item')
+  .popup({
+    inline: true,
+    hoverable  : true
+  })
+  ;
+  //ACCORDION
+  $('.ui.accordion')
+  .accordion()
+;
+  //STICKY LEGEND
+  $('.ui.sticky')
+  .sticky({
+    context: '#legend'
+  })
+;
+  //RADIO BUTTON ON FILTER FORM
+  $('.ui.radio.checkbox')
+  .checkbox()
+;
+$('.ui.dropdown')
+  .dropdown()
+;
+$('.ui.search')
+  .search({
+    source: content
+  })
+;
+  </script>
+  </body>
+</html>
