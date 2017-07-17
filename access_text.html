@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Semontic UI Sandbox</title>
+    <!--CDN for Semontic UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+
+  </head>
+
+  <style>
+  body{
+    line-height: 1.5rem;
+  }
+  .ui.segment, .ui.segments .segment {
+      font-size: 1.25rem;
+  }
+
+  </style>
+  <!--MAIN PAGE CONTENT-->
+  <body>
+
+    <div class="ui container">
+      <!--MENU-->
+      <div class="ui secondary large pointing menu blue">
+        <a class="item active" id="mi1" href="./index.html">Home</a>
+        <a class="item" id="mi2" href="./training.html">Training</a>
+        <a class="item" id="mi3" href="./datasource.html">Data Sources</a>
+        <a class="item" id="mi4" href="./about.html">About</a>
+
+        <div class="right menu">
+          <a class="ui item">Logout</a>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>breadcrumbs can go here</p>
+      </div>
+
+      <!--STUFF GOES HERE-->
+      <div class="ui inverted vertical segment black tertiary">
+        <div class="ui page grid center aligned">
+          <div class="column ">
+            <h1>Need Access?</h1>
+            <text>Please review the information below to request access to the MDH data sources.</text>
+          </div>
+        </div>
+      </div>
+      <div class="ui inverted vertical segment blue tertiary">
+        <div class="ui page grid">
+          <div class="column">
+              <h1 class="ui header large">1) You are a Roche employee and need access to MDH data sources.</h1>
+              <div class="centered grid ">
+                  <div class="column left aligned">
+                    <p>If this is the case, please complete the following steps:</p>
+                    <p>Complete the compliance training for the data source that you would like to access:</p>
+                    <ul>
+                      <li>Compliance Trainings are “Read and Understand” available in Roche Learning Management Systems (LSO, Chris Portal; LMS, SumTotal)</li>
+                      <li>For a list of the compliance training LSO/LMS codes <a onclick="$('.ui.modal#train-ru').modal('show');" href="#" class="ui label small">Click here for a list</a></li>
+                    </ul>
+                    <p>Request access to MDH data source by completing the <a href="http://rwdhelp.roche.com/rwd" target="_blank" class="ui label small">RWD web form</a>
+                    <br><i class="ui icon exclamation red"></i><i>Remember to attach the certificate of completion of the “Read and Understand” to the webform</i>
+
+                    <p>You will receive access within three business days from your request.</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+        <!--THIRD SECTION-->
+        <div class="ui inverted vertical segment green tertiary">
+          <div class="ui page grid">
+            <div class="column">
+                <h1 class="ui header large">2) You are not a Roche employee and need access to MDH data sources. <br><i>Note: a Third Party Agreement might be needed.</i> </h1>
+                <div class="centered grid">
+                    <div class="column left aligned">
+                        <p>If this is the case, please review the information below:</p>
+                        <p>Complete the compliance training for the data source that you would like to access.</p>
+                        <ul>
+                          <li>Compliance Training are “Read and Understand” available in Roche Learning Management Systems (LSO, Chris Portal; LMS, SumTotal)</li>
+                          <li>For a list of the compliance training LSO/LMS codes <a onclick="$('.ui.modal#train-ru').modal('show');" href="#" class="ui label small">Click here for a list</a></li>
+                        </ul>
+                        <p>Learn about Third Party Access (TPA) agreements:</p>
+                        <p>To learn about TPA requirements by data source, please refer to the <a onclick="$('.ui.modal#train-matrix').modal('show');" href="#" class="ui label small" >TPA Matrix</a></p>
+
+                        <p>If a TPA is needed:</p>
+                        <ul>
+                          <li>Your manager (Roche employee) will contact the Global RWD Support team <a href="mailto:global.rwdsupport@roche.com">global.rwdsupport@roche.com</a> to initiate the TPA process</li>
+                          <li>Once the TPA is signed, your manager (Roche employee) will request access on your behalf by completing the <a href="http://rwdhelp.roche.com/rwd" target="_blank" class="ui label small">RWD web form</a>
+                          <br><i class="ui icon exclamation red"></i><i>Remember to attach the certificate of completion of the “Read and Understand” to the webform</i>
+                          </li>
+                        </ul>
+                        <p>If a TPA is <strong style="color:grey;">not</strong> needed:</p>
+                        <ul>
+                          <li>Your manager (Roche employee) will request access on your behalf by completing the <a href="http://rwdhelp.roche.com/rwd" target="_blank" class="ui label small">RWD web form</a>
+                          <br><i class="ui icon exclamation red"></i><i>Remember to attach the certificate of completion of the “Read and Understand” to the webform</i>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+</div>
+
+<!--MODAL-->
+<div class="ui fullscreen modal" id="train-ru">
+  <i class="close icon yellow"></i>
+  <div id="mypdf">
+  <iframe src="http://www.google.com/url?q=http%3A%2F%2Fwe3.collaboration.roche.com%2Fteam%2F201266f4%2FDocuments%2FTRAINING%2F03_Compliance%2520Trainings%2FMDH%2520Read%2520and%2520Understand%2520LSO%2520LMS%2520Codes%2520Febr%25202017.pdf&sa=D&sntz=1&usg=AFQjCNE9a0sbOD-vHApYp1x1DPt0GgdWxQ" style="width: 100%; height: 800px;" frameborder="0" scrolling="no">
+  <p>Your web browser doesn't support iframes.</p>
+  </iframe>
+  </div>
+</div>
+
+<div class="ui fullscreen modal" id="train-matrix">
+  <i class="close icon yellow"></i>
+  <div id="myxl">
+  <iframe src="https://docs.google.com/spreadsheets/d/1D3bl2ZTYChFuS6q34N4HI89pt6YRjTazPPnoO3d3-SA/edit#gid=1051026704" style="width: 100%; height: 800px;" frameborder="0" scrolling="no">
+  <p>Your web browser doesn't support iframes.</p>
+  </iframe>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+  </body>
+</html>
