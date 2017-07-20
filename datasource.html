@@ -47,10 +47,18 @@
         </div>
          <!--FILTER SECTION-->
         <div class="ui segment">
+          <div class="ui header">Current selection:
+            <div class="ui tag labels">
+            <a class="ui green label compact">Access Only</a>
+            <a class="ui blue label compact">Databases Only</a>
+            </div>
+          </div>
+
         <div class="ui accordion">
           <div class="title">
             <i class="filter icon"></i>
             Data source Filters
+
           </div>
           <div class="content">
             <p class="transition hidden">Example filters</p>
@@ -138,6 +146,7 @@
             <a class="active item" data-tab="first/a">CPRD</a>
             <a class="item" data-tab="first/b">IMSEU</a>
             <a class="item" data-tab="first/c">CCAE</a>
+            <a class="item" data-tab="first/d">FLATIRON</a>
           </div>
 
 <!----------------------------------------------->
@@ -582,6 +591,14 @@
                 <param name='tabs' value='no' /><param name='toolbar' value='yes' />
                 <param name='showShareOptions' value='true' />
               </object>
+            </div>
+          </div>
+
+          <!--FLATIRON SHINY APP-->
+          <div class="ui bottom attached tab segment" data-tab="first/d">
+            <div class="fullwidth" style="width:100%;">
+              <div class="ui header">This is an embedded Shiny app</div>
+              <iframe src="https://shiny.roche.com/public/blackj9/template_Flatiron_dashboard/" frameborder="0" height="900px" width="1075px" title="Shiny data source app"></iframe>
             </div>
           </div>
         </div><!--END OF RWD DATA SOURCES-->
