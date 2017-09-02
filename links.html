@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Semontic UI Sandbox</title>
+    <!--CDN for Semontic UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  </head>
+
+  <!--MAIN PAGE CONTENT-->
+  <body>
+    <div class="ui container">
+      <!--MENU-->
+      <div class="ui secondary large pointing menu blue">
+        <a class="item active" id="mi1" href="./index.html">Home</a>
+        <a class="item" id="mi2" href="./training.html">Training</a>
+        <a class="item" id="mi3" href="./datasource.html">Data Sources</a>
+        <a class="item" id="mi4" href="./about.html">About</a>
+        <a class="item" id="mi5" href="./access.html">Access</a>
+        <a class="item" id="mi6" href="./organ.html">Organogram</a>
+        <a class="item" id="mi7" href="./MDH_hex_select.html">Landing Page(?)</a>
+        <div class="right menu">
+          <a class="ui item">Logout</a>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>breadcrumbs can go here</p>
+      </div>
+
+      <!--MAIN HEADING-->
+      <div class="ui grid">
+        <div class="six wide column">
+
+          <div class="ui segment ">
+            <h2 class="ui header">
+              <i class="ui icon newspaper huge"></i>
+              <div class="content">News Items</div>
+          </div>
+
+          <div class="ui inverted red segment" id="test2">
+            <div class="ui inverted accordion">
+              <div class=" title">What is a dog?</div>
+              <div class=" content"><p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p></div>
+            </div>
+          </div>
+
+          <div class="ui inverted red segment">
+              <div class="ui inverted accordion">
+                <div class=" title">What is a dog?</div>
+                <div class=" content"><p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p></div>
+              </div>
+          </div>
+
+          <div class="ui inverted red segment">
+              <div class="ui inverted accordion">
+                <div class=" title">What is a dog?</div>
+                <div class=" content"><p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p></div>
+              </div>
+          </div>
+
+          <div class="ui inverted red segment">
+              <div class="ui inverted accordion">
+                <div class=" title">What is a dog?</div>
+                <div class=" content"><p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p></div>
+              </div>
+          </div>
+
+          <div class="ui inverted segment">
+            <div class="ui inverted accordion">
+              <div class="title">What is the latest technology?<div class="date">1 Hour Ago</div></div>
+                <div class="content">
+                  <div class="summary">
+                    <a class="user">hibellm</a> added this news item
+                    <div class="date">1 Hour Ago</div>
+                  </div>
+                  <div class="extra text">
+                    <div class="label"><img src="/images/docker.jpg"></div>
+                    Docker demo is here. It will be on 31dec2017.
+                  </div>
+                  <div class="meta">
+                    <a class="like"><i class="like icon"></i>4 Likes</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+
+        </div><!--END OF FIRST COLUMN-->
+
+
+        <div class="four wide column">b</div>
+
+        <div class="six wide column">
+
+        <div class="ui segment">
+        <div class="ui segment blue inverted">
+          <div class="ui header centered">Data Access and curation Activity</div>
+        </div>
+
+          <div class="ui feed">
+            <!-- DUMMY EXAMPLE -->
+            <div class="event">
+              <div class="label"><img src="/images/hibellm.jpg"></div>
+              <div class="content">
+                <div class="summary">
+                  <a class="user">&lt;username&gt;</a> added this news item
+                  <div class="date">&lt;time difference&gt;</div>
+                </div>
+                <div class="extra text">
+                  <div class="label"><img src=" "></div>
+                  &lt;Text message Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, amet.&gt;
+                </div>
+                <div class="meta">
+                  <a class="like"><i class="like icon"></i>4 Likes</a>
+                </div>
+              </div>
+            </div><!--END OF EVENT-->
+
+            <div class="event">
+              <div class="label"><img src="/images/hibellm.jpg"></div>
+              <div class="content">
+                <div class="summary">
+                  <a class="user">hibellm</a> added this news item
+                  <div class="date">1 Hour Ago</div>
+                </div>
+                <div class="extra text">
+                  <div class="label"><img src="/images/docker.jpg"></div>
+                  Docker demo is here. It will be on 31dec2017.
+                </div>
+                <div class="meta">
+                  <a class="like"><i class="like icon"></i>4 Likes</a>
+                </div>
+              </div>
+            </div><!--END OF EVENT-->
+
+            <div class="event">
+              <div class="label"><img src="/images/frikerts.jpg"></div>
+              <div class="content">
+                <div class="summary">
+                  <a class="user">Frikerts</a> attended
+                  <div class="date">4 days ago</div>
+                </div>
+                <div class="extra images">
+                  <a><img src="/images/banner1.png"></a>
+                  <a><img src=""></a>
+                </div>
+                <div class="meta">
+                  <a class="like">
+                    <i class="like icon"></i> 1 Like
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="event">
+              <div class="label"><img src="/images/hibellm.jpg"></div>
+              <div class="content">
+                <div class="summary">
+                  <a class="user">
+                    Jenny Hess
+                  </a> added you as a friend
+                  <div class="date">2 Days Ago</div>
+                </div>
+                <div class="meta">
+                  <a class="like">
+                    <i class="like icon"></i> 8 Likes
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="event" id="test">
+              <div class="label">
+                <img src="/images/joews.jpg">
+              </div>
+              <div class="content">
+                <div class="summary">
+                  <a>Joe Henderson</a> posted on his page
+                  <div class="date">3 days ago</div>
+                </div>
+                <div class="extra text">
+                  Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+                </div>
+                <div class="meta">
+                  <a class="like">
+                    <i class="like icon"></i> 5 Likes
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="event">
+              <div class="label">
+                <img src="/images/ansaris5.jpg">
+              </div>
+              <div class="content">
+                <div class="summary">
+                  <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+                  <div class="date">4 days ago</div>
+                </div>
+                <div class="extra images">
+                  <a><img src="/images/slaine29.jpg"></a>
+                  <a><img src="/images/world-sqr.jpg"></a>
+                </div>
+                <div class="meta">
+                  <a class="like">
+                    <i class="like icon"></i> 41 Likes
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="event">
+              <div class="label">
+                <i class="ui icon newspaper red"></i>
+              </div>
+              <div class="content">
+                <div class="summary">
+                  <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+                  <div class="date">4 days ago</div>
+                </div>
+                <div class="extra images">
+                  <a><img src="/images/slaine29.jpg"></a>
+                  <a><img src="/images/world-sqr.jpg"></a>
+                </div>
+                <div class="meta">
+                  <a class="like">
+                    <i class="like icon"></i> 41 Likes
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="ui segment red centered">End of message list</div>
+
+          </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+  <script>
+  $('.ui.accordion')
+    .accordion()
+  ;
+  $('.infinite.example .demo.segment')
+  .visibility({
+    once: false,
+    // update size when new content loads
+    observeChanges: true,
+    // load content on bottom edge visible
+    onBottomVisible: function() {
+      // loads a max of 5 times
+      window.loadFakeContent();
+    }
+  })
+;
+$('#test,#test2')
+  .transition('pulse')
+;
+  </script>
+
+  </body>
+</html>
