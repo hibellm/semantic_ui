@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Semontic UI Sandbox</title>
+    <!--CDN for Semontic UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.20.1/vis.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.20.1/vis.min.js"></script>
+
+    <style>
+      /* alternating column backgrounds */
+      .vis-time-axis .grid.vis-odd {
+        background: #1dd5f5;
+      }
+
+      /* gray background in weekends, white text color */
+      .vis-time-axis .vis-grid.vis-saturday,
+      .vis-time-axis .vis-grid.vis-sunday {
+        background: lightgrey;
+      }
+      .vis-time-axis .vis-text.vis-saturday,
+      .vis-time-axis .vis-text.vis-sunday {
+        color: blue;
+      }
+      .mjh1{color:red;background-color: #123456;}
+      .mjh2{color:red;background-color: #323456;}
+      .mjh3{color:red;background-color: #523456;}
+      .mjh4{color:black;background-color: #a23456;}
+      .mjh5{color:black;background-color: #c23456;}
+      .mjh6{color:black;background-color: #e23456;}
+    </style>
+
+  </head>
+
+  <!--MAIN PAGE CONTENT-->
+  <body>
+    <div class="ui container">
+      <!--MENU-->
+      <div class="ui secondary large pointing menu blue">
+        <a class="item active" id="mi1" href="./index.html">Home</a>
+        <a class="item" id="mi2" href="./training.html">Training</a>
+        <a class="item" id="mi3" href="./datasource.html">Data Sources</a>
+        <a class="item" id="mi4" href="./about.html">About</a>
+        <a class="item" id="mi5" href="./access.html">Access</a>
+        <a class="item" id="mi6" href="./organ.html">Organogram</a>
+        <a class="item" id="mi7" href="./MDH_hex_select.html">Landing Page(?)</a>
+        <div class="right menu">
+          <a class="ui item">Logout</a>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>breadcrumbs can go here</p>
+      </div>
+
+      <!--MAIN HEADING-->
+      <div class="ui segment">
+        <div class="ui header">This is the Batch timeline  where &LT;date&GT; between valid_satrt and valid_end</div>
+        <div id="visualization"></div>
+      </div>
+
+      <div class="ui grid">
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+      </div>
+
+
+
+    </div>
+    <script type="text/javascript">
+      // DOM element where the Timeline will be attached
+      var container = document.getElementById('visualization');
+
+      // Create a DataSet (allows two way data-binding)
+      var items = new vis.DataSet([
+        {id: 1, className:'mjh1',group:1,content: 'Batch 1', start: '2013-04-20 10:10:00', end: '2015-07-01 10:10:00'},
+        {id: 2, className:'mjh2',group:1,content: 'Batch 2', start: '2015-07-01 10:10:01', end: '2016-01-01 10:10:00'},
+        {id: 3, className:'mjh3',group:1,content: 'Batch 3', start: '2016-01-01 10:10:01', end: '2016-07-01 10:10:00'},
+        {id: 4, className:'mjh4',group:1,content: 'Batch 4', start: '2016-07-01 10:10:01', end: '2017-01-01 10:10:00'},
+        {id: 5, className:'mjh5',group:1,content: 'Batch 5', start: '2017-01-01 10:10:01', end: '2017-07-01 10:10:00'},
+        {id: 6, className:'mjh6',group:1,content: 'Batch 6', start: '2017-07-01 10:10:01', end: '2020-12-31 23:59:59'}
+      ]);
+
+      var groups = ([
+        {id: 1,content: '<H1>CPRD<br>Batches</h1>',className:'mjh6'}
+      ]);
+      // Configuration for the Timeline
+      var options = {
+        showCurrentTime: true,
+        start: new Date(Date.now() - 1000 * 60 * 60 * 24* 365*3),
+        end: new Date(Date.now() + 1000 * 60 * 60 * 24 * 6),
+        editable: false       // true or false
+      };
+
+      // Create a Timeline
+      var timeline = new vis.Timeline(container, items, groups, options);
+
+    </script>
+
+  </body>
+</html>
