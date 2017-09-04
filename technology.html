@@ -17,14 +17,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
 
-  <!--FOR THE ACCORDION HORIZONTAL-->
-  <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-  <link href="./css/haccordion.css" rel="stylesheet" type="text/css">
-
-
-
-
-
   <style type="text/css">
   #mydiv {
     height:100%;
@@ -54,30 +46,6 @@
     background-image:url(https://hibellm.github.io/semantic_ui/images/human.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-  }
-  #sqr1{
-    background-image:url(https://hibellm.github.io/semantic_ui/images/whitedr-sqr.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index:2;
-  }
-  #sqr2{
-    background-image:url(https://hibellm.github.io/semantic_ui/images/dash-sqr.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index:2;
-  }
-  #sqr3{
-    background-image:url(https://hibellm.github.io/semantic_ui/images/world-sqr.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index:2;
-  }
-  #sqr4{
-    background-image:url(https://hibellm.github.io/semantic_ui/images/human-sqr.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index:2;
   }
 .lpul {
   font-size:2em;
@@ -234,21 +202,23 @@
       ;
     })
   ;
-
   </script>
 </head>
-<body class="pushable"  style="background-color:#fff!important;">
+<body class="pushable">
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu menubg">
   <div class="ui container">
     <a class="active item">Home</a>
-    <a class="item">Training</a>
-    <a class="item">Data Sources</a>
-    <a class="item">About</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
     <div class="right menu">
       <div class="item">
         <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
       </div>
     </div>
   </div>
@@ -257,15 +227,16 @@
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu left menubg">
   <a class="active item">Home</a>
-  <a class="item">Training</a>
-  <a class="item">Data Sources</a>
-  <a class="item">About</a>
+  <a class="item">Work</a>
+  <a class="item">Company</a>
+  <a class="item">Careers</a>
   <a class="item">Login</a>
+  <a class="item">Signup</a>
 </div>
 
 
 <!-- Page Contents -->
-<div class="pusher"  >
+<div class="pusher">
 
   <!--THE MASTHEAD-->
   <div class="ui inverted vertical masthead center aligned segment blue tertiary"
@@ -276,12 +247,13 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item" href="./index.html">Home</a>
-        <a class="item">Training</a>
-        <a class="item">Data Sources</a>
-        <a class="item">About</a>
+        <a class="active item">Home</a>
+        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
         <div class="right item">
           <a class="ui inverted button">Log in</a>
+          <a class="ui inverted button">Sign Up</a>
         </div>
       </div>
     </div>
@@ -298,7 +270,7 @@
 
       <div class="row">
         <div class="eight wide column">
-          <img src="./images/Logo-Teradata.jpg" id="print-logo" alt="Print Logo" width="300" height="100">
+          <img src="./images/Logo-Teradata-2013.jpg" id="print-logo" alt="Print Logo" width="300" height="200">
           <h3>Enterprise-Class Data Warehouse Performance</h3>
           <p>This powerful enterprise-ready system delivers everything you need pre-packaged into a base cabinet to help you start running analytics within hours – from small departmental data marts to a test and development box to an integrated data warehouse.</p>
           <div class="ui fluid" >
@@ -308,10 +280,12 @@
           </div>
         </div>
         <div class="eight wide column">
-          <img src="./images/Logo-cloudera.png" alt="Print Logo" width="300" height="100">
+          <img src="./images/Logo-cloudera.png" id="print-logo" alt="Print Logo" height="100">
           <h3>Hadoop on the cluster</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+          <h1 class="ui header center aligned" style="font-size:3em;">
+          <a class="ui button large center" href="http://www.teradata.com/3dtour/Teradata-Data-Warehouse-Appliance-2850?pid=6235&LangType=1033&LangSelect=true" target="_blank">3d- Tour of the appliance</a>
+          </h1>
           </div>
         </div>
       </div>
@@ -319,138 +293,79 @@
     </div>
   </div>
 
-<h1 class="ui horizontal huge header divider blue">Why these technologies?</h1>
+  <div class="ui container stackable grid fluid" >
+  	<div class="topbox" id="a"><img src="./images/square.jpg" alt=""/ width="100%" height="100%"></div>
+  	<div class="topbox" id="b"><img src="./images/rendered.jpg" alt=""/ width="100%" height="100%"></div>
+  	<div class="topbox" id="c"><img src="./images/slaine29.jpg" alt=""/ width="100%" height="100%"></div>
+  	<div class="topbox" id="d"><img src="./images/human.jpg" alt=""/ width="100%" height="100%"></div>
+  	<div class="topsqr"><img src="./images/docker.jpg" alt=""/ width="500px" height="500px" style="border-radius:50%;"></div>
+  </div>
 
-<div class="ui vertical stripe segment"  style="background-color:#fff!important;">
-<!--START OF THE HACCORDION-->
-<div class="haccordion">
-  <ul>
-    <li>
-      <div> <a href="#">
-        <h2>Innovation</h2>
-        <p>Technologies such as Kylo&trade;, and Apache NiFi&trade; allow innovative
-        <br>methods to address everyday issues, such as handling of Big Data files,
-        <br>accessing data from mulitple sources seemlessly.</p>
-       </a> </div>
-    </li>
-    <li>
-      <div> <a href="#">
-        <h2>Agility</h2>
-        <p>Faster analytical ability is now possible using many familiar tools such as
-        <br>SAS, R, Tableau and Spotfire.</p>
-        </a> </div>
-    </li>
-    <li>
-      <div> <a href="#">
-        <h2>Interconnective</h2>
-        <p>The interconnectivity allow databases and software to bring the
-        <br>analysis to the data.</p>
-        </a> </div>
-    </li>
-    <li>
-      <div> <a href="#">
-        <h2>Automation</h2>
-        <p>With the Kylo&trade; and Apache NiFi&trade; software, automation of complex
-          <br>tasks is made simplified.</p>
-        </a> </div>
-    </li>
-    <li>
-      <div> <a href="#">
-        <h2>Access</h2>
-        <p>The best technology is required to explore the ever expanding data lake,
-        <br>and gain essential insights into the data.</p>
-        <p>Alation&trade; provides a single point of access to the data lake,
-        <br>allowing the ability to search the lake and collaborate</p>
-        </a> </div>
-    </li>
-    <li>
-      <div> <a href="#">
-        <h2>Data Lake &amp; PhC 2.0</h2>
-        <p>To deliver on PHC 2.0 Roche must utilize it's data.</p>
-        <p>The necessity to search and utilze the ever growing
-        <br>data lake, requires technology and a capable infrastructre</p>
-        </a> </div>
-    </li>
-  </ul>
-</div>
-<!--END OF THE HACCORDION-->
-</div>
 
-<div class="ui vertical stripe quote segment">
-  <div class="ui equal width stackable internally celled grid">
-    <div class="center aligned row">
 
-      <div class="column left aligned">
-        <h1 class="ui header center aligned"></h1>
-        <div class="ui grid">
-          <div class="six wide column right floated"></div>
-          <div class="eight wide column right floated black" id="srq1">
-            <h3>Kylo</h3>
-            <p>Kylo is an open source enterprise-ready data lake management software platform for self-service data ingest and data preparation with integrated metadata management, governance, security and best practices inspired by <a href="https://www.thinkbiganalytics.com/" target="_blank" title="">Think Big's</a> 150+ big data implementation projects.</p>
-            <div class="ui center aligned segment inverted">
-               <a href="https://kylo.io/" target="_blank"><button class="ui button compact">Learn More</button></a>
-            </div>
-          </div>
-          <div class="two wide column right floated"></div>
-        </div>
-      </div>
-      <div class="column left aligned" >
-        <h1 class="ui header center aligned"></h1>
-        <div class="ui grid fluid">
-          <div class="two wide column right floated"></div>
-          <div class="eight wide column right floated blue">
-            <h3>Apache NiFi&trade;</h3>
-            <p>Apache NiFi&trade; is an easy to use, powerful, and reliable system to process and distribute data. Supporting powerful and scalable directed graphs of data routing, transformation, and system mediation logic.<br><br><br></p>
-            <div class="ui center aligned segment blue inverted">
-               <a href="https://nifi.apache.org/" target="_blank"><button class="ui button compact">Learn More</button></a>
-            </div>
-          </div>
-          <div class="six wide column right floated"></div>
-        </div>
-      </div>
 
-    </div>
-    <div class="center aligned row">
 
-      <div class="column left aligned">
-        <h1 class="ui header center aligned"></h1>
-        <div class="ui grid">
-          <div class="six wide column right floated"></div>
-          <div class="eight wide column right floated blue">
-            <h3>Alation&trade;</h3>
-            <p>Alation&trade;, is the world’s first collaborative data catalog for the enterprise.<br>It's a powerful solution that dramatically improves analytic productivity and empowers better business decisions for all.<br>Users can now search, query, curate and collaborate with one tool.</p>
-            <div class="ui center aligned segment blue inverted">
-               <a href="https://alation.com/product/" target="_blank"><button class="ui button compact">Learn More</button></a>
-            </div>
-            <br>
-          </div>
-          <div class="two wide column right floated"></div>
-        </div>
-      </div>
-      <div class="column left aligned">
-        <h1 class="ui header center aligned"></h1>
-        <div class="ui grid">
-          <div class="two wide column right floated "></div>
-          <div class="eight wide column right floated black">
-            <h3>SAS&trade;, R, Python&trade;, Tableau and Spotfire</h3>
-            <p>The familiar analysis tools are available , with connections to the data lake, bring fast analytics to the data.</p>
-            <ul>
-              <li><a href="https://www.sas.com/en_gb/home.html" target="_blank">SAS&trade;</a> is a powerful and comprehensive analyticical software that can perform data manipulation and sophisicated analytics.</li>
-              <li><a href="https://www.r-project.org/" target="_blank">R</a> is a language and an integrated suite of software facilities for data manipulation, calculation and graphical display.</li>
-              <li><a href="https://www.python.org/" target="_blank">Python&trade;</a> is a programming language that lets you work more quickly and integrate your systems more effectively.</li>
-              <li><a href="https://www.tableau.com/" target="_blank">Tableau&trade;</a> and <a href="https://spotfire.tibco.com/" target="_blank">Spotfire</a> are powerful vizualization tools allowing the creation of interactive dashboards and data insights.</li>
+
+
+
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+
+
+        <div class="column blue left aligned" id="midleft">#00367c
+          <h1 class="ui header center aligned mdhbb">Who are we?</h1>
+          <div class="ui grid">
+            <div class="twelve wide column right floated ">
+            <h2>Related technologies</h2>
+            <ul class="lpul">
+              <li>Kylo</li>
+              <li>NiFi</li>
+              <li>Provide support and advice for analysis</li>
+              <li>Training on the system and the Data Sources</li>
             </ul>
+            </div>
           </div>
-          <div class="six wide column right floated"></div>
+          <h1 class="ui header center aligned" style="font-size:3em;"><a class="ui huge button" href="mailto:mdh-d@gene.com">Contact us</a></h1>
         </div>
-      </div>
 
+        <div class="column blue left aligned" id="midright">
+          <h1 class="ui header center aligned mdhbb">How we can help?</h1>
+          <div class="ui grid">
+            <div class="twelve wide column right floated ">
+            <h2>The Medical Data Hub are:</h2>
+            <ul class="lpul">
+              <li>A small but highly functional team with complimentary skill sets</li>
+              <li>Able to impliment Big Data technologies to deliver an analytical environment required for the future</li>
+              <li>Provide support and advice for analysis</li>
+              <li>Training on the system and the Data Sources</li>
+            </ul>
+            </div>
+          </div>
+          <h1 class="ui header center aligned" style="font-size:3em;"><a class="ui huge button" href="mailto:mdh-d@gene.com">Contact us</a></h1>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
 
 
-
+  <div class="ui vertical stripe segment">
+    <div class="ui text container center aligned">
+      <h3 class="ui header">The Technology</h3>
+      <p>To handle Big Data , you need the right tools.</p>
+      <p>Roche has invested in Teradata&trade; and Cloudera&trade; to answer these questions, and bring fast analytics to the increasingly large data lake!</p>
+      <p> </p>
+      <a class="ui large button orange">Read More</a>
+      <h2 class="ui horizontal header divider">
+        <a href="#">Case Studies</a>
+      </h2>
+      <h3 class="ui header">Real World Data</h3>
+      <p>Teradata is the platform allowing all of Roche to access and use Real World Data to answer ...</p>
+      <p>Associated with the data sources are training courses, job aids and </p>
+      <a class="ui large button orange">Tell me more</a>
+    </div>
+  </div>
 
 
   <div class="ui inverted vertical footer segment">
@@ -460,24 +375,30 @@
           <h4 class="ui inverted header">About</h4>
           <div class="ui inverted link list">
             <a href="#" class="item">Sitemap</a>
-            <a href="mailto:mdh-d@gene.com" class="item">Contact Us</a>
+            <a href="#" class="item">Contact Us</a>
             <a href="#" class="item">Support</a>
           </div>
         </div>
         <div class="three wide column">
           <h4 class="ui inverted header">Services</h4>
           <div class="ui inverted link list">
-            <a href="#" class="item">Training</a>
-            <a href="#" class="item">Data related services</a>
-            <a href="#" class="item">System Access</a>
+            <a href="#" class="item">Banana Pre-Order</a>
+            <a href="#" class="item">DNA FAQ</a>
+            <a href="#" class="item">How To Access</a>
+            <a href="#" class="item">Favorite X-Men</a>
           </div>
         </div>
         <div class="seven wide column">
-          <h4 class="ui inverted header">Medical Data Hub</h4>
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
 </body>
 </html>
