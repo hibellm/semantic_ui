@@ -18,6 +18,28 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/markdown-themes/default.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/highlight-themes/default.css">
 
+    <style>
+      /* alternating column backgrounds */
+      .vis-time-axis .grid.vis-odd {
+        background: #FFFFFF;
+      }
+
+      /* gray background in weekends, white text color */
+      .vis-time-axis .vis-grid.vis-saturday,
+      .vis-time-axis .vis-grid.vis-sunday {
+        background: lightgrey;
+      }
+      .vis-time-axis .vis-text.vis-saturday,
+      .vis-time-axis .vis-text.vis-sunday {
+        color: blue;
+      }
+      .mjh1{color:red;background-color: #708090;}
+      .mjh2{color:red;background-color: #9FB6CD;}
+      .mjh3{color:red;background-color: #523456;}
+      .mjh4{color:black;background-color: #A08090;}
+      .mjh5{color:black;background-color: #C08090;}
+      .mjh6{color:black;background-color: #E08090;}
+    </style>
 
     <!--TABLESORT-->
     <script src="./tablesort.js"></script>
@@ -796,13 +818,9 @@ H~~ell~~o *W*o**r**l***d***!
 $('.ui.dropdown')
   .dropdown()
 ;
-$('.ui.search')
-  .search({
-    source: content
-  })
-;
+
 </script>
-<script>
+<script type="text/javascript">
   // DOM element where the Timeline will be attached
   var container = document.getElementById('visualization');
 
@@ -817,7 +835,7 @@ $('.ui.search')
   ]);
 
   var groups = ([
-    {id: 1,content: '<H1>CPRD<br>Batches</h1>',className:'mjh6'}
+    {id: 1,content: '<H1>CPRD<br>Batches</h1>',className:'mjh1'}
   ]);
   // Configuration for the Timeline
   var options = {
@@ -825,7 +843,6 @@ $('.ui.search')
     start: new Date(Date.now() - 1000 * 60 * 60 * 24* 365*3),
     end: new Date(Date.now() + 1000 * 60 * 60 * 24 * 6),
     editable: false       // true or false
-    clickToUse
   };
 
   // Create a Timeline
