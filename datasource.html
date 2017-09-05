@@ -826,12 +826,12 @@ $('.ui.dropdown')
 
   // Create a DataSet (allows two way data-binding)
   var items = new vis.DataSet([
-    {id: 1, className:'mjh1',group:1,content: 'Batch 1', title:'2013-04-20 10:10:00 to 2015-07-01 10:10:00',start: '2013-04-20 10:10:00', end: '2015-07-01 10:10:00'},
-    {id: 2, className:'mjh2',group:1,content: 'Batch 2', start: '2015-07-01 10:10:01', end: '2016-01-01 10:10:00'},
-    {id: 3, className:'mjh3',group:1,content: 'Batch 3', start: '2016-01-01 10:10:01', end: '2016-07-01 10:10:00'},
-    {id: 4, className:'mjh4',group:1,content: 'Batch 4', start: '2016-07-01 10:10:01', end: '2017-01-01 10:10:00'},
-    {id: 5, className:'mjh5',group:1,content: 'Batch 5', start: '2017-01-01 10:10:01', end: '2017-07-01 10:10:00'},
-    {id: 6, className:'mjh6',group:1,content: 'Batch 6 (next batch due July 2017)', start: '2017-07-01 10:10:01', end: '2020-12-31 23:59:59'}
+    {id: 1, className:'mjh1',group:1,content: 'Batch 1', title:'2013-04-20 10:10:00 to 2015-07-01 10:10:00',start: '2013-04-20T10:10:00', end: '2015-07-01T10:10:00'},
+    {id: 2, className:'mjh2',group:1,content: 'Batch 2', start: '2015-07-01T10:10:01', end: '2016-01-01T10:10:00'},
+    {id: 3, className:'mjh3',group:1,content: 'Batch 3', start: '2016-01-01T10:10:01', end: '2016-07-01T10:10:00'},
+    {id: 4, className:'mjh4',group:1,content: 'Batch 4', start: '2016-07-01T10:10:01', end: '2017-01-01T10:10:00'},
+    {id: 5, className:'mjh5',group:1,content: 'Batch 5', start: '2017-01-01T10:10:01', end: '2017-07-01T10:10:00'},
+    {id: 6, className:'mjh6',group:1,content: 'Batch 6 (next batch due July 2017)', start: '2017-07-01T10:10:01', end: '2020-12-31T23:59:59'}
   ]);
 
   var groups = ([
@@ -841,8 +841,16 @@ $('.ui.dropdown')
   var options = {
     showCurrentTime: true,
     start: new Date(Date.now() - 1000 * 60 * 60 * 24* 365*3),
+<<<<<<< Updated upstream
     end: new Date(Date.now() + 1000 * 60 * 60 * 24 * 6),
     editable: false       // true or false
+=======
+    end: new Date(Date.now() + 1000 * 60 * 60 * 24 * 120),
+    editable: false,       // true or false
+    stack:false,
+    stackSubgroups: false,
+    clickToUse: true
+>>>>>>> Stashed changes
   };
 
   // Create a Timeline
