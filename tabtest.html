@@ -10,6 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
   </head>
 
+  <style>
+
+  </style>
+
+
   <!--MAIN PAGE CONTENT-->
   <body>
     <div class="ui container">
@@ -30,37 +35,47 @@
         <p>breadcrumbs can go here</p>
       </div>
 
-      <!--MAIN HEADING-->
-      <div class="ui grid">
+      <div class="ui segment blue inverted" onclick="myFunction()">
+          <div class="ui disabled reveal ">
+              <div class="content visible active" id="test1seg">
+                <div class="ui large labels">
+                  <h3>Data source</h3>
+                  <a class="ui label basic green"  ><i class="flag eu"></i>CPRD</a><br>
+                  <a class="ui label basic red"    ><i class="flag eu"></i>IMSEU</a><br>
+                  <a class="ui label basic green"  ><i class="flag eu"></i>CCAE</a><br>
+                  <a class="ui label basic green"  ><i class="flag eu"></i>IPSOS</a><br>
+                  <a class="ui label basic green"  ><i class="flag eu"></i>FLATIRON</a><br>
+                  <a class="ui label basic red"    ><i class="flag us"></i>SEERM</a><br>
+                </div>
+             </div>
+             <div class="content hidden" id="test2seg">
+              <div class="ui large labels">
+                <h3>Data source</h3>
+                <a class="ui label basic green"><i class="flag eu"></i>CPRD</a>
+              </div>
+            </div>
+         </div>
+      </div>
 
-        <!-- THE MENU SELECTOR -->       
-       <div class="two wide column" id="vtabs">
-         <div class="ui vertical tabular menu fluid inverted blue">
-           <div class="active item" id="vt1" data-tab="tab-name">Workstreams</div>
-           <div class="item"        id="vt2" data-tab="tab-name2">Partnerships</div>
-           <div class="item"        id="vt3" data-tab="tab-name3">Documents</div>
-           <div class="item"        id="vt4" data-tab="tab-name4">Links</div>
+       <p></p>
+       <div class="ui disabled move reveal">
+         <div class="visible content">
+           <img src="../images/whitedr-sqr.jpg" class="ui small image">
+         </div>
+         <div class="hidden content">
+           <img src="../images/world-sqr.jpg" class="ui small image">
          </div>
        </div>
 
-       <div class="ui tab active" data-tab="tab-name">
-         <i class="ui icon database blue massive"></i>
-       </div>
-       <div class="ui tab" data-tab="tab-name2">
-         <i class="ui icon rocket yellow massive"></i>
-       </div>
-       <div class="ui tab" data-tab="tab-name3">
-         <i class="ui icon handshake green massive"></i>
-       </div>
-       <div class="ui tab" data-tab="tab-name4">
-         <i class="ui icon rocket red massive"></i>
-       </div>
-
-
-
-    </div>
   <script>
   $('.tabular.menu .item').tab();
+  $('.ui.accordion').accordion();
+
+  function myFunction() {
+    $('#test1seg').toggleClass('active');
+    $('#test2seg').toggleClass('active');
+    }
+
   </script>
 
   </body>
