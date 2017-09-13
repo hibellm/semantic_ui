@@ -10,6 +10,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
   </head>
 
+<style>
+#sqrpage-image{
+    background-image: url(../images/dash-sqr.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    background-attachment: scroll;
+    /*background-attachment: fixed*/
+}
+
+</style>
+
+
+
   <!--MAIN PAGE CONTENT-->
   <body>
     <div class="ui container">
@@ -110,8 +123,15 @@
       <div class="ui two column grid padded relaxed">
         <div class="two column row">
           <div class="column">
-            <div class="ui segment right aligned basic">
-              <img src="../images/dash-sqr.jpg" width="300" height="300" alt="">
+            <div class="ui segment right aligned basic" >
+              <div class="ui segment center aligned basic" id="sqrpage-image">
+
+                  <div class="content">test title</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, est?</p>
+
+
+              </div>
+              <!-- <img src="../images/dash-sqr.jpg" width="300" height="300" alt=""> -->
             </div>
           </div>
           <div class="column">
