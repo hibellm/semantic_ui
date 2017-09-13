@@ -140,7 +140,7 @@
           </div>
         </div>
         </div><!--END OF FILTER SECTION-->
-        <div class="ui segment">
+        <div class="ui segment" id="dssegment">
           <div class="ui two column grid">
           <div class="column">
             <div class="ui large labels">
@@ -685,7 +685,7 @@ H~~ell~~o *W*o**r**l***d***!
         </div>
       </div>
 
-   <!--RAILS FOR LEGEND-->
+   <!--RAIL RIGHT FOR LEGEND-->
    <div class="ui right internal rail" id="legend">
      <div class="ui sticky">
      <div class="ui segment">
@@ -709,9 +709,6 @@ H~~ell~~o *W*o**r**l***d***!
                   <div class="content">You do not have access to the data source</div>
                 </div>
                 <div class="item">
-
-
-
                   <i class="file icon large"  style="color:#a2fde2;"></i>
                   <div class="content">Green card indicates the latest batch</div>
                 </div>
@@ -757,6 +754,34 @@ H~~ell~~o *W*o**r**l***d***!
       </div>
     </div><!--RAIL-->
 
+    <!--RAIL LEFT FOR FILTER-->
+    <div class="ui left rail internal" id="legendl">
+      <div class="ui sticky" id="lrsticky">
+      <div class="ui segment">
+        <div class="ui accordion">
+           <div class="active title"><i class="dropdown icon"></i>Filters</div>
+           <div class="content">
+             <h3>Tips:</h3>
+               <div class="ui list">
+                 <div class="item">
+                   <i class="info blue icon large"></i>
+                   <div class="content">Click on the <strong>Data source name</strong> to reveal further information about it</div>
+                 </div>
+                 <div class="item">
+                   <i class="square outline green icon large"></i>
+                   <div class="content">You have access to the data source</div>
+                 </div>
+                 <div class="item">
+                   <i class="square outline red icon large"></i>
+                   <div class="content">You do not have access to the data source</div>
+                 </div>
+               </div>
+           </div>
+         </div><!--ACCORDION-->
+       </div><!--SEGEMENT-->
+       </div>
+     </div><!--RAIL-->
+
 
     <!--MODAL-->
     <div class="ui modal" id="fijun2017">
@@ -780,44 +805,19 @@ H~~ell~~o *W*o**r**l***d***!
 
 
   <script type="text/javascript">
-  $('#context1 .menu .item')
-  .tab({
-    context: $('#context1')
-  })
-  ;
-  $('#context2 .menu .item')
-  .tab({
-    // special keyword works same as above
-    context: 'parent'
-  })
-  ;
-
+  $('#context1 .menu .item').tab({context: $('#context1')});
+  $('#context2 .menu .item').tab({context: 'parent'});
   $('table').tablesort();
-
   //POPUP LAYOUT
-  $('.item')
-  .popup({
-    inline: true,
-    hoverable  : true
-  })
-  ;
+  $('.item').popup({inline: true,hoverable  : true});
   //ACCORDION
-  $('.ui.accordion')
-  .accordion()
-;
+  $('.ui.accordion').accordion();
   //STICKY LEGEND
-  $('.ui.sticky')
-  .sticky({
-    context: '#legend'
-  })
-;
-  //RADIO BUTTON ON FILTER FORM
-  $('.ui.radio.checkbox')
-  .checkbox()
-;
-$('.ui.dropdown')
-  .dropdown()
-;
+  $('.ui.sticky').sticky({context: '#legend'});
+  $('#lrsticky .ui.sticky').sticky({context:'#ds'});
+    //RADIO BUTTON ON FILTER FORM
+  $('.ui.radio.checkbox').checkbox();
+  $('.ui.dropdown').dropdown();
 
 </script>
 <script type="text/javascript">
@@ -841,16 +841,11 @@ $('.ui.dropdown')
   var options = {
     showCurrentTime: true,
     start: new Date(Date.now() - 1000 * 60 * 60 * 24* 365*3),
-<<<<<<< Updated upstream
-    end: new Date(Date.now() + 1000 * 60 * 60 * 24 * 6),
-    editable: false       // true or false
-=======
     end: new Date(Date.now() + 1000 * 60 * 60 * 24 * 120),
     editable: false,       // true or false
     stack:false,
     stackSubgroups: false,
     clickToUse: true
->>>>>>> Stashed changes
   };
 
   // Create a Timeline
