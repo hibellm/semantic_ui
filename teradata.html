@@ -15,9 +15,68 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/markdown-themes/default.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/highlight-themes/default.css">
 
+    <!-- FOR D3 -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
     <!--TABLESORT-->
     <script src="./tablesort.js"></script>
+
+    <style>
+    body {
+      font: 10px sans-serif;
+    }
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .bar {
+      fill: orange;
+    }
+
+    .bar:hover {
+      fill: orangered ;
+    }
+
+    .x.axis path {
+      display: none;
+    }
+
+    .d3-tip {
+      line-height: 1;
+      font-weight: bold;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 2px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+    </style>
+
+
+
   </head>
 
   <!--MAIN PAGE CONTENT-->
@@ -62,17 +121,18 @@
 
       <!--MENU ITEM 1-->
       <div class="ui tab active" data-tab="tab-name1">
-      <div class="ui segment grid">
+        <div class="ui segment grid">
 
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sequi, obcaecati excepturi quidem nisi quos sunt placeat, deleniti possimus dolores sit modi aspernatur ipsum! Eos quos, nostrum ratione aliquam et.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sequi, obcaecati excepturi quidem nisi quos sunt placeat, deleniti possimus dolores sit modi aspernatur ipsum! Eos quos, nostrum ratione aliquam et.
+        <div id="svgHere"></div>
 
-      video
-      Setup
-      Viewpoint
-      getting started
-      training material
+         video
+        Setup
+        Viewpoint
+        getting started
+        training material
 
-      </div>
+        </div>
       </div>
 
       <!--MENU ITEM 2-->
@@ -128,44 +188,274 @@
 
       <!--MENU ITEM 3-->
       <div class="ui tab" data-tab="tab-name3">
-       <div class="ui segment">
+        <div class="ui grid">
+          <div class="row"></div>
+          <div class="four wide column">
 
-         <div class="ui card fluid">
-           <div class="content">
-             <div class="right floated meta"><i class="ui icon copy large"></i></div>
-             <div class="ui label ribbon orange">Teradata</div>
-             <span style="font-size:1.5em;">Create Table</span>
-           </div>
-           <div class="content">
-             <div class="ui segment">
-                <zero-md file="https://raw.githubusercontent.com/hibellm/MDtest/master/README.md">
-                   <div class="md-html"></div>
-                </zero-md>
+            <div class="ui vertical fluid tabular menu red inverted" id="tab3menu">
+              <a class="active item" id="vt3t1" data-tab="tab-name31">Tables</a>
+              <a class="item"        id="vt3t2" data-tab="tab-name32">Pics</a>
+              <a class="item"        id="vt3t3" data-tab="tab-name33">test</a>
+              <a class="item"        id="vt3t4" data-tab="tab-name34">Links</a>
+            </div>
+          </div>
+          <div class="twelve wide stretched column">
+            <div class="ui tab active" data-tab="tab-name31">
+            <div class="ui segment">
+              <div class="ui card fluid attached">
+                <div class="content">
+                  <div class="right floated meta"><i class="ui icon copy large"></i></div>
+                  <div class="ui label ribbon orange">Teradata</div>
+                  <span style="font-size:1.5em;">Create Table</span>
+                </div>
+                <div class="content">
+                  <div class="ui segment">
+                     <zero-md file="https://raw.githubusercontent.com/hibellm/MDtest/master/README.md">
+                        <div class="md-html"></div>
+                     </zero-md>
+                   </div>
+                </div>
               </div>
-           </div>
-           <div class="content">
-             <span class="right floated">
-               <i class="heart outline like icon"></i>
-               17 likes
-             </span>
-             <i class="comment icon"></i>
-             3 comments
-           </div>
-           <div class="extra content">
-             <div class="ui large transparent left icon input">
-               <i class="heart outline icon"></i>
-               <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+          <div class="ui tab" data-tab="tab-name32">
+          <div class="ui segment">
+            <div class="ui card fluid attached">
+              <div class="content">
+                <div class="right floated meta"><i class="ui icon copy large"></i></div>
+                <div class="ui label ribbon orange">Teradata</div>
+                <span style="font-size:1.5em;">what is this</span>
+              </div>
+              <div class="content">
+                <div class="ui segment">
+                   <zero-md file="https://raw.githubusercontent.com/hibellm/MDtest/master/README.md">
+                      <div class="md-html"></div>
+                   </zero-md>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui tab" data-tab="tab-name33">
+        <div class="ui segment">
+          <div class="ui card fluid attached">
+            <div class="content">
+              <div class="right floated meta"><i class="ui icon copy large"></i></div>
+              <div class="ui label ribbon orange">Teradata</div>
+              <span style="font-size:1.5em;">dsfgstehsteh</span>
+            </div>
+            <div class="content">
+              <div class="ui segment">
+                 <zero-md file="https://raw.githubusercontent.com/hibellm/MDtest/master/README.md">
+                    <div class="md-html"></div>
+                 </zero-md>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui tab" data-tab="tab-name34">
+      <div class="ui segment">
+        <div class="ui card fluid attached">
+          <div class="content">
+            <div class="right floated meta"><i class="ui icon copy large"></i></div>
+            <div class="ui label ribbon orange">Teradata</div>
+            <span style="font-size:1.5em;">ziotzioiozui</span>
+          </div>
+          <div class="content">
+            <div class="ui segment">
+               <zero-md file="https://raw.githubusercontent.com/hibellm/MDtest/master/README.md">
+                  <div class="md-html"></div>
+               </zero-md>
              </div>
-           </div>
-         </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-       </div>
+          </div>
+        </div>
+
+
+
      </div><!--END OF THE MENU ITEM 3-->
 
 
       <div class="ui tab" data-tab="tab-name4">
-      <div class="ui segment grid">
-      <div class="six wide column">
+
+        <!-- THIS PLACES 3 COL WIDE BOXES IN COL1 -->
+        <div class="ui two column grid">
+          <div class="row"></div>
+          <div class="column">
+            <div class="ui three column grid">
+              <div class="column center aligned">
+                <div class="ui inverted segment" onclick="$('.ui.modal#tmodal').modal('show');">
+                  <a class="ui left corner label pink"><i class="users icon"></i></a>
+                  <h2 class="title">CIN</h2>
+                  <img class="ui centered image tiny" src="/images/CIN-sqr.jpg">
+                    <div class="content">Curation &amp; Intergration Network</div>
+                </div>
+              </div>
+              <div class="column center aligned">
+                <div class="ui inverted segment" onclick="$('.ui.modal#tmodal').modal('show');">
+                  <a class="ui left corner label pink"><i class="users icon"></i></a>
+                  <h2 class="title">DIS</h2>
+                  <img class="ui centered image tiny" src="/images/CIN-sqr.jpg">
+                  <div class="content">Data &amp; Intergration Network</div>
+                </div>
+              </div>
+              <div class="column center aligned">
+                <div class="ui inverted segment" onclick="$('.ui.modal#tmodal').modal('show');">
+                  <a class="ui left corner label teal"><i class="chain icon"></i></a>
+                  <h2 class="title">BEE</h2>
+                  <img class="ui centered image tiny" src="/images/bee.png">
+                  <div class="content">Biometrics Exploratory environment</div>
+                </div>
+              </div>
+              <div class="column center aligned">
+                <div class="ui inverted segment" onclick="$('.ui.modal#tmodal').modal('show');">
+                  <a class="ui left corner label teal"><i class="chain icon"></i></a>
+                  <h2 class="title">GitHub</h2>
+                  <img class="ui centered image tiny" src="/images/github.png">
+                  <div class="content">Roche GitHub Enterprise Server</div>
+                </div>
+              </div>
+              <div class="column center aligned">
+                <div class="ui inverted segment" onclick="$('.ui.modal#tmodal').modal('show');">
+                  <a class="ui left corner label teal"><i class="chain icon"></i></a>
+                  <h2 class="title">Jira</h2>
+                  <img class="ui centered image tiny" src="/images/jira.jpg">
+                  <div class="content">Curation &amp; Intergration Network</div>
+                </div>
+              </div>
+              <div class="column center aligned">
+                <div class="ui inverted segment" onclick="$('.ui.modal#tmodal').modal('show');">
+                  <a class="ui left corner label pink"><i class="users icon"></i></a>
+                  <h2 class="title">CIN</h2>
+                  <img class="ui centered image tiny" src="/images/CIN-sqr.jpg">
+                  <div class="content">Curation &amp; Intergration Network</div>
+                </div>
+              </div>
+              <div class="column center aligned">
+                <div class="ui inverted segment" onclick="$('.ui.modal#tmodal').modal('show');">
+                  <h2 class="title">CIN</h2>
+                  <img class="ui centered image tiny" src="/images/CIN-sqr.jpg">
+                  <div class="content">Curation &amp; Intergration Network</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- COL2 -->
+          <div class="column">
+            <div class="ui segment" style="height:600px;overflow:scroll;">
+              <div class="ui segment top attached center aligned inverted tertiary">
+                <i class="ui newspaper icon large"></i>
+                <span><h3 class="header center aligned">News Feed</h3></span>
+              </div>
+              <div class="ui feed">
+                <div class="event">
+                  <div class="label"><img src="/images/avatar/small/elliot.jpg"></div>
+                  <div class="content">
+                    <div class="summary">
+                      <a class="user">Elliot Fu</a> added you as a friend
+                      <div class="date">1 Hour Ago</div>
+                    </div>
+                    <div class="meta">
+                      <a class="like">
+                        <i class="like icon"></i> 4 Likes
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="event">
+                  <div class="label">
+                    <img src="/images/avatar/small/helen.jpg">
+                  </div>
+                  <div class="content">
+                    <div class="summary">
+                      <a>Helen Troy</a> added <a>2 new illustrations</a>
+                      <div class="date">
+                        4 days ago
+                      </div>
+                    </div>
+                    <div class="extra images">
+                      <a><img src="/images/wireframe/image.png"></a>
+                      <a><img src="/images/wireframe/image.png"></a>
+                    </div>
+                    <div class="meta">
+                      <a class="like"><i class="like icon"></i> 1 Like</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="event">
+                  <div class="label">
+                    <img src="/images/avatar/small/jenny.jpg">
+                  </div>
+                  <div class="content">
+                    <div class="summary">
+                      <a class="user">Jenny Hess</a> added you as a friend
+                      <div class="date">2 Days Ago</div>
+                    </div>
+                    <div class="meta">
+                      <a class="like"><i class="like icon"></i> 8 Likes</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="event">
+                  <div class="label">
+                    <img src="/images/avatar/small/joe.jpg">
+                  </div>
+                  <div class="content">
+                    <div class="summary">
+                      <a>Joe Henderson</a> posted on his page
+                      <div class="date">3 Days ago</div>
+                    </div>
+                    <div class="extra text">
+                      Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+                    </div>
+                    <div class="meta"><a class="like"><i class="like icon"></i> 5 Likes</a></div>
+                  </div>
+                </div>
+                <div class="event">
+                  <div class="label">
+                    <img src="/images/avatar/small/justen.jpg">
+                  </div>
+                  <div class="content">
+                    <div class="summary">
+                      <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+                      <div class="date">4 Days ago</div>
+                    </div>
+                    <div class="extra images">
+                      <a><img src="/images/wireframe/image.png"></a>
+                      <a><img src="/images/wireframe/image.png"></a>
+                    </div>
+                    <div class="meta">
+                      <a class="like"><i class="like icon"></i> 41 Likes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="ui features segment inverted blue" style="overflow-y:auto;white-space:nowrap;">
+              METADATA TO GET THIS TO WORK
+
+              -title
+              -description
+              -image
+              -link
+              -Order
+              -color + icon for corner label
+            </div>
+          </div>
+        </div>
+
+
+
+      <div class="ui segment two column grid">
+      <div class="column">
+      <div class="ui three column grid">
         <div class="ui segment huge center aligned">
           <h2 style="color:black;">Work Streams</h2><i class="ui circular blue inverted icon exchange"></i>
         <div class="ui inverted segment" onclick="$('.ui.modal#tmodal').modal('show');">
@@ -189,6 +479,8 @@
         </div>
 
       </div>
+</div>
+
       </div>
     </div>
     </div>
@@ -200,8 +492,86 @@
 
 
   <script type="text/javascript">
-  $('.ui.accordion').accordion();
-  $('.tabular.menu .item').tab();
+    $('.ui.accordion').accordion();
+    $('.tabular.menu .item').tab();
+    $('#tab3menu').tab();
   </script>
+
+  <script>
+  var margin = {top: 40, right: 20, bottom: 30, left: 40},
+      width = 460 - margin.left - margin.right,
+      height = 300 - margin.top - margin.bottom;
+
+  var formatPercent = d3.format(".0%");
+
+  var x = d3.scale.ordinal()
+      .rangeRoundBands([0, width], .1);
+
+  var y = d3.scale.linear()
+      .range([height, 0]);
+
+  var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom");
+
+  var yAxis = d3.svg.axis()
+      .scale(y)
+      .orient("left")
+      .tickFormat(formatPercent);
+
+  var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+      return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+    })
+
+  var svg = d3.select("#svgHere").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.call(tip);
+
+  d3.tsv("data2.tsv", type, function(error, data) {
+    x.domain(data.map(function(d) { return d.letter; }));
+    y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Data");
+
+    svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function(d) { return x(d.letter); })
+        .attr("width", x.rangeBand())
+        .attr("y", function(d) { return y(d.frequency); })
+        .attr("height", function(d) { return height - y(d.frequency); })
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide)
+  });
+
+  function type(d) {
+    d.frequency = +d.frequency;
+    return d;
+  }
+
+  </script>
+
+
   </body>
 </html>
