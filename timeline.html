@@ -27,12 +27,15 @@
       .vis-time-axis .vis-text.vis-sunday {
         color: blue;
       }
-      .mjh1{color:red;background-color: #123456;}
-      .mjh2{color:red;background-color: #323456;}
-      .mjh3{color:red;background-color: #523456;}
-      .mjh4{color:black;background-color: #a23456;}
-      .mjh5{color:black;background-color: #c23456;}
-      .mjh6{color:black;background-color: #e23456;}
+
+      .mjh1{color:black;background-color: #2185D0;}
+      .mjh2{color:black;background-color: #1d77bb;}
+      .mjh3{color:black;background-color: #1a6aa6;}
+      .mjh4{color:black;background-color: #175d91;}
+      .mjh5{color:white;background-color: #104268;}
+      .mjh6{color:white;background-color: #0d3553;}
+      .mjh7{color:white;background-color: #09273e;}
+      .bt  {color:black;background-color: #BCDAF0;}
     </style>
 
   </head>
@@ -59,15 +62,16 @@
 
       <!--MAIN HEADING-->
       <div class="ui segment">
-        <div class="ui header">This is the Batch timeline  where &LT;date&GT; between valid_satrt and valid_end</div>
+        <div class="ui header">This is the Batch timeline where &LT;date&GT; between valid_satrt and valid_end</div>
         <div id="visualization"></div>
+        <div id="visualization2"></div>
       </div>
 
       <div class="ui grid">
-        <div class="four wide column"></div>
-        <div class="four wide column"></div>
-        <div class="four wide column"></div>
-        <div class="four wide column"></div>
+        <div class="four wide column">sdghsg</div>
+        <div class="four wide column">sghs</div>
+        <div class="four wide column">sghsgh</div>
+        <div class="four wide column">sghsfgh</div>
       </div>
 
 
@@ -77,9 +81,14 @@
       // DOM element where the Timeline will be attached
       var container = document.getElementById('visualization');
 
+     var b1s='2013-04-20 10:10:00';
+     var b1e='2015-07-01 10:10:00';
+     var t='<table style="width:100%;border:2px solid black;"><tr><th>Valid_start</th><th>Valid_end</th></tr><tr><td>'+b1s+'</td><td>'+b1e+'</td></tr></table>';
+     var b1t='CPRD 2013 JUN <br><small>this NUMI is the description</small>'+t;
+
       // Create a DataSet (allows two way data-binding)
       var items = new vis.DataSet([
-        {id: 1, className:'mjh1',group:1,content: 'Batch 1', start: '2013-04-20 10:10:00', end: '2015-07-01 10:10:00'},
+        {id: 1, className:'mjh1',group:1,content: b1t, start: b1s, end: b1e},
         {id: 2, className:'mjh2',group:1,content: 'Batch 2', start: '2015-07-01 10:10:01', end: '2016-01-01 10:10:00'},
         {id: 3, className:'mjh3',group:1,content: 'Batch 3', start: '2016-01-01 10:10:01', end: '2016-07-01 10:10:00'},
         {id: 4, className:'mjh4',group:1,content: 'Batch 4', start: '2016-07-01 10:10:01', end: '2017-01-01 10:10:00'},
@@ -88,7 +97,7 @@
       ]);
 
       var groups = ([
-        {id: 1,content: '<H1>CPRD<br>Batches</h1>',className:'mjh6'}
+        {id: 1,content: '<h2>CPRD<br>Batches</h2>',className:'bt'}
       ]);
       // Configuration for the Timeline
       var options = {
@@ -101,6 +110,46 @@
       // Create a Timeline
       var timeline = new vis.Timeline(container, items, groups, options);
 
+    </script>
+
+    <script type="text/javascript">
+      // load data via an ajax request. When the data is in, load the timeline
+      $.ajax({
+        url: './data.json',
+        success: function (data) {
+          // hide the "loading..." message
+          // document.getElementById('loading').style.display = 'none';
+
+          // DOM element where the Timeline will be attached
+          var container = document.getElementById('visualization2');
+
+          // Create a DataSet (allows two way data-binding)
+          var items = new vis.DataSet(data);
+          var groups = new vis.DataSet(data);
+          // var groups = ([
+          //   {id: 1,content: '<h2>CPRD<br>Batches</h2>',className:'bt'}
+          // ]);
+          // Configuration for the Timeline
+          var options = {
+            showCurrentTime: true,
+            start: new Date(Date.now() - 1000 * 60 * 60 * 24* 365*3),
+            end: new Date(Date.now() + 1000 * 60 * 60 * 24 * 6),
+            editable: false       // true or false
+            };
+
+          // Create a Timeline
+          var timeline = new vis.Timeline(container, items, groups, options);
+        },
+        error: function (err) {
+          console.log('Error', err);
+          if (err.status === 0) {
+            alert('Failed to load data.json.\nPlease run this example on a server.');
+          }
+          else {
+            alert('Failed to load data.json.');
+          }
+        }
+      });
     </script>
 
   </body>

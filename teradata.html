@@ -190,23 +190,29 @@
       <div class="ui tab" data-tab="tab-name3">
         <div class="ui grid">
           <div class="row"></div>
-          <div class="four wide column">
+          <div class="three wide column">
 
             <div class="ui vertical fluid tabular menu red inverted" id="tab3menu">
-              <a class="active item" id="vt3t1" data-tab="tab-name31">Tables</a>
-              <a class="item"        id="vt3t2" data-tab="tab-name32">Pics</a>
+              <a class="ui item left dropdown" >Tables</a>
+                  <div class="menu">
+                    <div class="item" id="vt3t2" data-tab="tab-name32">Volatile tables</div>
+                    <div class="item" id="vt3t1" data-tab="tab-name31">Set Tables</div>
+                    <div class="item" id="vt3t1" data-tab="tab-name31">Multiset Tables</div>
+                    <div class="item" id="vt3t1" data-tab="tab-name31">Working with Tables</div>
+                  </div>
+              <a class="item"        >Pics</a>
               <a class="item"        id="vt3t3" data-tab="tab-name33">test</a>
               <a class="item"        id="vt3t4" data-tab="tab-name34">Links</a>
             </div>
           </div>
-          <div class="twelve wide stretched column">
+          <div class="thirteen wide stretched column">
             <div class="ui tab active" data-tab="tab-name31">
             <div class="ui segment">
               <div class="ui card fluid attached">
                 <div class="content">
                   <div class="right floated meta"><i class="ui icon copy large"></i></div>
                   <div class="ui label ribbon orange">Teradata</div>
-                  <span style="font-size:1.5em;">Create Table</span>
+                  <span style="font-size:1.5em;">Set Table</span>
                 </div>
                 <div class="content">
                   <div class="ui segment">
@@ -224,7 +230,7 @@
               <div class="content">
                 <div class="right floated meta"><i class="ui icon copy large"></i></div>
                 <div class="ui label ribbon orange">Teradata</div>
-                <span style="font-size:1.5em;">what is this</span>
+                <span style="font-size:1.5em;">Volatile Tables</span>
               </div>
               <div class="content">
                 <div class="ui segment">
@@ -242,7 +248,7 @@
             <div class="content">
               <div class="right floated meta"><i class="ui icon copy large"></i></div>
               <div class="ui label ribbon orange">Teradata</div>
-              <span style="font-size:1.5em;">dsfgstehsteh</span>
+              <span style="font-size:1.5em;">Set Tables</span>
             </div>
             <div class="content">
               <div class="ui segment">
@@ -260,7 +266,7 @@
           <div class="content">
             <div class="right floated meta"><i class="ui icon copy large"></i></div>
             <div class="ui label ribbon orange">Teradata</div>
-            <span style="font-size:1.5em;">ziotzioiozui</span>
+            <span style="font-size:1.5em;">Multiset Tables</span>
           </div>
           <div class="content">
             <div class="ui segment">
@@ -494,6 +500,7 @@
   <script type="text/javascript">
     $('.ui.accordion').accordion();
     $('.tabular.menu .item').tab();
+    $('.dropdown').dropdown({transition: 'drop'});
     $('#tab3menu').tab();
   </script>
 
